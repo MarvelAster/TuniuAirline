@@ -10,12 +10,13 @@
 		5446E1950F4C17426F2992F8 /* Pods_TuniuAirlineProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC1708CDFBE00B4E3BECD1E /* Pods_TuniuAirlineProject.framework */; };
 		5B660EFDDF3467D2ED702C9E /* Pods_TuniuAirlineProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D09BC57BFB05A865C03D0F2 /* Pods_TuniuAirlineProjectTests.framework */; };
 		5B9800AB20C9902B008845F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9800AA20C9902B008845F3 /* AppDelegate.swift */; };
-		5B9800AD20C9902B008845F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9800AC20C9902B008845F3 /* ViewController.swift */; };
+		5B9800AD20C9902B008845F3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9800AC20C9902B008845F3 /* HomeViewController.swift */; };
 		5B9800B020C9902B008845F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9800AE20C9902B008845F3 /* Main.storyboard */; };
 		5B9800B220C9902D008845F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B9800B120C9902D008845F3 /* Assets.xcassets */; };
 		5B9800B520C9902D008845F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9800B320C9902D008845F3 /* LaunchScreen.storyboard */; };
 		5B9800C020C9902D008845F3 /* TuniuAirlineProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9800BF20C9902D008845F3 /* TuniuAirlineProjectTests.swift */; };
 		5B9800CB20C99053008845F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B9800CA20C99053008845F3 /* GoogleService-Info.plist */; };
+		5B98010620C9CB55008845F3 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B98010520C9CB55008845F3 /* Login.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +35,7 @@
 		3DC1708CDFBE00B4E3BECD1E /* Pods_TuniuAirlineProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuniuAirlineProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9800A720C9902B008845F3 /* TuniuAirlineProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuniuAirlineProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9800AA20C9902B008845F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5B9800AC20C9902B008845F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5B9800AC20C9902B008845F3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5B9800AF20C9902B008845F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B9800B120C9902D008845F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B9800B420C9902D008845F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -43,6 +44,7 @@
 		5B9800BF20C9902D008845F3 /* TuniuAirlineProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuniuAirlineProjectTests.swift; sourceTree = "<group>"; };
 		5B9800C120C9902D008845F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B9800CA20C99053008845F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5B98010520C9CB55008845F3 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		80F61C3F87551F07EAF36BD1 /* Pods-TuniuAirlineProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuniuAirlineProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuniuAirlineProject/Pods-TuniuAirlineProject.release.xcconfig"; sourceTree = "<group>"; };
 		BB4B6AC9CB7705AFB1C05710 /* Pods-TuniuAirlineProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuniuAirlineProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuniuAirlineProjectTests/Pods-TuniuAirlineProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF8832D425966612F63E529B /* Pods-TuniuAirlineProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuniuAirlineProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuniuAirlineProjectTests/Pods-TuniuAirlineProjectTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -80,6 +82,10 @@
 		5B98009E20C9902B008845F3 = {
 			isa = PBXGroup;
 			children = (
+				5B98010A20C9CC66008845F3 /* Controller */,
+				5B98010920C9CC5F008845F3 /* Model */,
+				5B98010820C9CC53008845F3 /* View */,
+				5B98010720C9CC31008845F3 /* Storyboard */,
 				5B9800A920C9902B008845F3 /* TuniuAirlineProject */,
 				5B9800BE20C9902D008845F3 /* TuniuAirlineProjectTests */,
 				5B9800A820C9902B008845F3 /* Products */,
@@ -101,8 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				5B9800AA20C9902B008845F3 /* AppDelegate.swift */,
-				5B9800AC20C9902B008845F3 /* ViewController.swift */,
-				5B9800AE20C9902B008845F3 /* Main.storyboard */,
 				5B9800B120C9902D008845F3 /* Assets.xcassets */,
 				5B9800B320C9902D008845F3 /* LaunchScreen.storyboard */,
 				5B9800B620C9902D008845F3 /* Info.plist */,
@@ -118,6 +122,37 @@
 				5B9800C120C9902D008845F3 /* Info.plist */,
 			);
 			path = TuniuAirlineProjectTests;
+			sourceTree = "<group>";
+		};
+		5B98010720C9CC31008845F3 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				5B98010520C9CB55008845F3 /* Login.storyboard */,
+				5B9800AE20C9902B008845F3 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		5B98010820C9CC53008845F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5B98010920C9CC5F008845F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5B98010A20C9CC66008845F3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B9800AC20C9902B008845F3 /* HomeViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		6E2E40825AA54B5E035D2384 /* Pods */ = {
@@ -219,6 +254,7 @@
 				5B9800B520C9902D008845F3 /* LaunchScreen.storyboard in Resources */,
 				5B9800CB20C99053008845F3 /* GoogleService-Info.plist in Resources */,
 				5B9800B220C9902D008845F3 /* Assets.xcassets in Resources */,
+				5B98010620C9CB55008845F3 /* Login.storyboard in Resources */,
 				5B9800B020C9902B008845F3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,7 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B9800AD20C9902B008845F3 /* ViewController.swift in Sources */,
+				5B9800AD20C9902B008845F3 /* HomeViewController.swift in Sources */,
 				5B9800AB20C9902B008845F3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
