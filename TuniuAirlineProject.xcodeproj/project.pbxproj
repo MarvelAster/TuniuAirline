@@ -17,6 +17,7 @@
 		5B9800C020C9902D008845F3 /* TuniuAirlineProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9800BF20C9902D008845F3 /* TuniuAirlineProjectTests.swift */; };
 		5B9800CB20C99053008845F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B9800CA20C99053008845F3 /* GoogleService-Info.plist */; };
 		5B98010620C9CB55008845F3 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B98010520C9CB55008845F3 /* Login.storyboard */; };
+		A2FDAB8720C9DDE1009D2D5E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FDAB8620C9DDE1009D2D5E /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		5B9800CA20C99053008845F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5B98010520C9CB55008845F3 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		80F61C3F87551F07EAF36BD1 /* Pods-TuniuAirlineProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuniuAirlineProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuniuAirlineProject/Pods-TuniuAirlineProject.release.xcconfig"; sourceTree = "<group>"; };
+		A2FDAB8620C9DDE1009D2D5E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		BB4B6AC9CB7705AFB1C05710 /* Pods-TuniuAirlineProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuniuAirlineProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuniuAirlineProjectTests/Pods-TuniuAirlineProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF8832D425966612F63E529B /* Pods-TuniuAirlineProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuniuAirlineProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuniuAirlineProjectTests/Pods-TuniuAirlineProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				5B9800AC20C9902B008845F3 /* HomeViewController.swift */,
+				A2FDAB8620C9DDE1009D2D5E /* SignInViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 			files = (
 				5B9800AD20C9902B008845F3 /* HomeViewController.swift in Sources */,
 				5B9800AB20C9902B008845F3 /* AppDelegate.swift in Sources */,
+				A2FDAB8720C9DDE1009D2D5E /* SignInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
