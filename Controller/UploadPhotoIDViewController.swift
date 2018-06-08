@@ -48,5 +48,8 @@ class UploadPhotoIDViewController: UIViewController, UIImagePickerControllerDele
     }
     
     @IBAction func signUpBtnAction(_ sender: UIButton) {
+        let storyboard =  UIStoryboard(name: "Main", bundle: nil)
+        let rootController = storyboard.instantiateViewController(withIdentifier: "ECSlidingViewController")
+        UIApplication.shared.keyWindow?.rootViewController = rootController
     }
 }

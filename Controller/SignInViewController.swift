@@ -40,9 +40,12 @@ class SignInViewController: UIViewController {
                 FirebaseHandler.sharedInstance.checkIfUserHasPhotoID(userStorage: self.userStorage, completion: { (doesHavePhotoID) in
                     if doesHavePhotoID == false{
                         let controller = self.storyboard?.instantiateViewController(withIdentifier: "UploadPhotoIDViewController") as! UploadPhotoIDViewController
-                        self.navigationController?.pushViewController(controller, animated: true)
+                        //self.navigationController?.pushViewController(controller, animated: true)
+                        self.navigationController?.present(controller, animated: true, completion: nil)
                     }else{
-                        
+                        let storyboard =  UIStoryboard(name: "Main", bundle: nil)
+                        let rootController = storyboard.instantiateViewController(withIdentifier: "ECSlidingViewController")
+                        UIApplication.shared.keyWindow?.rootViewController = rootController
                     }
                 })
             }
