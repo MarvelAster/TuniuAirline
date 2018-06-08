@@ -29,7 +29,7 @@ class SideMenuViewController: UIViewController,UITableViewDelegate,UITableViewDa
     //MARK: -UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.slidingViewController().topViewController = storyboard?.instantiateViewController(withIdentifier: "\(navigationName[indexPath.row])NavigationViewController")
-        
+        self.slidingViewController().resetTopView(animated: true)
     }
     //MARK: -ViewDidLoad
     override func viewDidLoad() {
