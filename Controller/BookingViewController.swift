@@ -27,7 +27,8 @@ class BookingViewController: UIViewController {
     
     
     @IBAction func calender1Click(_ sender: Any) {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "CalenderViewController") as! CalenderViewController
+        let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "CalenderViewController") as! CalenderViewController
         present(controller, animated: true, completion: nil)
     }
     
