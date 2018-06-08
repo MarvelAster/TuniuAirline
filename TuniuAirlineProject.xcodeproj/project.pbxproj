@@ -17,6 +17,12 @@
 		5B9800C020C9902D008845F3 /* TuniuAirlineProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9800BF20C9902D008845F3 /* TuniuAirlineProjectTests.swift */; };
 		5B9800CB20C99053008845F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B9800CA20C99053008845F3 /* GoogleService-Info.plist */; };
 		5B98010620C9CB55008845F3 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B98010520C9CB55008845F3 /* Login.storyboard */; };
+		5B98010C20C9DD53008845F3 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B98010B20C9DD53008845F3 /* SideMenuViewController.swift */; };
+		5B98010E20C9E4B6008845F3 /* FTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B98010D20C9E4B6008845F3 /* FTNavigationController.swift */; };
+		5B98011020CA040E008845F3 /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B98010F20CA040E008845F3 /* BookingViewController.swift */; };
+		5B98011220CA09A9008845F3 /* MyBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B98011120CA09A9008845F3 /* MyBookingViewController.swift */; };
+		5B98011420CA09B6008845F3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B98011320CA09B6008845F3 /* ProfileViewController.swift */; };
+		5B98011620CA09C2008845F3 /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B98011520CA09C2008845F3 /* LogoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +51,12 @@
 		5B9800C120C9902D008845F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B9800CA20C99053008845F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5B98010520C9CB55008845F3 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		5B98010B20C9DD53008845F3 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		5B98010D20C9E4B6008845F3 /* FTNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTNavigationController.swift; sourceTree = "<group>"; };
+		5B98010F20CA040E008845F3 /* BookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
+		5B98011120CA09A9008845F3 /* MyBookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingViewController.swift; sourceTree = "<group>"; };
+		5B98011320CA09B6008845F3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		5B98011520CA09C2008845F3 /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
 		80F61C3F87551F07EAF36BD1 /* Pods-TuniuAirlineProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuniuAirlineProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuniuAirlineProject/Pods-TuniuAirlineProject.release.xcconfig"; sourceTree = "<group>"; };
 		BB4B6AC9CB7705AFB1C05710 /* Pods-TuniuAirlineProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuniuAirlineProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuniuAirlineProjectTests/Pods-TuniuAirlineProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF8832D425966612F63E529B /* Pods-TuniuAirlineProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuniuAirlineProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuniuAirlineProjectTests/Pods-TuniuAirlineProjectTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +148,7 @@
 		5B98010820C9CC53008845F3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B98010D20C9E4B6008845F3 /* FTNavigationController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -150,7 +163,12 @@
 		5B98010A20C9CC66008845F3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5B98010B20C9DD53008845F3 /* SideMenuViewController.swift */,
 				5B9800AC20C9902B008845F3 /* HomeViewController.swift */,
+				5B98010F20CA040E008845F3 /* BookingViewController.swift */,
+				5B98011120CA09A9008845F3 /* MyBookingViewController.swift */,
+				5B98011320CA09B6008845F3 /* ProfileViewController.swift */,
+				5B98011520CA09C2008845F3 /* LogoutViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -370,7 +388,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B98011220CA09A9008845F3 /* MyBookingViewController.swift in Sources */,
 				5B9800AD20C9902B008845F3 /* HomeViewController.swift in Sources */,
+				5B98010E20C9E4B6008845F3 /* FTNavigationController.swift in Sources */,
+				5B98010C20C9DD53008845F3 /* SideMenuViewController.swift in Sources */,
+				5B98011420CA09B6008845F3 /* ProfileViewController.swift in Sources */,
+				5B98011020CA040E008845F3 /* BookingViewController.swift in Sources */,
+				5B98011620CA09C2008845F3 /* LogoutViewController.swift in Sources */,
 				5B9800AB20C9902B008845F3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
