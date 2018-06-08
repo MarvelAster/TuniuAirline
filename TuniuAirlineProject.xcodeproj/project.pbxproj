@@ -10,7 +10,6 @@
 		5446E1950F4C17426F2992F8 /* Pods_TuniuAirlineProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC1708CDFBE00B4E3BECD1E /* Pods_TuniuAirlineProject.framework */; };
 		5B660EFDDF3467D2ED702C9E /* Pods_TuniuAirlineProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D09BC57BFB05A865C03D0F2 /* Pods_TuniuAirlineProjectTests.framework */; };
 		5B9800AB20C9902B008845F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9800AA20C9902B008845F3 /* AppDelegate.swift */; };
-		5B9800AD20C9902B008845F3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9800AC20C9902B008845F3 /* HomeViewController.swift */; };
 		5B9800B020C9902B008845F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9800AE20C9902B008845F3 /* Main.storyboard */; };
 		5B9800B220C9902D008845F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B9800B120C9902D008845F3 /* Assets.xcassets */; };
 		5B9800B520C9902D008845F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9800B320C9902D008845F3 /* LaunchScreen.storyboard */; };
@@ -23,6 +22,14 @@
 		5B98011220CA09A9008845F3 /* MyBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B98011120CA09A9008845F3 /* MyBookingViewController.swift */; };
 		5B98011420CA09B6008845F3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B98011320CA09B6008845F3 /* ProfileViewController.swift */; };
 		5B98011620CA09C2008845F3 /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B98011520CA09C2008845F3 /* LogoutViewController.swift */; };
+		5B98011820CA4C43008845F3 /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B98011720CA4C43008845F3 /* CalenderViewController.swift */; };
+		5B98011A20CA4E25008845F3 /* CalenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B98011920CA4E25008845F3 /* CalenderCell.swift */; };
+		5B98011C20CAC276008845F3 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B98011B20CAC276008845F3 /* Calendar.storyboard */; };
+		5B98012020CAF14D008845F3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B98011F20CAF14D008845F3 /* HomeViewController.swift */; };
+		A27B462520CA27E6001132E3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27B462420CA27E6001132E3 /* SignUpViewController.swift */; };
+		A27B462720CA2C53001132E3 /* FirebaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27B462620CA2C53001132E3 /* FirebaseHandler.swift */; };
+		A27B462920CA2D60001132E3 /* UploadPhotoIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27B462820CA2D60001132E3 /* UploadPhotoIDViewController.swift */; };
+		A2FDAB8720C9DDE1009D2D5E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FDAB8620C9DDE1009D2D5E /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +48,6 @@
 		3DC1708CDFBE00B4E3BECD1E /* Pods_TuniuAirlineProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuniuAirlineProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9800A720C9902B008845F3 /* TuniuAirlineProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuniuAirlineProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9800AA20C9902B008845F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5B9800AC20C9902B008845F3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5B9800AF20C9902B008845F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B9800B120C9902D008845F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B9800B420C9902D008845F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,7 +63,15 @@
 		5B98011120CA09A9008845F3 /* MyBookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingViewController.swift; sourceTree = "<group>"; };
 		5B98011320CA09B6008845F3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5B98011520CA09C2008845F3 /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
+		5B98011720CA4C43008845F3 /* CalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
+		5B98011920CA4E25008845F3 /* CalenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderCell.swift; sourceTree = "<group>"; };
+		5B98011B20CAC276008845F3 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		5B98011F20CAF14D008845F3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../../../../Downloads/HomeViewController.swift; sourceTree = "<group>"; };
 		80F61C3F87551F07EAF36BD1 /* Pods-TuniuAirlineProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuniuAirlineProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuniuAirlineProject/Pods-TuniuAirlineProject.release.xcconfig"; sourceTree = "<group>"; };
+		A27B462420CA27E6001132E3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		A27B462620CA2C53001132E3 /* FirebaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirebaseHandler.swift; path = Controller/FirebaseHandler.swift; sourceTree = SOURCE_ROOT; };
+		A27B462820CA2D60001132E3 /* UploadPhotoIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPhotoIDViewController.swift; sourceTree = "<group>"; };
+		A2FDAB8620C9DDE1009D2D5E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		BB4B6AC9CB7705AFB1C05710 /* Pods-TuniuAirlineProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuniuAirlineProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuniuAirlineProjectTests/Pods-TuniuAirlineProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF8832D425966612F63E529B /* Pods-TuniuAirlineProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuniuAirlineProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuniuAirlineProjectTests/Pods-TuniuAirlineProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +155,7 @@
 			children = (
 				5B98010520C9CB55008845F3 /* Login.storyboard */,
 				5B9800AE20C9902B008845F3 /* Main.storyboard */,
+				5B98011B20CAC276008845F3 /* Calendar.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -149,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				5B98010D20C9E4B6008845F3 /* FTNavigationController.swift */,
+				5B98011920CA4E25008845F3 /* CalenderCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -156,6 +172,7 @@
 		5B98010920C9CC5F008845F3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A27B462620CA2C53001132E3 /* FirebaseHandler.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -163,12 +180,16 @@
 		5B98010A20C9CC66008845F3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5B98011F20CAF14D008845F3 /* HomeViewController.swift */,
+				A2FDAB8620C9DDE1009D2D5E /* SignInViewController.swift */,
+				A27B462420CA27E6001132E3 /* SignUpViewController.swift */,
+				A27B462820CA2D60001132E3 /* UploadPhotoIDViewController.swift */,
 				5B98010B20C9DD53008845F3 /* SideMenuViewController.swift */,
-				5B9800AC20C9902B008845F3 /* HomeViewController.swift */,
 				5B98010F20CA040E008845F3 /* BookingViewController.swift */,
 				5B98011120CA09A9008845F3 /* MyBookingViewController.swift */,
 				5B98011320CA09B6008845F3 /* ProfileViewController.swift */,
 				5B98011520CA09C2008845F3 /* LogoutViewController.swift */,
+				5B98011720CA4C43008845F3 /* CalenderViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -269,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B98011C20CAC276008845F3 /* Calendar.storyboard in Resources */,
 				5B9800B520C9902D008845F3 /* LaunchScreen.storyboard in Resources */,
 				5B9800CB20C99053008845F3 /* GoogleService-Info.plist in Resources */,
 				5B9800B220C9902D008845F3 /* Assets.xcassets in Resources */,
@@ -355,6 +377,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/TWMessageBarManager/TWMessageBarManager.framework",
@@ -370,6 +393,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TWMessageBarManager.framework",
@@ -388,14 +412,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A27B462720CA2C53001132E3 /* FirebaseHandler.swift in Sources */,
 				5B98011220CA09A9008845F3 /* MyBookingViewController.swift in Sources */,
-				5B9800AD20C9902B008845F3 /* HomeViewController.swift in Sources */,
 				5B98010E20C9E4B6008845F3 /* FTNavigationController.swift in Sources */,
 				5B98010C20C9DD53008845F3 /* SideMenuViewController.swift in Sources */,
 				5B98011420CA09B6008845F3 /* ProfileViewController.swift in Sources */,
+				5B98012020CAF14D008845F3 /* HomeViewController.swift in Sources */,
 				5B98011020CA040E008845F3 /* BookingViewController.swift in Sources */,
+				5B98011820CA4C43008845F3 /* CalenderViewController.swift in Sources */,
+				5B98011A20CA4E25008845F3 /* CalenderCell.swift in Sources */,
 				5B98011620CA09C2008845F3 /* LogoutViewController.swift in Sources */,
 				5B9800AB20C9902B008845F3 /* AppDelegate.swift in Sources */,
+				A27B462920CA2D60001132E3 /* UploadPhotoIDViewController.swift in Sources */,
+				A27B462520CA27E6001132E3 /* SignUpViewController.swift in Sources */,
+				A2FDAB8720C9DDE1009D2D5E /* SignInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

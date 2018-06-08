@@ -13,6 +13,7 @@ import FirebaseAuth
 import Foundation
 import GoogleSignIn
 import FBSDKLoginKit
+
 class LogoutViewController: UIViewController {
 
     @IBAction func btnClick(_ sender: Any) {
@@ -31,6 +32,7 @@ class LogoutViewController: UIViewController {
             GIDSignIn.sharedInstance().signOut()
             FBSDKLoginManager().logOut()
             try? Auth.auth().signOut()
+            self.logout()
         })
         alter.addAction(actionCancel)
         alter.addAction(actionYes)
@@ -51,20 +53,10 @@ class LogoutViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         logoutPopup()
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func logout() {
+        try! Auth.auth().signOut()
+        let storyboard =  UIStoryboard(name: "Login", bundle: nil)
+        let rootController = storyboard.instantiateViewController(withIdentifier: "navigationSignIn")
+        UIApplication.shared.keyWindow?.rootViewController = rootController
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

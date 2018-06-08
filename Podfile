@@ -16,7 +16,7 @@ target 'TuniuAirlineProject' do
   pod 'FBSDKLoginKit'
   pod 'Firebase/Messaging'
   pod 'ECSlidingViewController', '~> 2.0.3'
-  
+  pod 'JTAppleCalendar'
   
   
   target 'TuniuAirlineProjectTests' do
