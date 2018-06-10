@@ -15,10 +15,50 @@ import FirebaseStorage
 
 final class FirebaseHandler{
     static let sharedInstance = FirebaseHandler()
-    
+    var userRef : DatabaseReference!
+    var airportRef : DatabaseReference!
     private init(){
         
     }
+    //MARK: -Chuanqi
+    func databaseInit() {
+        userRef = Database.database().reference().child("UserInfo")
+        airportRef = Database.database().reference().child("Airport")
+        
+    }
+    func databaseQueryByCityName(city : String , completion:@escaping ([Airport]) -> Void) {
+        databaseInit()
+        airportRef.queryOrdered(byChild: "city").queryStarting(atValue: city).queryEnding(atValue: "\(city)\u{f8ff}").observe(.value, with: {
+            (snapshot) in
+            var airport : [Airport] = []
+            let dispatchgroup = DispatchGroup()
+            if let item = snapshot.value as? Dictionary<String, Any>{
+                for (_, value) in item {
+                    dispatchgroup.enter()
+                    let dict = value as! Dictionary<String, Any>
+                    let city = dict["city"] as? String ?? ""
+                    let country = dict["country"] as? String ?? ""
+                    let elevation = dict["elevation"] as? Int ?? 0
+                    let iata = dict["iata"] as? String ?? ""
+                    let icao = dict["icao"] as? String ?? ""
+                    let lat = dict["lat"] as? Double ?? 0.0
+                    let lon = dict["lon"] as? Double ?? 0.0
+                    let name = dict["name"] as? String ?? ""
+                    let state = dict["state"] as? String ?? ""
+                    let tz = dict["tz"] as? String ?? ""
+                    let tmpAirport = Airport(city: city, country: country, elevation: elevation, iata: iata, icao: icao, lat: lat, lon: lon, name: name, state: state, tz: tz)
+                    airport.append(tmpAirport)
+                    dispatchgroup.leave()
+                }
+                dispatchgroup.notify(queue: DispatchQueue.main, execute: {
+                    completion(airport)
+                })
+            }
+        })
+    }
+    
+    
+    //MARK: -Zhongda
     func uploadUserInfo(userRef:DatabaseReference? ,name: String, email: String, password: String, completion:@escaping ()->Void) {
         Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
             if let err = error{
