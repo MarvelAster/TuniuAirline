@@ -11,18 +11,25 @@ import FirebaseDatabase
 import TWMessageBarManager
 import FirebaseAuth
 import FirebaseStorage
+import GoogleSignIn
 
-class SignInViewController: UIViewController {
+class SignInViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signUpBtn: UIButton!
     
     var userStorage: StorageReference?
+    var userRef: DatabaseReference?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self
+        
         userStorage = Storage.storage().reference()
+        userRef = Database.database().reference()
+        
         signUpBtn.layer.borderWidth = 1.0
         signUpBtn.layer.borderColor = UIColor.darkGray.cgColor
     }
@@ -40,7 +47,6 @@ class SignInViewController: UIViewController {
                 FirebaseHandler.sharedInstance.checkIfUserHasPhotoID(userStorage: self.userStorage, completion: { (doesHavePhotoID) in
                     if doesHavePhotoID == false{
                         let controller = self.storyboard?.instantiateViewController(withIdentifier: "UploadPhotoIDViewController") as! UploadPhotoIDViewController
-                        //self.navigationController?.pushViewController(controller, animated: true)
                         self.navigationController?.present(controller, animated: true, completion: nil)
                     }else{
                         let storyboard =  UIStoryboard(name: "Main", bundle: nil)
@@ -52,6 +58,42 @@ class SignInViewController: UIViewController {
         }
     }
     
-    @IBAction func signUpBtnAction(_ sender: UIButton) {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let _ = error{
+            return
+        }
+        guard let authentication = user.authentication else{
+            return
+        }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+        Auth.auth().signIn(with:credential){(user, error) in
+            if let err = error{
+                TWMessageBarManager().showMessage(withTitle: "Error", description: err.localizedDescription, type:  .error)
+            }else{
+                FirebaseHandler.sharedInstance.checkIfCurrentUserExistWhenGoogleSignIn(userId: (user?.uid)!, userRef: self.userRef, completion: { (isExist) in
+                    if isExist == true{
+                        FirebaseHandler.sharedInstance.checkIfUserHasPhotoID(userStorage: self.userStorage, completion: { (doesHavePhotoID) in
+                            if doesHavePhotoID == false{
+                                let controller = self.storyboard?.instantiateViewController(withIdentifier: "UploadPhotoIDViewController") as! UploadPhotoIDViewController
+                                self.navigationController?.present(controller, animated: true, completion: nil)
+                            }else{
+                                let storyboard =  UIStoryboard(name: "Main", bundle: nil)
+                                let rootController = storyboard.instantiateViewController(withIdentifier: "ECSlidingViewController")
+                                UIApplication.shared.keyWindow?.rootViewController = rootController
+                            }
+                        })
+                    }else{
+                        FirebaseHandler.sharedInstance.googleSignInUploadUserInfo(userId: (user?.uid)!, name: (user?.displayName!)!, email: (user?.email!)!, userRef: self.userRef)
+                        let controller = self.storyboard?.instantiateViewController(withIdentifier: "UploadPhotoIDViewController") as! UploadPhotoIDViewController
+                        self.navigationController?.present(controller, animated: true, completion: nil)
+                    }
+                })
+            }
+        }
     }
+    
+    @IBAction func googleSignInBtn(_ sender: GIDSignInButton) {
+        GIDSignIn.sharedInstance().signIn()
+    }
+    
 }

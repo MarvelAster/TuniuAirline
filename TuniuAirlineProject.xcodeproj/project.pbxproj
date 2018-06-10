@@ -26,6 +26,9 @@
 		5B98011A20CA4E25008845F3 /* CalenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B98011920CA4E25008845F3 /* CalenderCell.swift */; };
 		5B98011C20CAC276008845F3 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B98011B20CAC276008845F3 /* Calendar.storyboard */; };
 		5B98012020CAF14D008845F3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B98011F20CAF14D008845F3 /* HomeViewController.swift */; };
+		5B98012220CB0F40008845F3 /* AirportSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B98012120CB0F40008845F3 /* AirportSearchViewController.swift */; };
+		5B98012420CB118E008845F3 /* CitySearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B98012320CB118E008845F3 /* CitySearchTableViewCell.swift */; };
+		5B98012620CC2DFF008845F3 /* AirportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B98012520CC2DFF008845F3 /* AirportModel.swift */; };
 		A27B462520CA27E6001132E3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27B462420CA27E6001132E3 /* SignUpViewController.swift */; };
 		A27B462720CA2C53001132E3 /* FirebaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27B462620CA2C53001132E3 /* FirebaseHandler.swift */; };
 		A27B462920CA2D60001132E3 /* UploadPhotoIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27B462820CA2D60001132E3 /* UploadPhotoIDViewController.swift */; };
@@ -67,6 +70,9 @@
 		5B98011920CA4E25008845F3 /* CalenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderCell.swift; sourceTree = "<group>"; };
 		5B98011B20CAC276008845F3 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		5B98011F20CAF14D008845F3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../../../../Downloads/HomeViewController.swift; sourceTree = "<group>"; };
+		5B98012120CB0F40008845F3 /* AirportSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportSearchViewController.swift; sourceTree = "<group>"; };
+		5B98012320CB118E008845F3 /* CitySearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchTableViewCell.swift; sourceTree = "<group>"; };
+		5B98012520CC2DFF008845F3 /* AirportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportModel.swift; sourceTree = "<group>"; };
 		80F61C3F87551F07EAF36BD1 /* Pods-TuniuAirlineProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuniuAirlineProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuniuAirlineProject/Pods-TuniuAirlineProject.release.xcconfig"; sourceTree = "<group>"; };
 		A27B462420CA27E6001132E3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A27B462620CA2C53001132E3 /* FirebaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirebaseHandler.swift; path = Controller/FirebaseHandler.swift; sourceTree = SOURCE_ROOT; };
@@ -165,6 +171,7 @@
 			children = (
 				5B98010D20C9E4B6008845F3 /* FTNavigationController.swift */,
 				5B98011920CA4E25008845F3 /* CalenderCell.swift */,
+				5B98012320CB118E008845F3 /* CitySearchTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				A27B462620CA2C53001132E3 /* FirebaseHandler.swift */,
+				5B98012520CC2DFF008845F3 /* AirportModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,6 +198,7 @@
 				5B98011320CA09B6008845F3 /* ProfileViewController.swift */,
 				5B98011520CA09C2008845F3 /* LogoutViewController.swift */,
 				5B98011720CA4C43008845F3 /* CalenderViewController.swift */,
+				5B98012120CB0F40008845F3 /* AirportSearchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -416,11 +425,14 @@
 				5B98011220CA09A9008845F3 /* MyBookingViewController.swift in Sources */,
 				5B98010E20C9E4B6008845F3 /* FTNavigationController.swift in Sources */,
 				5B98010C20C9DD53008845F3 /* SideMenuViewController.swift in Sources */,
+				5B98012620CC2DFF008845F3 /* AirportModel.swift in Sources */,
 				5B98011420CA09B6008845F3 /* ProfileViewController.swift in Sources */,
 				5B98012020CAF14D008845F3 /* HomeViewController.swift in Sources */,
 				5B98011020CA040E008845F3 /* BookingViewController.swift in Sources */,
+				5B98012220CB0F40008845F3 /* AirportSearchViewController.swift in Sources */,
 				5B98011820CA4C43008845F3 /* CalenderViewController.swift in Sources */,
 				5B98011A20CA4E25008845F3 /* CalenderCell.swift in Sources */,
+				5B98012420CB118E008845F3 /* CitySearchTableViewCell.swift in Sources */,
 				5B98011620CA09C2008845F3 /* LogoutViewController.swift in Sources */,
 				5B9800AB20C9902B008845F3 /* AppDelegate.swift in Sources */,
 				A27B462920CA2D60001132E3 /* UploadPhotoIDViewController.swift in Sources */,
