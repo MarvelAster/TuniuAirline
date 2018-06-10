@@ -8,13 +8,17 @@
 
 import UIKit
 import JTAppleCalendar
+protocol CalendarDelegate {
+    func passDate(tag: Int, date : String)
+}
 class CalenderViewController: UIViewController {
     let formatter = DateFormatter()
     @IBOutlet weak var collectionView: JTAppleCalendarView!
     @IBOutlet weak var year: UILabel!
     @IBOutlet weak var month: UILabel!
     var selectedDate : Int?
-    
+    var delegate : CalendarDelegate?
+    var tag :Int?
     
     @IBAction func cancelClick(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -24,6 +28,7 @@ class CalenderViewController: UIViewController {
             dismiss(animated: true, completion: nil)
         } else {
             print("Month : \(month.text!) Date : \(selectedDate!) Year : \(year.text!)")
+            self.delegate?.passDate(tag : self.tag!, date: "\(month.text!)/\(selectedDate!)/\(year.text!)")
             dismiss(animated: true, completion: nil)
         }
     }

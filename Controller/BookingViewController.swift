@@ -8,7 +8,8 @@
 
 import UIKit
 import ECSlidingViewController
-class BookingViewController: UIViewController {
+class BookingViewController: UIViewController,UITextFieldDelegate, AirportSearchDelegate, CalendarDelegate {
+    
     @IBOutlet weak var sourceTextfield: UITextField!
     
     @IBOutlet weak var destinationTextfield: UITextField!
@@ -24,17 +25,31 @@ class BookingViewController: UIViewController {
     @IBAction func findFlightsClick(_ sender: Any) {
     }
     
+    //MARK: -AirportSearchDelegate
+    func airportSelect(tag : Int, airportIata: String, airportInfo: Airport) {
+        if tag == 101 {
+            sourceTextfield.text = airportIata
+        } else{
+            destinationTextfield.text = airportIata
+        }
+    }
     
-    
-    @IBAction func calender1Click(_ sender: Any) {
+    //MARK: -CalendarDelegate
+    func passDate(tag: Int, date: String) {
+        if tag == 1 {
+            dateTextfield1.text = date
+        } else {
+            dateTextfield2.text = date
+        }
+    }
+    @IBAction func calender1Click(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "CalenderViewController") as! CalenderViewController
+        controller.tag = sender.tag
+        controller.delegate = self
         present(controller, animated: true, completion: nil)
     }
     
-    @IBAction func calender2Click(_ sender: Any) {
-        
-    }
     @IBAction func segment(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             dateTextfield2.isHidden = false
@@ -78,6 +93,14 @@ class BookingViewController: UIViewController {
         view.backgroundColor = UIColor(patternImage: UIImage(named: "generalbackground")!)
     }
     
+    //MARK: -TextFieldDelegate
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "AirportSearchViewController") as! AirportSearchViewController
+        controller.tag = textField.tag
+        controller.delegate = self
+        present(controller, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

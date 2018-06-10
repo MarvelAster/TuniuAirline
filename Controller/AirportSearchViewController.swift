@@ -8,11 +8,11 @@
 
 import UIKit
 protocol AirportSearchDelegate {
-    func airportSelect(airportIata: String, airportInfo : Airport)
+    func airportSelect(tag : Int, airportIata: String, airportInfo : Airport)
 }
 class AirportSearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
-    
+    var tag :Int?
     
     
     var airport : [Airport]?
@@ -52,7 +52,8 @@ class AirportSearchViewController: UIViewController, UITableViewDelegate, UITabl
             passValue = "\(curCity!)"
         }
         print(passValue!)
-        delegate?.airportSelect(airportIata : passValue!, airportInfo : curAirport)
+        delegate?.airportSelect(tag : self.tag!, airportIata : passValue!, airportInfo : curAirport)
+        dismiss(animated: true, completion: nil)
     }
     //MARK: -TableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
