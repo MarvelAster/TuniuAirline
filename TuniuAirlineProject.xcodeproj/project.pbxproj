@@ -32,6 +32,8 @@
 		A27B462520CA27E6001132E3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27B462420CA27E6001132E3 /* SignUpViewController.swift */; };
 		A27B462720CA2C53001132E3 /* FirebaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27B462620CA2C53001132E3 /* FirebaseHandler.swift */; };
 		A27B462920CA2D60001132E3 /* UploadPhotoIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27B462820CA2D60001132E3 /* UploadPhotoIDViewController.swift */; };
+		A2B00D9720CE1A5F0082B21C /* CouponModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B00D9620CE1A5F0082B21C /* CouponModel.swift */; };
+		A2B00D9920CE25930082B21C /* CouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B00D9820CE25930082B21C /* CouponViewController.swift */; };
 		A2FDAB8720C9DDE1009D2D5E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FDAB8620C9DDE1009D2D5E /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +79,8 @@
 		A27B462420CA27E6001132E3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A27B462620CA2C53001132E3 /* FirebaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirebaseHandler.swift; path = Model/FirebaseHandler.swift; sourceTree = SOURCE_ROOT; };
 		A27B462820CA2D60001132E3 /* UploadPhotoIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPhotoIDViewController.swift; sourceTree = "<group>"; };
+		A2B00D9620CE1A5F0082B21C /* CouponModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponModel.swift; sourceTree = "<group>"; };
+		A2B00D9820CE25930082B21C /* CouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponViewController.swift; sourceTree = "<group>"; };
 		A2FDAB8620C9DDE1009D2D5E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		BB4B6AC9CB7705AFB1C05710 /* Pods-TuniuAirlineProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuniuAirlineProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuniuAirlineProjectTests/Pods-TuniuAirlineProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF8832D425966612F63E529B /* Pods-TuniuAirlineProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuniuAirlineProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuniuAirlineProjectTests/Pods-TuniuAirlineProjectTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 			children = (
 				A27B462620CA2C53001132E3 /* FirebaseHandler.swift */,
 				5B98012520CC2DFF008845F3 /* AirportModel.swift */,
+				A2B00D9620CE1A5F0082B21C /* CouponModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 				5B98011520CA09C2008845F3 /* LogoutViewController.swift */,
 				5B98011720CA4C43008845F3 /* CalenderViewController.swift */,
 				5B98012120CB0F40008845F3 /* AirportSearchViewController.swift */,
+				A2B00D9820CE25930082B21C /* CouponViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -432,8 +438,10 @@
 				5B98012220CB0F40008845F3 /* AirportSearchViewController.swift in Sources */,
 				5B98011820CA4C43008845F3 /* CalenderViewController.swift in Sources */,
 				5B98011A20CA4E25008845F3 /* CalenderCell.swift in Sources */,
+				A2B00D9720CE1A5F0082B21C /* CouponModel.swift in Sources */,
 				5B98012420CB118E008845F3 /* CitySearchTableViewCell.swift in Sources */,
 				5B98011620CA09C2008845F3 /* LogoutViewController.swift in Sources */,
+				A2B00D9920CE25930082B21C /* CouponViewController.swift in Sources */,
 				5B9800AB20C9902B008845F3 /* AppDelegate.swift in Sources */,
 				A27B462920CA2D60001132E3 /* UploadPhotoIDViewController.swift in Sources */,
 				A27B462520CA27E6001132E3 /* SignUpViewController.swift in Sources */,

@@ -17,7 +17,34 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="fcx-in-s6q">
+                                <rect key="frame" x="0.0" y="192" width="375" height="37"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="Npo-lk-jdW"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XQz-Jy-iuV">
+                                <rect key="frame" x="0.0" y="64" width="375" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="h70-4i-grs"/>
+                                    <constraint firstAttribute="height" constant="128" id="xMR-wV-D70"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="xqn-6D-egK"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fcx-in-s6q" firstAttribute="top" secondItem="XQz-Jy-iuV" secondAttribute="bottom" id="CUw-NB-xYA"/>
+                            <constraint firstItem="XQz-Jy-iuV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EoS-hu-GaA"/>
+                            <constraint firstItem="XQz-Jy-iuV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="h8C-Ci-Zjl"/>
+                            <constraint firstItem="fcx-in-s6q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="o7x-YY-NVO"/>
+                            <constraint firstItem="fcx-in-s6q" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="toK-HZ-gBU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="cP0-WA-pC0">
@@ -28,10 +55,62 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="pageControl" destination="fcx-in-s6q" id="cYN-fy-S6v"/>
+                        <outlet property="scrollView" destination="XQz-Jy-iuV" id="5hW-br-q0q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pox-6w-VJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="41"/>
+            <point key="canvasLocation" x="972" y="40.929535232383813"/>
+        </scene>
+        <!--Coupon View Controller-->
+        <scene sceneID="1ui-ce-NYJ">
+            <objects>
+                <viewController storyboardIdentifier="CouponViewController" id="6SE-j8-Kge" customClass="CouponViewController" customModule="TuniuAirlineProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="27M-E8-2SC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d1f-0R-WSo">
+                                <rect key="frame" x="54" y="52" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfh-FS-nN4">
+                                <rect key="frame" x="125" y="225" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0Q-nc-mO8">
+                                <rect key="frame" x="87" y="439" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBf-71-vny">
+                                <rect key="frame" x="188" y="434" width="36" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Copy"/>
+                                <connections>
+                                    <action selector="copyBtnAction:" destination="6SE-j8-Kge" eventType="touchUpInside" id="lEA-sp-zIE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="KSK-at-ARA"/>
+                    </view>
+                    <connections>
+                        <outlet property="couponCodeLabel" destination="Z0Q-nc-mO8" id="wXg-S0-VRr"/>
+                        <outlet property="couponImage" destination="d1f-0R-WSo" id="HuS-NI-1gw"/>
+                        <outlet property="descriptionLabel" destination="bfh-FS-nN4" id="SW0-lX-yOm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4TO-dY-e12" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1705" y="41"/>
         </scene>
         <!--Booking View Controller-->
         <scene sceneID="zOx-D2-nBv">
