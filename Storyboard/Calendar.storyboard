@@ -278,5 +278,64 @@
             </objects>
             <point key="canvasLocation" x="2498.4000000000001" y="741.67916041979015"/>
         </scene>
+        <!--Flight Search Result View Controller-->
+        <scene sceneID="lJI-3Q-EW4">
+            <objects>
+                <viewController storyboardIdentifier="FlightSearchResultViewController" id="t5n-tA-W8u" customClass="FlightSearchResultViewController" customModule="TuniuAirlineProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Eby-Sv-Vp2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUG-hc-b5E">
+                                <rect key="frame" x="0.0" y="64" width="375" height="24"/>
+                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4y-LS-mZx">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ffC-x3-SPN"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem id="vD0-oB-yDC"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WOP-wP-dhj">
+                                <rect key="frame" x="0.0" y="88" width="375" height="579"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FlightSearchResultTableViewCell" rowHeight="153" id="xrB-Hd-omA" customClass="FlightSearchResultTableViewCell" customModule="TuniuAirlineProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="153"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xrB-Hd-omA" id="ow1-Pw-wGH">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="152.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WOP-wP-dhj" firstAttribute="top" secondItem="rUG-hc-b5E" secondAttribute="bottom" id="7Is-2W-3Cq"/>
+                            <constraint firstItem="CUp-RT-e1r" firstAttribute="trailing" secondItem="WOP-wP-dhj" secondAttribute="trailing" id="8G1-La-puj"/>
+                            <constraint firstItem="WOP-wP-dhj" firstAttribute="leading" secondItem="CUp-RT-e1r" secondAttribute="leading" id="AZ8-D4-uhQ"/>
+                            <constraint firstItem="x4y-LS-mZx" firstAttribute="trailing" secondItem="CUp-RT-e1r" secondAttribute="trailing" id="H3v-Zc-XzN"/>
+                            <constraint firstItem="x4y-LS-mZx" firstAttribute="top" secondItem="CUp-RT-e1r" secondAttribute="top" id="MaO-Ni-03a"/>
+                            <constraint firstItem="CUp-RT-e1r" firstAttribute="bottom" secondItem="WOP-wP-dhj" secondAttribute="bottom" id="RuF-kn-R6g"/>
+                            <constraint firstItem="rUG-hc-b5E" firstAttribute="leading" secondItem="CUp-RT-e1r" secondAttribute="leading" id="e6Z-mx-1JC"/>
+                            <constraint firstItem="CUp-RT-e1r" firstAttribute="trailing" secondItem="rUG-hc-b5E" secondAttribute="trailing" id="f9k-4a-9nn"/>
+                            <constraint firstItem="rUG-hc-b5E" firstAttribute="top" secondItem="x4y-LS-mZx" secondAttribute="bottom" id="iuh-tc-vzl"/>
+                            <constraint firstItem="x4y-LS-mZx" firstAttribute="leading" secondItem="CUp-RT-e1r" secondAttribute="leading" id="lBs-VR-diW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CUp-RT-e1r"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E0u-Fh-pzB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3257" y="740"/>
+        </scene>
     </scenes>
 </document>

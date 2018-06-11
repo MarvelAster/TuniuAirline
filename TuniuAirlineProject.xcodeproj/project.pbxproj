@@ -29,6 +29,9 @@
 		5B98012220CB0F40008845F3 /* AirportSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B98012120CB0F40008845F3 /* AirportSearchViewController.swift */; };
 		5B98012420CB118E008845F3 /* CitySearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B98012320CB118E008845F3 /* CitySearchTableViewCell.swift */; };
 		5B98012620CC2DFF008845F3 /* AirportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B98012520CC2DFF008845F3 /* AirportModel.swift */; };
+		5BD4F7F720CECFC000F3A7AC /* FlightSearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4F7F620CECFC000F3A7AC /* FlightSearchResultViewController.swift */; };
+		5BD4F7F920CED0CB00F3A7AC /* FlightSearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4F7F820CED0CB00F3A7AC /* FlightSearchResultTableViewCell.swift */; };
+		5BD4F7FD20CF203500F3A7AC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4F7FC20CF203500F3A7AC /* BaseViewController.swift */; };
 		A27B462520CA27E6001132E3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27B462420CA27E6001132E3 /* SignUpViewController.swift */; };
 		A27B462720CA2C53001132E3 /* FirebaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27B462620CA2C53001132E3 /* FirebaseHandler.swift */; };
 		A27B462920CA2D60001132E3 /* UploadPhotoIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27B462820CA2D60001132E3 /* UploadPhotoIDViewController.swift */; };
@@ -75,6 +78,9 @@
 		5B98012120CB0F40008845F3 /* AirportSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportSearchViewController.swift; sourceTree = "<group>"; };
 		5B98012320CB118E008845F3 /* CitySearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchTableViewCell.swift; sourceTree = "<group>"; };
 		5B98012520CC2DFF008845F3 /* AirportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportModel.swift; sourceTree = "<group>"; };
+		5BD4F7F620CECFC000F3A7AC /* FlightSearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSearchResultViewController.swift; sourceTree = "<group>"; };
+		5BD4F7F820CED0CB00F3A7AC /* FlightSearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSearchResultTableViewCell.swift; sourceTree = "<group>"; };
+		5BD4F7FC20CF203500F3A7AC /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		80F61C3F87551F07EAF36BD1 /* Pods-TuniuAirlineProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuniuAirlineProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuniuAirlineProject/Pods-TuniuAirlineProject.release.xcconfig"; sourceTree = "<group>"; };
 		A27B462420CA27E6001132E3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A27B462620CA2C53001132E3 /* FirebaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirebaseHandler.swift; path = Model/FirebaseHandler.swift; sourceTree = SOURCE_ROOT; };
@@ -176,6 +182,7 @@
 				5B98010D20C9E4B6008845F3 /* FTNavigationController.swift */,
 				5B98011920CA4E25008845F3 /* CalenderCell.swift */,
 				5B98012320CB118E008845F3 /* CitySearchTableViewCell.swift */,
+				5BD4F7F820CED0CB00F3A7AC /* FlightSearchResultTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -205,6 +212,8 @@
 				5B98011720CA4C43008845F3 /* CalenderViewController.swift */,
 				5B98012120CB0F40008845F3 /* AirportSearchViewController.swift */,
 				A2B00D9820CE25930082B21C /* CouponViewController.swift */,
+				5BD4F7FC20CF203500F3A7AC /* BaseViewController.swift */,
+				5BD4F7F620CECFC000F3A7AC /* FlightSearchResultViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -431,13 +440,16 @@
 				5B98011220CA09A9008845F3 /* MyBookingViewController.swift in Sources */,
 				5B96864A20CE2DDD00909163 /* HomeViewController.swift in Sources */,
 				5B98010E20C9E4B6008845F3 /* FTNavigationController.swift in Sources */,
+				5BD4F7F920CED0CB00F3A7AC /* FlightSearchResultTableViewCell.swift in Sources */,
 				5B98010C20C9DD53008845F3 /* SideMenuViewController.swift in Sources */,
 				5B98012620CC2DFF008845F3 /* AirportModel.swift in Sources */,
 				5B98011420CA09B6008845F3 /* ProfileViewController.swift in Sources */,
+				5BD4F7F720CECFC000F3A7AC /* FlightSearchResultViewController.swift in Sources */,
 				5B98011020CA040E008845F3 /* BookingViewController.swift in Sources */,
 				5B98012220CB0F40008845F3 /* AirportSearchViewController.swift in Sources */,
 				5B98011820CA4C43008845F3 /* CalenderViewController.swift in Sources */,
 				5B98011A20CA4E25008845F3 /* CalenderCell.swift in Sources */,
+				5BD4F7FD20CF203500F3A7AC /* BaseViewController.swift in Sources */,
 				A2B00D9720CE1A5F0082B21C /* CouponModel.swift in Sources */,
 				5B98012420CB118E008845F3 /* CitySearchTableViewCell.swift in Sources */,
 				5B98011620CA09C2008845F3 /* LogoutViewController.swift in Sources */,
@@ -609,6 +621,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RQAE768Z9N;
 				INFOPLIST_FILE = TuniuAirlineProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -628,6 +641,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RQAE768Z9N;
 				INFOPLIST_FILE = TuniuAirlineProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
