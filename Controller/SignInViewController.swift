@@ -32,6 +32,8 @@ class SignInViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDele
         
         signUpBtn.layer.borderWidth = 1.0
         signUpBtn.layer.borderColor = UIColor.darkGray.cgColor
+        
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
