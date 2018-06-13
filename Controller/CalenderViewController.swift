@@ -19,6 +19,7 @@ class CalenderViewController: UIViewController {
     var selectedDate : Int?
     var delegate : CalendarDelegate?
     var tag :Int?
+    var monthShow : String?
     
     @IBAction func cancelClick(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -28,7 +29,7 @@ class CalenderViewController: UIViewController {
             dismiss(animated: true, completion: nil)
         } else {
             print("Month : \(month.text!) Date : \(selectedDate!) Year : \(year.text!)")
-            self.delegate?.passDate(tag : self.tag!, date: "\(month.text!)/\(selectedDate!)/\(year.text!)")
+            self.delegate?.passDate(tag : self.tag!, date: "\(year.text!)/\(monthShow!)/\(selectedDate!)")
             dismiss(animated: true, completion: nil)
         }
     }
@@ -49,6 +50,9 @@ class CalenderViewController: UIViewController {
         
         formatter.dateFormat = "MMMM"
         month.text = formatter.string(from: date)
+        
+        formatter.dateFormat = "MM"
+        monthShow = formatter.string(from: date)
     }
     func handleCelltextColor(view : JTAppleCell?, cellState: CellState) {
         guard let validCell = view as? CalenderCell else {

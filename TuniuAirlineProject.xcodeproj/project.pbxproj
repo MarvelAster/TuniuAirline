@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5446E1950F4C17426F2992F8 /* Pods_TuniuAirlineProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC1708CDFBE00B4E3BECD1E /* Pods_TuniuAirlineProject.framework */; };
 		5B660EFDDF3467D2ED702C9E /* Pods_TuniuAirlineProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D09BC57BFB05A865C03D0F2 /* Pods_TuniuAirlineProjectTests.framework */; };
+		5B80E63020D0B9AB0061CB8C /* FlightDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B80E62F20D0B9AB0061CB8C /* FlightDetailViewController.swift */; };
+		5B80E63220D0CF390061CB8C /* FlightDetialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B80E63120D0CF390061CB8C /* FlightDetialTableViewCell.swift */; };
 		5B96864A20CE2DDD00909163 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B96864920CE2DDD00909163 /* HomeViewController.swift */; };
 		5B9800AB20C9902B008845F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9800AA20C9902B008845F3 /* AppDelegate.swift */; };
 		5B9800B020C9902B008845F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9800AE20C9902B008845F3 /* Main.storyboard */; };
@@ -32,6 +34,9 @@
 		5BD4F7F720CECFC000F3A7AC /* FlightSearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4F7F620CECFC000F3A7AC /* FlightSearchResultViewController.swift */; };
 		5BD4F7F920CED0CB00F3A7AC /* FlightSearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4F7F820CED0CB00F3A7AC /* FlightSearchResultTableViewCell.swift */; };
 		5BD4F7FD20CF203500F3A7AC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4F7FC20CF203500F3A7AC /* BaseViewController.swift */; };
+		5BD4F7FF20CF34E500F3A7AC /* FlightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4F7FE20CF34E500F3A7AC /* FlightModel.swift */; };
+		5BD4F80120CF458900F3A7AC /* FlightStatsAPIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4F80020CF458900F3A7AC /* FlightStatsAPIHandler.swift */; };
+		5BD4F80320CF48C800F3A7AC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4F80220CF48C800F3A7AC /* Constants.swift */; };
 		A27B462520CA27E6001132E3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27B462420CA27E6001132E3 /* SignUpViewController.swift */; };
 		A27B462720CA2C53001132E3 /* FirebaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27B462620CA2C53001132E3 /* FirebaseHandler.swift */; };
 		A27B462920CA2D60001132E3 /* UploadPhotoIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27B462820CA2D60001132E3 /* UploadPhotoIDViewController.swift */; };
@@ -54,6 +59,8 @@
 		227DD92D7279E99C7CAED100 /* Pods-TuniuAirlineProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuniuAirlineProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuniuAirlineProject/Pods-TuniuAirlineProject.debug.xcconfig"; sourceTree = "<group>"; };
 		3D09BC57BFB05A865C03D0F2 /* Pods_TuniuAirlineProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuniuAirlineProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC1708CDFBE00B4E3BECD1E /* Pods_TuniuAirlineProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuniuAirlineProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B80E62F20D0B9AB0061CB8C /* FlightDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailViewController.swift; sourceTree = "<group>"; };
+		5B80E63120D0CF390061CB8C /* FlightDetialTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetialTableViewCell.swift; sourceTree = "<group>"; };
 		5B96864920CE2DDD00909163 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5B9800A720C9902B008845F3 /* TuniuAirlineProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuniuAirlineProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9800AA20C9902B008845F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +88,9 @@
 		5BD4F7F620CECFC000F3A7AC /* FlightSearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSearchResultViewController.swift; sourceTree = "<group>"; };
 		5BD4F7F820CED0CB00F3A7AC /* FlightSearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSearchResultTableViewCell.swift; sourceTree = "<group>"; };
 		5BD4F7FC20CF203500F3A7AC /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		5BD4F7FE20CF34E500F3A7AC /* FlightModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightModel.swift; sourceTree = "<group>"; };
+		5BD4F80020CF458900F3A7AC /* FlightStatsAPIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightStatsAPIHandler.swift; sourceTree = "<group>"; };
+		5BD4F80220CF48C800F3A7AC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		80F61C3F87551F07EAF36BD1 /* Pods-TuniuAirlineProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuniuAirlineProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuniuAirlineProject/Pods-TuniuAirlineProject.release.xcconfig"; sourceTree = "<group>"; };
 		A27B462420CA27E6001132E3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A27B462620CA2C53001132E3 /* FirebaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirebaseHandler.swift; path = Model/FirebaseHandler.swift; sourceTree = SOURCE_ROOT; };
@@ -183,6 +193,7 @@
 				5B98011920CA4E25008845F3 /* CalenderCell.swift */,
 				5B98012320CB118E008845F3 /* CitySearchTableViewCell.swift */,
 				5BD4F7F820CED0CB00F3A7AC /* FlightSearchResultTableViewCell.swift */,
+				5B80E63120D0CF390061CB8C /* FlightDetialTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -191,8 +202,11 @@
 			isa = PBXGroup;
 			children = (
 				A27B462620CA2C53001132E3 /* FirebaseHandler.swift */,
+				5BD4F80020CF458900F3A7AC /* FlightStatsAPIHandler.swift */,
 				5B98012520CC2DFF008845F3 /* AirportModel.swift */,
 				A2B00D9620CE1A5F0082B21C /* CouponModel.swift */,
+				5BD4F7FE20CF34E500F3A7AC /* FlightModel.swift */,
+				5BD4F80220CF48C800F3A7AC /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,6 +228,7 @@
 				A2B00D9820CE25930082B21C /* CouponViewController.swift */,
 				5BD4F7FC20CF203500F3A7AC /* BaseViewController.swift */,
 				5BD4F7F620CECFC000F3A7AC /* FlightSearchResultViewController.swift */,
+				5B80E62F20D0B9AB0061CB8C /* FlightDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -436,8 +451,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BD4F80320CF48C800F3A7AC /* Constants.swift in Sources */,
 				A27B462720CA2C53001132E3 /* FirebaseHandler.swift in Sources */,
 				5B98011220CA09A9008845F3 /* MyBookingViewController.swift in Sources */,
+				5BD4F7FF20CF34E500F3A7AC /* FlightModel.swift in Sources */,
 				5B96864A20CE2DDD00909163 /* HomeViewController.swift in Sources */,
 				5B98010E20C9E4B6008845F3 /* FTNavigationController.swift in Sources */,
 				5BD4F7F920CED0CB00F3A7AC /* FlightSearchResultTableViewCell.swift in Sources */,
@@ -446,12 +463,15 @@
 				5B98011420CA09B6008845F3 /* ProfileViewController.swift in Sources */,
 				5BD4F7F720CECFC000F3A7AC /* FlightSearchResultViewController.swift in Sources */,
 				5B98011020CA040E008845F3 /* BookingViewController.swift in Sources */,
+				5BD4F80120CF458900F3A7AC /* FlightStatsAPIHandler.swift in Sources */,
 				5B98012220CB0F40008845F3 /* AirportSearchViewController.swift in Sources */,
+				5B80E63020D0B9AB0061CB8C /* FlightDetailViewController.swift in Sources */,
 				5B98011820CA4C43008845F3 /* CalenderViewController.swift in Sources */,
 				5B98011A20CA4E25008845F3 /* CalenderCell.swift in Sources */,
 				5BD4F7FD20CF203500F3A7AC /* BaseViewController.swift in Sources */,
 				A2B00D9720CE1A5F0082B21C /* CouponModel.swift in Sources */,
 				5B98012420CB118E008845F3 /* CitySearchTableViewCell.swift in Sources */,
+				5B80E63220D0CF390061CB8C /* FlightDetialTableViewCell.swift in Sources */,
 				5B98011620CA09C2008845F3 /* LogoutViewController.swift in Sources */,
 				A2B00D9920CE25930082B21C /* CouponViewController.swift in Sources */,
 				5B9800AB20C9902B008845F3 /* AppDelegate.swift in Sources */,

@@ -10,8 +10,22 @@ import UIKit
 
 class FlightSearchResultTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var timeFromTo: UILabel!
+    
+    @IBOutlet weak var airline: UILabel!
+    
+    @IBOutlet weak var interval: UILabel!
+    
+    @IBOutlet weak var cityFromTo: UILabel!
+    
+    @IBOutlet weak var price: UILabel!
+    
+    @IBAction func viewDetailClick(_ sender: Any) {
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+       
         // Initialization code
     }
 
