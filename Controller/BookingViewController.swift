@@ -8,6 +8,7 @@
 
 import UIKit
 import ECSlidingViewController
+import SVProgressHUD
 class BookingViewController: UIViewController,UITextFieldDelegate, AirportSearchDelegate, CalendarDelegate {
     
     @IBOutlet weak var sourceTextfield: UITextField!
@@ -20,17 +21,44 @@ class BookingViewController: UIViewController,UITextFieldDelegate, AirportSearch
     
     @IBOutlet weak var passengerLbl: UILabel!
     @IBOutlet weak var calender2Btn: UIButton!
+    //passed airports
+    var sourceAirport : Airport?
+    var destinationAirport : Airport?
     
+    //pass segment tag
+    var segmentTag = 0
     
     @IBAction func findFlightsClick(_ sender: Any) {
+        if segmentTag == 0 {
+            if dateTextfield1.text == "" || dateTextfield2.text == "" {
+                alter1()
+                return
+            }
+        }
+        if segmentTag == 1 {
+            if dateTextfield1.text == "" {
+                alter1()
+                return
+            }
+        }
+        let storyboard = UIStoryboard(name: "Calendar", bundle: nil )
+        let controller = storyboard.instantiateViewController(withIdentifier: "FlightSearchResultViewController") as! FlightSearchResultViewController
+        controller.segmentTag = self.segmentTag
+        controller.sourceAirport = self.sourceAirport!
+        controller.destinationAirport = self.destinationAirport!
+        controller.departureTrip = dateTextfield1.text
+        controller.returnTrip = dateTextfield2.text
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     //MARK: -AirportSearchDelegate
     func airportSelect(tag : Int, airportIata: String, airportInfo: Airport) {
         if tag == 101 {
             sourceTextfield.text = airportIata
+            self.sourceAirport = airportInfo
         } else{
             destinationTextfield.text = airportIata
+            self.destinationAirport = airportInfo
         }
     }
     
@@ -52,9 +80,11 @@ class BookingViewController: UIViewController,UITextFieldDelegate, AirportSearch
     
     @IBAction func segment(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
+            self.segmentTag = 0
             dateTextfield2.isHidden = false
             calender2Btn.isHidden = false
         } else {
+            self.segmentTag = 1
             dateTextfield2.isHidden = true
             calender2Btn.isHidden = true
         }
@@ -92,7 +122,21 @@ class BookingViewController: UIViewController,UITextFieldDelegate, AirportSearch
         passengerLbl.text = "1"
         view.backgroundColor = UIColor(patternImage: UIImage(named: "generalbackground")!)
     }
-    
+    func alter() {
+        let alter = UIAlertController(title: "Warning", message: "return date must be later than your depature date", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: {
+            [unowned self] action in
+            self.dateTextfield2.text = ""
+        })
+        alter.addAction(action)
+        present(alter, animated: true, completion: nil)
+    }
+    func alter1() {
+        let alter = UIAlertController(title: "Warning", message: "select a date first", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alter.addAction(action)
+        present(alter, animated: true, completion: nil)
+    }
     //MARK: -TextFieldDelegate
     func textFieldDidBeginEditing(_ textField: UITextField) {
         let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
@@ -101,7 +145,11 @@ class BookingViewController: UIViewController,UITextFieldDelegate, AirportSearch
         controller.delegate = self
         present(controller, animated: true, completion: nil)
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        if dateTextfield1.text != "" && dateTextfield2.text != "" && dateTextfield1.text! > dateTextfield2.text! || dateTextfield1.text == "" && dateTextfield2.text != "" {
+            alter()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -75,6 +75,7 @@ class AirportSearchViewController: UIViewController, UITableViewDelegate, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         tblView.tableFooterView = UIView(frame: .zero)
+        self.searchBar.becomeFirstResponder()
         // Do any additional setup after loading the view.
     }
 
