@@ -18,6 +18,7 @@ final class FirebaseHandler{
     var userRef : DatabaseReference!
     var airportRef : DatabaseReference!
     var userStorage: StorageReference!
+    var couponRef: DatabaseReference!
     
     static let sharedInstance = FirebaseHandler()
     
@@ -28,6 +29,7 @@ final class FirebaseHandler{
     func databaseInit() {
         userRef = Database.database().reference().child("UserInfo")
         airportRef = Database.database().reference().child("Airport")
+        couponRef = Database.database().reference().child("CouponInfo")
         userStorage = Storage.storage().reference()
     }
     func databaseQueryByCityName(city : String , completion:@escaping ([Airport]) -> Void) {
@@ -155,5 +157,41 @@ final class FirebaseHandler{
                 TWMessageBarManager().showMessage(withTitle: "Error", description: err.localizedDescription, type:  .error)
             }
         })
+    }
+    //MARK: -CouponViewController
+    func getCouponInfo(completion:@escaping ([Coupon]) ->Void){
+        var couponInfo = [Coupon]()
+        databaseInit()
+        couponRef.observeSingleEvent(of:  .value) { (snapshot) in
+            guard let value = snapshot.value as? [Any] else{
+                return
+            }
+            let dispatchGroup = DispatchGroup()
+            for item in value{
+                dispatchGroup.enter()
+                let dict = item as? Dictionary<String, String>
+                let imagePath = dict!["imageName"]
+                let couponCode = dict!["couponCode"]
+                let discount = dict!["discount"]
+                let validStartDate = dict!["validStartDate"]
+                let validEndDate = dict!["validEndDate"]
+                let imagepath = "CouponImage/\(imagePath!)"
+                self.userStorage.child(imagepath).getData(maxSize: 1024*1024*1024, completion: { (data, error) in
+                    if error != nil{
+                        return
+                        
+                    
+                    }else{
+                        let image = UIImage(data: data!)
+                        let singleCoupon = Coupon(image: image!, couponCode: couponCode!, validStartDate: validStartDate!, validEndDate: validEndDate!, discount: discount!)
+                        couponInfo.append(singleCoupon)
+                    }
+                    dispatchGroup.leave()
+                })
+            }
+            dispatchGroup.notify(queue: DispatchQueue.main, execute: {
+                completion(couponInfo)
+            })
+        }
     }
 }

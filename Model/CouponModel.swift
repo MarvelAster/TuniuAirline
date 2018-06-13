@@ -7,16 +7,17 @@
 //
 
 import Foundation
+import UIKit
 
 class Coupon{
-    var imageName: String?
+    var image: UIImage?
     var couponCode: String?
     var validStartDate: String?
     var validEndDate: String?
     var discount: String?
     
-    init(imageName: String, couponCode: String, validStartDate: String, validEndDate:String, discount:String) {
-        self.imageName = imageName
+    init(image: UIImage, couponCode: String, validStartDate: String, validEndDate:String, discount:String) {
+        self.image = image
         self.couponCode = couponCode
         self.validStartDate = validStartDate
         self.validEndDate = validEndDate

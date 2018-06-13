@@ -14,8 +14,8 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var scrollView: UIScrollView!
     
-    var image : [String] = ["coupon1", "coupon2", "coupon3", "coupon4"]
     var frame = CGRect(x: 0, y: 0, width: 0, height: 0)
+    var couponInfo = [Coupon]()
     
     @IBAction func btnClick(_ sender: Any) {
         let slidingViewController = self.slidingViewController()
@@ -27,11 +27,16 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollViewSetup()
         let singleTap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         singleTap.cancelsTouchesInView = false
         singleTap.numberOfTapsRequired = 1
         scrollView.addGestureRecognizer(singleTap)
+        FirebaseHandler.sharedInstance.getCouponInfo { (coupon) in
+            print(coupon)
+            self.couponInfo = coupon
+            self.couponInfo = self.couponInfo.sorted(by: {$0.validStartDate! < $1.validStartDate!})
+            self.scrollViewSetup()
+        }
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
@@ -40,21 +45,23 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func scrollViewSetup() {
-        pageControl.numberOfPages = image.count
-        for index in 0..<image.count{
+        pageControl.numberOfPages = couponInfo.count
+        for index in 0..<couponInfo.count{
             frame.origin.x = scrollView.frame.size.width * CGFloat(index)
             frame.size = scrollView.frame.size
             
             let imageView = UIImageView(frame: frame)
-            imageView.image = UIImage(named: image[index])
+            imageView.image = couponInfo[index].image
             self.scrollView.addSubview(imageView)
         }
-        scrollView.contentSize = CGSize(width: (scrollView.frame.size.width * CGFloat(image.count)), height: scrollView.frame.size.height)
+        scrollView.contentSize = CGSize(width: (scrollView.frame.size.width * CGFloat(couponInfo.count)), height: scrollView.frame.size.height)
         scrollView.delegate = self
     }
     
     @objc func handleTap(_ recognizer: UITapGestureRecognizer) {
-        print("11111")
+        let controller = storyboard?.instantiateViewController(withIdentifier: "CouponViewController") as! CouponViewController
+        controller.couponInfo = couponInfo[pageControl.currentPage]
+        navigationController?.pushViewController(controller, animated: true)
     }
 
 }

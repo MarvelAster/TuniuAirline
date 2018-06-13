@@ -13,7 +13,7 @@ import FirebaseAuth
 import FirebaseStorage
 import GoogleSignIn
 
-class SignInViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
+class SignInViewController: BaseViewController, GIDSignInDelegate, GIDSignInUIDelegate {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -32,8 +32,9 @@ class SignInViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDele
         
         signUpBtn.layer.borderWidth = 1.0
         signUpBtn.layer.borderColor = UIColor.darkGray.cgColor
-        
-        self.navigationController?.isNavigationBarHidden = true
+
+        title = "SIGN IN"
+
     }
     
     override func viewWillAppear(_ animated: Bool) {

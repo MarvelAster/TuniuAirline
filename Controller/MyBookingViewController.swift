@@ -7,9 +7,22 @@
 //
 
 import UIKit
+import UserNotifications
 
 class MyBookingViewController: UIViewController {
-
+    
+    var date = DateComponents()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        date.weekday = 3
+        date.hour = 14
+        date.minute = 34
+        timeNotifications(date: date) { (flag) in
+            
+        }
+    }
+    
     @IBAction func btnClick(_ sender: Any) {
         let slidingViewController = self.slidingViewController()
         if slidingViewController?.currentTopViewPosition == .centered {
@@ -18,26 +31,21 @@ class MyBookingViewController: UIViewController {
             slidingViewController?.resetTopView(animated: true)
         }
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    func timeNotifications(date: DateComponents, completion: @escaping (Bool)->Void) {
+        let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: false)
+        let content = UNMutableNotificationContent()
+        content.title = "Flight Reminder"
+        content.body = "Your Flight will take off after 2 hours"
+        
+        let request = UNNotificationRequest(identifier: "customNotification", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request) { (error) in
+            if error != nil{
+                completion(false)
+            }else{
+                completion(true)
+            }
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

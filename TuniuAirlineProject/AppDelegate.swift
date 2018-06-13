@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,9 +26,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let rootController = storyboard.instantiateViewController(withIdentifier: "navigationSignIn")
             self.window?.rootViewController = rootController
         }
+        setupNotification()
         return true
     }
 
+    func setupNotification() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (success, error) in
+            if error != nil{
+                print("Authorization Unsuccessfull")
+            }else{
+                print("Authorization Successfull")
+            }
+        }
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

@@ -13,13 +13,22 @@ class CouponViewController: UIViewController {
     @IBOutlet weak var couponImage: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var couponCodeLabel: UILabel!
+    @IBOutlet weak var endDateLabel: UILabel!
+    
+    var couponInfo: Coupon?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(couponInfo)
+        couponImage.image = couponInfo?.image
+        descriptionLabel.text = couponInfo?.discount
+        couponCodeLabel.text = couponInfo?.couponCode
+        endDateLabel.text = couponInfo?.validEndDate
     }
 
     @IBAction func copyBtnAction(_ sender: Any) {
+        UIPasteboard.general.string = couponCodeLabel.text
+        
     }
-    
 
 }
