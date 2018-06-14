@@ -111,6 +111,8 @@ class FlightSearchResultViewController: UIViewController,UITableViewDelegate, UI
             controller1.flights = self.choosedFlights
             controller1.departureTrip = self.departureTrip
             controller1.returnTrip = self.returnTrip
+            controller1.sourceAirport = self.sourceAirport
+            controller1.destAirport = self.destinationAirport
             navigationController?.pushViewController(controller1, animated: true)
         }
     }
@@ -144,22 +146,5 @@ class FlightSearchResultViewController: UIViewController,UITableViewDelegate, UI
         initialize()
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

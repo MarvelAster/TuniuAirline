@@ -82,23 +82,21 @@
                                     <segue destination="ZWH-60-0Bj" kind="show" id="eU7-As-PnB"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Ia-nt-I0E" customClass="GIDSignInButton">
-                                <rect key="frame" x="122" y="627" width="56" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="googleSignInBtn:" destination="Aif-ZK-GCy" eventType="valueChanged" id="AqZ-Q0-7ce"/>
-                                </connections>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FbW-vg-tpY">
-                                <rect key="frame" x="30" y="609" width="60" height="1"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FbW-vg-tpY">
+                                <rect key="frame" x="30" y="613" width="60" height="1"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="V0A-SK-1xb"/>
+                                    <constraint firstAttribute="height" constant="1" id="qgO-O8-uek"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bQs-Cl-B8h">
-                                <rect key="frame" x="285" y="609" width="60" height="1"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQs-Cl-B8h">
+                                <rect key="frame" x="285" y="613" width="60" height="1"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="REe-v7-TiF"/>
+                                    <constraint firstAttribute="width" constant="60" id="i3W-k9-ZM7"/>
+                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social Network Login In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joN-9E-fGC">
                                 <rect key="frame" x="98" y="601" width="179" height="25"/>
@@ -109,10 +107,16 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="db5-Nq-v3S">
-                                <rect key="frame" x="285" y="629" width="58" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ia-nt-I0E" customClass="GIDSignInButton">
+                                <rect key="frame" x="147" y="627" width="80" height="30"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="VJt-Nx-zg9"/>
+                                    <constraint firstAttribute="height" constant="30" id="qzP-hc-UYW"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="googleSignInBtn:" destination="Aif-ZK-GCy" eventType="valueChanged" id="AqZ-Q0-7ce"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -121,17 +125,23 @@
                             <constraint firstItem="75Y-Zx-ktd" firstAttribute="top" secondItem="sXQ-yB-tlG" secondAttribute="bottom" constant="10" id="2lE-C8-J4O"/>
                             <constraint firstItem="wLz-Q6-wgc" firstAttribute="top" secondItem="ohE-I6-uS6" secondAttribute="bottom" id="5Wp-9T-bSj"/>
                             <constraint firstItem="75Y-Zx-ktd" firstAttribute="leading" secondItem="bhd-g7-5eI" secondAttribute="leading" constant="50" id="9tl-mH-HWI"/>
+                            <constraint firstItem="4Ia-nt-I0E" firstAttribute="top" secondItem="joN-9E-fGC" secondAttribute="bottom" constant="1" id="BwW-xm-1Fh"/>
+                            <constraint firstItem="4Ia-nt-I0E" firstAttribute="centerX" secondItem="HqW-Ud-s4f" secondAttribute="centerX" id="DAz-BV-RZR"/>
                             <constraint firstItem="sXQ-yB-tlG" firstAttribute="leading" secondItem="bhd-g7-5eI" secondAttribute="leading" constant="50" id="F5s-wy-Ikj"/>
                             <constraint firstItem="bhd-g7-5eI" firstAttribute="trailing" secondItem="YuP-sP-TMt" secondAttribute="trailing" constant="50" id="FeZ-Ap-h9m"/>
                             <constraint firstItem="wLz-Q6-wgc" firstAttribute="leading" secondItem="bhd-g7-5eI" secondAttribute="leading" constant="50" id="GPm-HV-r1K"/>
                             <constraint firstItem="YuP-sP-TMt" firstAttribute="leading" secondItem="bhd-g7-5eI" secondAttribute="leading" constant="50" id="Ie1-7Y-b4M"/>
+                            <constraint firstItem="bQs-Cl-B8h" firstAttribute="centerY" secondItem="joN-9E-fGC" secondAttribute="centerY" id="N1Q-qs-2EB"/>
                             <constraint firstItem="sXQ-yB-tlG" firstAttribute="top" secondItem="wLz-Q6-wgc" secondAttribute="bottom" constant="45" id="Rb4-o7-WxE"/>
                             <constraint firstItem="bhd-g7-5eI" firstAttribute="trailing" secondItem="75Y-Zx-ktd" secondAttribute="trailing" constant="50" id="YJP-Dv-gdO"/>
                             <constraint firstItem="ohE-I6-uS6" firstAttribute="leading" secondItem="bhd-g7-5eI" secondAttribute="leading" constant="50" id="ZSm-t6-oJW"/>
                             <constraint firstItem="AGQ-sz-9cF" firstAttribute="top" secondItem="bhd-g7-5eI" secondAttribute="top" constant="240" id="awM-dd-zpQ"/>
+                            <constraint firstItem="joN-9E-fGC" firstAttribute="leading" secondItem="FbW-vg-tpY" secondAttribute="trailing" constant="8" id="bvK-im-ZVx"/>
+                            <constraint firstItem="FbW-vg-tpY" firstAttribute="centerY" secondItem="joN-9E-fGC" secondAttribute="centerY" id="db4-4m-7iI"/>
                             <constraint firstItem="bhd-g7-5eI" firstAttribute="trailing" secondItem="sXQ-yB-tlG" secondAttribute="trailing" constant="50" id="eDR-mW-gmn"/>
                             <constraint firstItem="6zt-ll-49Y" firstAttribute="top" secondItem="bhd-g7-5eI" secondAttribute="top" constant="60" id="eqK-lK-M1q"/>
                             <constraint firstItem="bhd-g7-5eI" firstAttribute="trailing" secondItem="joN-9E-fGC" secondAttribute="trailing" constant="98" id="fgA-m0-WrF"/>
+                            <constraint firstItem="bQs-Cl-B8h" firstAttribute="leading" secondItem="joN-9E-fGC" secondAttribute="trailing" constant="8" id="fzq-Bs-Fts"/>
                             <constraint firstItem="bhd-g7-5eI" firstAttribute="trailing" secondItem="AGQ-sz-9cF" secondAttribute="trailing" constant="50" id="gYO-Fw-SQB"/>
                             <constraint firstItem="YuP-sP-TMt" firstAttribute="top" secondItem="AGQ-sz-9cF" secondAttribute="bottom" id="igT-Wv-2JU"/>
                             <constraint firstItem="bhd-g7-5eI" firstAttribute="trailing" secondItem="wLz-Q6-wgc" secondAttribute="trailing" constant="50" id="l3F-gY-wFT"/>

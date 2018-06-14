@@ -6,47 +6,94 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Controller/FlightDetailViewController.swift"
+            timestampString = "550648370.05533"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "FlightDetailViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Controller/ProfileViewController.swift"
-            timestampString = "550292020.261794"
+            filePath = "Model/FirebaseHandler.swift"
+            timestampString = "550648370.055706"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "viewWillAppear(_:)"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
+            landmarkName = "uploadBookedFlightDetail(flights:departureTrip:departureCity:arriveCity:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Model/FirebaseHandler.swift"
+            timestampString = "550648370.055962"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "218"
+            endingLineNumber = "218"
+            landmarkName = "uploadBookedFlightDetail(flights:departureTrip:departureCity:arriveCity:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "TuniuAirlineProject.ProfileViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  symbolName = "TuniuAirlineProject.FirebaseHandler.uploadBookedFlightDetail(flights: TuniuAirlineProject.ScheduledFlights, departureTrip: Swift.String, departureCity: Swift.String, arriveCity: Swift.String, completion: () -&gt; ()) -&gt; ()"
                   moduleName = "TuniuAirlineProject"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ganzhongda/Documents/Xcode%20Practice/TuniuAirline/Controller/ProfileViewController.swift"
-                  timestampString = "550458207.914259"
+                  urlString = "file:///Users/ganzhongda/Documents/Xcode%20Practice/TuniuAirline/Model/FirebaseHandler.swift"
+                  timestampString = "550643600.597631"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "22">
+                  startingLineNumber = "202"
+                  endingLineNumber = "202"
+                  offsetFromSymbolStart = "2334">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.String, Swift.String, __ObjC.UIImage) -&gt; () in TuniuAirlineProject.ProfileViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  symbolName = "TuniuAirlineProject.FirebaseHandler.uploadBookedFlightDetail(flights: TuniuAirlineProject.ScheduledFlights, departureTrip: Swift.String, departureCity: Swift.String, arriveCity: Swift.String, completion: () -&gt; ()) -&gt; ()"
                   moduleName = "TuniuAirlineProject"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ganzhongda/Documents/Xcode%20Practice/TuniuAirline/Controller/ProfileViewController.swift"
-                  timestampString = "550458207.925806"
+                  urlString = "file:///Users/ganzhongda/Documents/Xcode%20Practice/TuniuAirline/Model/FirebaseHandler.swift"
+                  timestampString = "550643600.601261"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "53">
+                  startingLineNumber = "202"
+                  endingLineNumber = "202"
+                  offsetFromSymbolStart = "3722">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;, __ObjC.DatabaseReference) -&gt; () in TuniuAirlineProject.FirebaseHandler.uploadBookedFlightDetail(flights: TuniuAirlineProject.ScheduledFlights, departureTrip: Swift.String, departureCity: Swift.String, arriveCity: Swift.String, completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "TuniuAirlineProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ganzhongda/Documents/Xcode%20Practice/TuniuAirline/Model/FirebaseHandler.swift"
+                  timestampString = "550643600.605023"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "203"
+                  endingLineNumber = "203"
+                  offsetFromSymbolStart = "29">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -57,173 +104,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Controller/FirebaseHandler.swift"
-            timestampString = "550292020.263052"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
-            landmarkName = "downloadUserInfoInProfileViewController(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Controller/HomeViewController.swift"
-            timestampString = "550467257.593307"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TuniuAirlineProject.HomeViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "TuniuAirlineProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ganzhongda/Documents/Xcode%20Practice/TuniuAirline/Controller/HomeViewController.swift"
-                  timestampString = "550458207.969043"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "574">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Array&lt;TuniuAirlineProject.Coupon&gt;) -&gt; () in TuniuAirlineProject.HomeViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "TuniuAirlineProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ganzhongda/Documents/Xcode%20Practice/TuniuAirline/Controller/HomeViewController.swift"
-                  timestampString = "550458207.97921"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "12">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Controller/HomeViewController.swift"
-            timestampString = "550467257.593446"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Model/FirebaseHandler.swift"
-            timestampString = "550467257.5935529"
+            timestampString = "550648370.056028"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
-            landmarkName = "getCouponInfo(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Model/FirebaseHandler.swift"
-            timestampString = "550467257.5936249"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
-            landmarkName = "getCouponInfo(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Model/FirebaseHandler.swift"
-            timestampString = "550467257.593676"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "180"
-            endingLineNumber = "180"
-            landmarkName = "getCouponInfo(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Model/FirebaseHandler.swift"
-            timestampString = "550467257.593722"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
-            landmarkName = "getCouponInfo(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Model/FirebaseHandler.swift"
-            timestampString = "550467257.593766"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
-            landmarkName = "getCouponInfo(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Model/FirebaseHandler.swift"
-            timestampString = "550467257.593807"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "193"
-            endingLineNumber = "193"
-            landmarkName = "getCouponInfo(completion:)"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
+            landmarkName = "uploadBookedFlightDetail(flights:departureTrip:departureCity:arriveCity:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

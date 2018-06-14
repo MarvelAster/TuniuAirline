@@ -34,10 +34,10 @@
 		5BD4F7F720CECFC000F3A7AC /* FlightSearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4F7F620CECFC000F3A7AC /* FlightSearchResultViewController.swift */; };
 		5BD4F7F920CED0CB00F3A7AC /* FlightSearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4F7F820CED0CB00F3A7AC /* FlightSearchResultTableViewCell.swift */; };
 		5BD4F7FD20CF203500F3A7AC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4F7FC20CF203500F3A7AC /* BaseViewController.swift */; };
-		A266FA7520D059F9006FF138 /* MyBookingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A266FA7420D059F9006FF138 /* MyBookingTableViewCell.swift */; };
 		5BD4F7FF20CF34E500F3A7AC /* FlightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4F7FE20CF34E500F3A7AC /* FlightModel.swift */; };
 		5BD4F80120CF458900F3A7AC /* FlightStatsAPIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4F80020CF458900F3A7AC /* FlightStatsAPIHandler.swift */; };
 		5BD4F80320CF48C800F3A7AC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4F80220CF48C800F3A7AC /* Constants.swift */; };
+		A266FA7520D059F9006FF138 /* MyBookingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A266FA7420D059F9006FF138 /* MyBookingTableViewCell.swift */; };
 		A27B462520CA27E6001132E3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27B462420CA27E6001132E3 /* SignUpViewController.swift */; };
 		A27B462720CA2C53001132E3 /* FirebaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27B462620CA2C53001132E3 /* FirebaseHandler.swift */; };
 		A27B462920CA2D60001132E3 /* UploadPhotoIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27B462820CA2D60001132E3 /* UploadPhotoIDViewController.swift */; };
@@ -645,7 +645,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RQAE768Z9N;
 				INFOPLIST_FILE = TuniuAirlineProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -665,7 +665,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RQAE768Z9N;
 				INFOPLIST_FILE = TuniuAirlineProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

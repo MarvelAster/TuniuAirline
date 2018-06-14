@@ -11,6 +11,7 @@ import UserNotifications
 
 class MyBookingViewController: UIViewController {
     
+    @IBOutlet weak var durationTimeLabel: UILabel!
     var date = DateComponents()
     
     override func viewDidLoad() {
