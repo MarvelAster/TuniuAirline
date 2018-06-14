@@ -13,9 +13,34 @@ class FlightDetailViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tblView: UITableView!
     
+    var sourceAirport: Airport?
+    var destAirport: Airport?
     var flights: [ScheduledFlights]?
     var departureTrip : String?
     var returnTrip : String?
+    var backSourceAirport: String?
+    var backDestAirport: String?
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Confirm Purchase", style:  .plain, target: self, action: #selector(doneBtnAction))
+        backSourceAirport = destAirport?.city
+        backDestAirport = sourceAirport?.city
+    }
+    
+    @objc func doneBtnAction() {
+        if flights?.count == 1{
+            FirebaseHandler.sharedInstance.uploadBookedFlightDetail(flights: flights![0], departureTrip: toDate(time: flights![0].departureTime), departureCity: sourceAirport!.city!, arriveCity: destAirport!.city!, completion: {()in
+            })
+        }else{
+            FirebaseHandler.sharedInstance.uploadBookedFlightDetail(flights: flights![0], departureTrip: toDate(time: flights![0].departureTime), departureCity: sourceAirport!.city!, arriveCity: destAirport!.city!, completion: {()in
+            })
+            FirebaseHandler.sharedInstance.uploadBookedFlightDetail(flights: flights![1], departureTrip: toDate(time: flights![1].departureTime), departureCity: backSourceAirport!, arriveCity: backDestAirport!, completion: {()in
+            })
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if flights == nil {
@@ -27,28 +52,73 @@ class FlightDetailViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tblView.dequeueReusableCell(withIdentifier: "FlightDetialTableViewCell") as! FlightDetialTableViewCell
+        if indexPath.row == 0{
+            cell.airlineCompanyLabel.text = "\(flights![indexPath.row].carrierFsCode) Airline"
+            cell.arriveCityLabel.text = "\(destAirport!.city!)(\(flights![indexPath.row].arrivalAirportFsCode))"
+            cell.arriveTerminalLabel.text = flights![indexPath.row].arrivalTerminal
+            cell.arriveTimeLabel.text = toTime(time: flights![indexPath.row].arrivalTime)
+            cell.departureCityLabel.text = "\(sourceAirport!.city!)(\(flights![indexPath.row].departureAirportFsCode))"
+            cell.departureTerminalLabel.text = flights![indexPath.row].departureTerminal
+            cell.departureTimeLabel.text = toTime(time: flights![indexPath.row].departureTime)
+            cell.flightNumberLabel.text = "flight number: \(flights![indexPath.row].flightNumber)"
+            cell.durationTimeLabel.text = getTimeInterval(indexPath: indexPath)
+            cell.dateLabel.text = toDate(time: flights![indexPath.row].departureTime)
+            cell.stopsLabel.text = "\(flights![indexPath.row].stops)"
+        }else{
+            cell.airlineCompanyLabel.text = "\(flights![indexPath.row].carrierFsCode) Airline"
+            cell.arriveCityLabel.text = "\(backDestAirport!)(\(flights![indexPath.row].arrivalAirportFsCode))"
+            cell.arriveTerminalLabel.text = flights![indexPath.row].arrivalTerminal
+            cell.arriveTimeLabel.text = toTime(time: flights![indexPath.row].arrivalTime)
+            cell.departureCityLabel.text = "\(backSourceAirport!)(\(flights![indexPath.row].departureAirportFsCode))"
+            cell.departureTerminalLabel.text = flights![indexPath.row].departureTerminal
+            cell.departureTimeLabel.text = toTime(time: flights![indexPath.row].departureTime)
+            cell.flightNumberLabel.text = "flight number: \(flights![indexPath.row].flightNumber)"
+            cell.durationTimeLabel.text = getTimeInterval(indexPath: indexPath)
+            cell.dateLabel.text = toDate(time: flights![indexPath.row].departureTime)
+            cell.stopsLabel.text = "\(flights![indexPath.row].stops)"
+        }
         return cell
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func getTimeInterval(indexPath : IndexPath) -> String {
+        let depatureTime = flights![indexPath.row].departureTime
+        let arrivalTime = flights![indexPath.row].arrivalTime
+        let format = DateFormatter()
+        format.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+        let date1 = format.date(from: depatureTime)
+        let date2 = format.date(from: arrivalTime)
+        var inteval = Int((date2?.timeIntervalSince(date1!))!)
+        let days = inteval/86400
+        inteval = inteval - days * 86400
+        let hours = inteval/3600
+        inteval = inteval - hours * 3600
+        let mins = inteval/60
+        if days == 0 {
+            return "\(hours)h \(mins)m"
+        } else {
+            return "\(days)d \(hours)h \(mins)m"
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func toTime(time : String) -> String {
+        let format = DateFormatter()
+        format.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+        let date = format.date(from: time)
+        //print(date)
+        format.dateFormat = "HH:mm"
+        let date1 = format.string(from: date!)
+        //print(date1)
+        return date1
     }
-    */
-
+    
+    func toDate(time: String) -> String {
+        let format = DateFormatter()
+        format.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+        let date = format.date(from: time)
+        //print(date)
+        format.dateFormat = "MM-dd"
+        let date1 = format.string(from: date!)
+        //print(date1)
+        return date1
+    }
 }

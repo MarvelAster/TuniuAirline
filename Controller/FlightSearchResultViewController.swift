@@ -24,6 +24,7 @@ class FlightSearchResultViewController: UIViewController,UITableViewDelegate, UI
     var returnTrip : String?
     
     var segmentTag : Int?
+    var flag = false
     
     var choosedFlights : [ScheduledFlights] = []
     
@@ -81,11 +82,13 @@ class FlightSearchResultViewController: UIViewController,UITableViewDelegate, UI
         
         if self.segmentTag == 0 {
         //round trip choosed
+            flag = true
             let controller = storyboard.instantiateViewController(withIdentifier: "FlightSearchResultViewController") as! FlightSearchResultViewController
             controller.segmentTag = 1
             controller.sourceAirport = self.sourceAirport!
             controller.destinationAirport = self.destinationAirport!
             controller.departureTrip = self.returnTrip
+            controller.flag = flag
             if choosedFlights.count > 0 {
                 choosedFlights.popLast()
             }
@@ -95,13 +98,21 @@ class FlightSearchResultViewController: UIViewController,UITableViewDelegate, UI
         } else {
         //one-way trip choosed
             let controller1 = storyboard.instantiateViewController(withIdentifier: "FlightDetailViewController") as! FlightDetailViewController
-            if choosedFlights.count > 1 {
-                choosedFlights.popLast()
+            if flag == false {
+                if choosedFlights.count > 0 {
+                    choosedFlights.popLast()
+                }
+            } else {
+                if choosedFlights.count > 1 {
+                    choosedFlights.popLast()
+                }
             }
             self.choosedFlights.append(self.allFlights![indexPath.row])
             controller1.flights = self.choosedFlights
             controller1.departureTrip = self.departureTrip
             controller1.returnTrip = self.returnTrip
+            controller1.sourceAirport = self.sourceAirport
+            controller1.destAirport = self.destinationAirport
             navigationController?.pushViewController(controller1, animated: true)
         }
     }
@@ -135,22 +146,5 @@ class FlightSearchResultViewController: UIViewController,UITableViewDelegate, UI
         initialize()
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -522,7 +522,7 @@
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 0 stops" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qb0-dB-bTL">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 0 stops" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qb0-dB-bTL" userLabel="0 stops">
                                                                     <rect key="frame" x="0.0" y="20.5" width="61.5" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
@@ -562,7 +562,7 @@
                                                                 <constraint firstAttribute="width" constant="115" id="Bcf-pv-ahn"/>
                                                                 <constraint firstAttribute="height" constant="50" id="iza-Iu-uHy"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -647,6 +647,19 @@
                                                 <constraint firstItem="VJ4-bb-MsE" firstAttribute="top" secondItem="pu9-6E-YbH" secondAttribute="top" constant="5" id="Zug-vM-U9r"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="airlineCompanyLabel" destination="WIj-0u-imM" id="gYZ-99-J2b"/>
+                                            <outlet property="arriveCityLabel" destination="f2F-cY-Lqh" id="Dn5-4e-QJT"/>
+                                            <outlet property="arriveTerminalLabel" destination="jJt-Ca-Dh8" id="l7V-Z6-cNV"/>
+                                            <outlet property="arriveTimeLabel" destination="vCN-GD-Nli" id="l9K-f0-5rj"/>
+                                            <outlet property="dateLabel" destination="Z1F-ez-0cm" id="NCT-6q-ASl"/>
+                                            <outlet property="departureCityLabel" destination="cEC-fk-EHn" id="KAf-dm-cpQ"/>
+                                            <outlet property="departureTerminalLabel" destination="Fej-Wc-I7p" id="VBe-Yc-Ern"/>
+                                            <outlet property="departureTimeLabel" destination="Svs-IM-22A" id="kWf-AG-O0i"/>
+                                            <outlet property="durationTimeLabel" destination="vQx-1s-3po" id="MfU-TH-imp"/>
+                                            <outlet property="flightNumberLabel" destination="2b7-ge-93l" id="nLa-o3-H3A"/>
+                                            <outlet property="stopsLabel" destination="Qb0-dB-bTL" id="698-c8-CDq"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -673,7 +686,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tty-gy-VEv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3941.5999999999999" y="740.7796101949026"/>
+            <point key="canvasLocation" x="4172" y="740"/>
         </scene>
     </scenes>
 </document>

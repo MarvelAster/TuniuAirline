@@ -19,6 +19,7 @@ final class FirebaseHandler{
     var airportRef : DatabaseReference!
     var userStorage: StorageReference!
     var couponRef: DatabaseReference!
+    var airplaneRef: DatabaseReference!
     
     static let sharedInstance = FirebaseHandler()
     
@@ -30,6 +31,7 @@ final class FirebaseHandler{
         userRef = Database.database().reference().child("UserInfo")
         airportRef = Database.database().reference().child("Airport")
         couponRef = Database.database().reference().child("CouponInfo")
+        airplaneRef = Database.database().reference().child("AirplaneInfo")
         userStorage = Storage.storage().reference()
     }
     func databaseQueryByCityName(city : String , completion:@escaping ([Airport]) -> Void) {
@@ -194,4 +196,33 @@ final class FirebaseHandler{
             })
         }
     }
+    
+    //MARK: -BookedFlightDetail
+    func toTime(time : String) -> String {
+        let format = DateFormatter()
+        format.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+        let date = format.date(from: time)
+        //print(date)
+        format.dateFormat = "HH:mm"
+        let date1 = format.string(from: date!)
+        //print(date1)
+        return date1
+    }
+    
+    func uploadBookedFlightDetail(flights: ScheduledFlights, departureTrip: String, departureCity: String, arriveCity: String, completion:@escaping ()->Void) {
+        databaseInit()
+        let flightKey = userRef.childByAutoId().key
+        let flightDetail = ["carrierFsCode": flights.carrierFsCode, "flightNumber": flights.flightNumber, "departureAirportFsCode": flights.departureAirportFsCode, "arrivalAirportFsCode": flights.arrivalAirportFsCode, "stops": "\(flights.stops)", "departureTerminal": flights.departureTerminal, "arrivalTerminal": flights.arrivalTerminal, "departureTime": toTime(time: flights.departureTime), "arrivalTime": toTime(time: flights.arrivalTime), "departureDate": departureTrip, "departureCity": departureCity, "arriveCity": arriveCity]
+        let flightdict = [flightKey: "FlightInfoKey"]
+        userRef.child((Auth.auth().currentUser?.uid)!).child("Flights").updateChildValues(flightdict)
+        airplaneRef.child(flightKey).updateChildValues(flightDetail) { (error, ref) in
+            if error != nil{
+                TWMessageBarManager().showMessage(withTitle: "Error", description: error?.localizedDescription, type: .error)
+                completion()
+            }else{
+                completion()
+            }
+        }
+    }
+    
 }
