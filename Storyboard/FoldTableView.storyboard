@@ -367,7 +367,7 @@
                                                             <color key="textColor" red="0.20392156859999999" green="0.23921568630000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="Hqe-vM-y3i" userLabel="photo">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userDefaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="Hqe-vM-y3i" userLabel="photo">
                                                             <rect key="frame" x="22" y="28" width="49" height="49"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="49" id="37f-Qh-RaU"/>
@@ -705,6 +705,6 @@
         <image name="burger" width="38" height="29"/>
         <image name="dots" width="14" height="84"/>
         <image name="flightDim" width="1600" height="1000"/>
-        <image name="photo" width="98" height="98"/>
+        <image name="userDefaultImage" width="50" height="50"/>
     </resources>
 </document>

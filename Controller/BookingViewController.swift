@@ -46,6 +46,7 @@ class BookingViewController: UIViewController,UITextFieldDelegate, AirportSearch
         
         let storyboard = UIStoryboard(name: "FoldTableView", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "FlightSearchFoldViewController") as! FlightSearchFoldViewController
+        
         controller.segmentTag = self.segmentTag
         controller.sourceAirport = self.sourceAirport!
         controller.destinationAirport = self.destinationAirport!
