@@ -66,10 +66,10 @@ class FlightDetailViewController: UIViewController, UITableViewDataSource {
             cell.stopsLabel.text = "\(flights![indexPath.row].stops)"
         }else{
             cell.airlineCompanyLabel.text = "\(flights![indexPath.row].carrierFsCode) Airline"
-            cell.arriveCityLabel.text = "\(backDestAirport!)(\(flights![indexPath.row].arrivalAirportFsCode))"
+            cell.arriveCityLabel.text = "\(backDestAirport!)(\(flights![indexPath.row].departureAirportFsCode))"
             cell.arriveTerminalLabel.text = flights![indexPath.row].arrivalTerminal
             cell.arriveTimeLabel.text = toTime(time: flights![indexPath.row].arrivalTime)
-            cell.departureCityLabel.text = "\(backSourceAirport!)(\(flights![indexPath.row].departureAirportFsCode))"
+            cell.departureCityLabel.text = "\(backSourceAirport!)(\(flights![indexPath.row].arrivalAirportFsCode))"
             cell.departureTerminalLabel.text = flights![indexPath.row].departureTerminal
             cell.departureTimeLabel.text = toTime(time: flights![indexPath.row].departureTime)
             cell.flightNumberLabel.text = "flight number: \(flights![indexPath.row].flightNumber)"

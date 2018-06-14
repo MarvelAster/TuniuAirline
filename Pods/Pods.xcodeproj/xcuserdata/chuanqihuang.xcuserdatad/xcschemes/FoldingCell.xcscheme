@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EAFB4E75BD489045C34D8C8A22B41DDE"
-               BlueprintName = "TWMessageBarManager"
+               BlueprintIdentifier = "B626E472969D6F87698AF0041EAAFC38"
+               BlueprintName = "FoldingCell"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "TWMessageBarManager.framework">
+               BuildableName = "FoldingCell.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
