@@ -1,4 +1,5 @@
 PODS:
+  - ARSPopover (2.2.1)
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
     - Bolts/Tasks (= 1.9.0)
@@ -87,6 +88,7 @@ PODS:
   - TWMessageBarManager (1.8.1)
 
 DEPENDENCIES:
+  - ARSPopover
   - ECSlidingViewController (~> 2.0.3)
   - FBSDKLoginKit
   - Firebase/Auth
@@ -102,6 +104,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - ARSPopover
     - Bolts
     - ECSlidingViewController
     - FBSDKCoreKit
@@ -127,6 +130,7 @@ SPEC REPOS:
     - TWMessageBarManager
 
 SPEC CHECKSUMS:
+  ARSPopover: ec2531fe8f498da1181e00f9ffeaa586a3d16d82
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   ECSlidingViewController: 6485c14f23b4487e9946535421ca8f111f86cc53
   FBSDKCoreKit: 572b047a7e029bc44542bcf8a59414e7ff2b543e
@@ -151,6 +155,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   TWMessageBarManager: fd84e7948ba7968a2b5d9454859135761214ec56
 
-PODFILE CHECKSUM: 5e6b4a229a53c78effb9f4d93b9a9d7b0691fee4
+PODFILE CHECKSUM: 113464b999390ef64d2cc25246f4cc59864c91d1
 
 COCOAPODS: 1.5.2
