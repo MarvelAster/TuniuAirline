@@ -6,23 +6,11 @@
     },
     {
       "idiom" : "universal",
+      "filename" : "Rectangle 2@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x"
-    },
-    {
-      "idiom" : "iphone",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "iphone",
-      "filename" : "arrow.pdf",
-      "scale" : "2x"
-    },
-    {
-      "idiom" : "iphone",
       "scale" : "3x"
     }
   ],

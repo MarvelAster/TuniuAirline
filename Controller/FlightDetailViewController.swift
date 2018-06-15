@@ -20,6 +20,12 @@ class FlightDetailViewController: UIViewController, UITableViewDataSource {
     var returnTrip : String?
     var backSourceAirport: String?
     var backDestAirport: String?
+    var SourceAirportName: String?
+    var DestAirportName: String?
+    var backSourceAirportName: String?
+    var backDestAirportName: String?
+    var departureDurationTime: String?
+    var returnDurationTime: String?
     
     
     
@@ -28,16 +34,21 @@ class FlightDetailViewController: UIViewController, UITableViewDataSource {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Confirm Purchase", style:  .plain, target: self, action: #selector(doneBtnAction))
         backSourceAirport = destAirport?.city
         backDestAirport = sourceAirport?.city
+        
+        SourceAirportName = sourceAirport?.name
+        DestAirportName = destAirport?.name
+        backSourceAirportName = DestAirportName
+        backDestAirportName = SourceAirportName
     }
     
     @objc func doneBtnAction() {
         if flights?.count == 1{
-            FirebaseHandler.sharedInstance.uploadBookedFlightDetail(flights: flights![0], departureTrip: toDate(time: flights![0].departureTime), departureCity: sourceAirport!.city!, arriveCity: destAirport!.city!, completion: {()in
+            FirebaseHandler.sharedInstance.uploadBookedFlightDetail(flights: flights![0], departureTrip: toDate(time: flights![0].departureTime), departureCity: sourceAirport!.city!, arriveCity: destAirport!.city!, departureAirportName: SourceAirportName!, arriveAirportName: DestAirportName!, durationTime: departureDurationTime!, completion: {()in
             })
         }else{
-            FirebaseHandler.sharedInstance.uploadBookedFlightDetail(flights: flights![0], departureTrip: toDate(time: flights![0].departureTime), departureCity: sourceAirport!.city!, arriveCity: destAirport!.city!, completion: {()in
+            FirebaseHandler.sharedInstance.uploadBookedFlightDetail(flights: flights![0], departureTrip: toDate(time: flights![0].departureTime), departureCity: sourceAirport!.city!, arriveCity: destAirport!.city!, departureAirportName: SourceAirportName!, arriveAirportName: DestAirportName!, durationTime: departureDurationTime!, completion: {()in
             })
-            FirebaseHandler.sharedInstance.uploadBookedFlightDetail(flights: flights![1], departureTrip: toDate(time: flights![1].departureTime), departureCity: backSourceAirport!, arriveCity: backDestAirport!, completion: {()in
+            FirebaseHandler.sharedInstance.uploadBookedFlightDetail(flights: flights![1], departureTrip: toDate(time: flights![1].departureTime), departureCity: backSourceAirport!, arriveCity: backDestAirport!, departureAirportName: backSourceAirportName!, arriveAirportName: backDestAirportName!, durationTime: returnDurationTime!, completion: {()in
             })
         }
     }
@@ -62,6 +73,7 @@ class FlightDetailViewController: UIViewController, UITableViewDataSource {
             cell.departureTimeLabel.text = toTime(time: flights![indexPath.row].departureTime)
             cell.flightNumberLabel.text = "flight number: \(flights![indexPath.row].flightNumber)"
             cell.durationTimeLabel.text = getTimeInterval(indexPath: indexPath)
+            departureDurationTime = getTimeInterval(indexPath: indexPath)
             cell.dateLabel.text = toDate(time: flights![indexPath.row].departureTime)
             cell.stopsLabel.text = "\(flights![indexPath.row].stops)"
         }else{
@@ -74,6 +86,7 @@ class FlightDetailViewController: UIViewController, UITableViewDataSource {
             cell.departureTimeLabel.text = toTime(time: flights![indexPath.row].departureTime)
             cell.flightNumberLabel.text = "flight number: \(flights![indexPath.row].flightNumber)"
             cell.durationTimeLabel.text = getTimeInterval(indexPath: indexPath)
+            returnDurationTime = getTimeInterval(indexPath: indexPath)
             cell.dateLabel.text = toDate(time: flights![indexPath.row].departureTime)
             cell.stopsLabel.text = "\(flights![indexPath.row].stops)"
         }

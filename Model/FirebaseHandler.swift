@@ -209,10 +209,10 @@ final class FirebaseHandler{
         return date1
     }
     
-    func uploadBookedFlightDetail(flights: ScheduledFlights, departureTrip: String, departureCity: String, arriveCity: String, completion:@escaping ()->Void) {
+    func uploadBookedFlightDetail(flights: ScheduledFlights, departureTrip: String, departureCity: String, arriveCity: String, departureAirportName: String, arriveAirportName: String, durationTime: String, completion:@escaping ()->Void) {
         databaseInit()
         let flightKey = userRef.childByAutoId().key
-        let flightDetail = ["carrierFsCode": flights.carrierFsCode, "flightNumber": flights.flightNumber, "departureAirportFsCode": flights.departureAirportFsCode, "arrivalAirportFsCode": flights.arrivalAirportFsCode, "stops": "\(flights.stops)", "departureTerminal": flights.departureTerminal, "arrivalTerminal": flights.arrivalTerminal, "departureTime": toTime(time: flights.departureTime), "arrivalTime": toTime(time: flights.arrivalTime), "departureDate": departureTrip, "departureCity": departureCity, "arriveCity": arriveCity]
+        let flightDetail = ["carrierFsCode": flights.carrierFsCode, "flightNumber": flights.flightNumber, "departureAirportFsCode": flights.departureAirportFsCode, "arrivalAirportFsCode": flights.arrivalAirportFsCode, "stops": "\(flights.stops)", "departureTerminal": flights.departureTerminal, "arrivalTerminal": flights.arrivalTerminal, "departureTime": toTime(time: flights.departureTime), "arrivalTime": toTime(time: flights.arrivalTime), "departureDate": departureTrip, "departureCity": departureCity, "arriveCity": arriveCity, "departureAirportName": departureAirportName, "arriveAirportName": arriveAirportName, "durationTime": durationTime]
         let flightdict = [flightKey: "FlightInfoKey"]
         userRef.child((Auth.auth().currentUser?.uid)!).child("Flights").updateChildValues(flightdict)
         airplaneRef.child(flightKey).updateChildValues(flightDetail) { (error, ref) in
@@ -222,6 +222,48 @@ final class FirebaseHandler{
             }else{
                 completion()
             }
+        }
+    }
+    
+    //MARK: -MyBooking
+    func downLoadMyBookingInfo(completion: @escaping ([BookedFlightsInfo])-> Void) {
+        databaseInit()
+        var flights = [BookedFlightsInfo]()
+        userRef.child((Auth.auth().currentUser?.uid)!).child("Flights").observeSingleEvent(of:  .value) { (snapshot) in
+            guard let value = snapshot.value as? Dictionary<String,String> else{
+                return
+            }
+            let dispatchGroup = DispatchGroup()
+            for item in value{
+                dispatchGroup.enter()
+                let flightKey = item.key
+                self.airplaneRef.child(flightKey).observeSingleEvent(of:  .value, with: { (snapshot1) in
+                    guard let value1 = snapshot1.value as? Dictionary<String, String> else{
+                        return
+                    }
+                    let carrierFsCode = value1["carrierFsCode"]
+                    let flightNumber = value1["flightNumber"]
+                    let departureAirportFsCode = value1["departureAirportFsCode"]
+                    let arrivalAirportFsCode = value1["arrivalAirportFsCode"]
+                    let stops = value1["stops"]
+                    let departureTerminal = value1["departureTerminal"]
+                    let arrivalTerminal = value1["arrivalTerminal"]
+                    let departureTime = value1["departureTime"]
+                    let arrivalTime = value1["arrivalTime"]
+                    let departureCity = value1["departureCity"]
+                    let arriveCity = value1["arriveCity"]
+                    let departureDate = value1["departureDate"]
+                    let departureAirportName = value1["departureAirportName"]
+                    let arriveAirportName = value1["arriveAirportName"]
+                    let durationTime = value1["durationTime"]
+                    let singleFilght = BookedFlightsInfo(carrierFsCode: carrierFsCode!, flightNumber: flightNumber!, departureAirportFsCode: departureAirportFsCode!, arrivalAirportFsCode: arrivalAirportFsCode!, stops: Int(stops!)!, departureTerminal: departureTerminal!, arrivalTerminal: arrivalTerminal!, departureTime: departureTime!, arrivalTime: arrivalTime!, departureCity: departureCity!, arriveCity: arriveCity!, departureDate: departureDate!, flightKey: flightKey, departureAirportName: departureAirportName!, arriveAirportName: arriveAirportName!, durationTime: durationTime!)
+                    flights.append(singleFilght)
+                    dispatchGroup.leave()
+                })
+            }
+            dispatchGroup.notify(queue: DispatchQueue.main, execute: {
+                completion(flights)
+            })
         }
     }
     

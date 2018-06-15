@@ -42,6 +42,7 @@
 		5BD4F80120CF458900F3A7AC /* FlightStatsAPIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4F80020CF458900F3A7AC /* FlightStatsAPIHandler.swift */; };
 		5BD4F80320CF48C800F3A7AC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4F80220CF48C800F3A7AC /* Constants.swift */; };
 		A266FA7520D059F9006FF138 /* MyBookingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A266FA7420D059F9006FF138 /* MyBookingTableViewCell.swift */; };
+		A266FA7720D3647E006FF138 /* MyBookingFlightDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A266FA7620D3647E006FF138 /* MyBookingFlightDetailViewController.swift */; };
 		A27B462520CA27E6001132E3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27B462420CA27E6001132E3 /* SignUpViewController.swift */; };
 		A27B462720CA2C53001132E3 /* FirebaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27B462620CA2C53001132E3 /* FirebaseHandler.swift */; };
 		A27B462920CA2D60001132E3 /* UploadPhotoIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27B462820CA2D60001132E3 /* UploadPhotoIDViewController.swift */; };
@@ -102,6 +103,7 @@
 		5BD4F80220CF48C800F3A7AC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		80F61C3F87551F07EAF36BD1 /* Pods-TuniuAirlineProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuniuAirlineProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuniuAirlineProject/Pods-TuniuAirlineProject.release.xcconfig"; sourceTree = "<group>"; };
 		A266FA7420D059F9006FF138 /* MyBookingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingTableViewCell.swift; sourceTree = "<group>"; };
+		A266FA7620D3647E006FF138 /* MyBookingFlightDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingFlightDetailViewController.swift; sourceTree = "<group>"; };
 		A27B462420CA27E6001132E3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A27B462620CA2C53001132E3 /* FirebaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirebaseHandler.swift; path = Model/FirebaseHandler.swift; sourceTree = SOURCE_ROOT; };
 		A27B462820CA2D60001132E3 /* UploadPhotoIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPhotoIDViewController.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				5BD4F7F620CECFC000F3A7AC /* FlightSearchResultViewController.swift */,
 				5BA6D7AD20D2461B002B7568 /* FlightSearchFoldViewController.swift */,
 				5B80E62F20D0B9AB0061CB8C /* FlightDetailViewController.swift */,
+				A266FA7620D3647E006FF138 /* MyBookingFlightDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				5BD4F80320CF48C800F3A7AC /* Constants.swift in Sources */,
 				A27B462720CA2C53001132E3 /* FirebaseHandler.swift in Sources */,
 				5B98011220CA09A9008845F3 /* MyBookingViewController.swift in Sources */,
+				A266FA7720D3647E006FF138 /* MyBookingFlightDetailViewController.swift in Sources */,
 				5BD4F7FF20CF34E500F3A7AC /* FlightModel.swift in Sources */,
 				5B96864A20CE2DDD00909163 /* HomeViewController.swift in Sources */,
 				5B98010E20C9E4B6008845F3 /* FTNavigationController.swift in Sources */,
