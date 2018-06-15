@@ -31,6 +31,10 @@
 		5B98012220CB0F40008845F3 /* AirportSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B98012120CB0F40008845F3 /* AirportSearchViewController.swift */; };
 		5B98012420CB118E008845F3 /* CitySearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B98012320CB118E008845F3 /* CitySearchTableViewCell.swift */; };
 		5B98012620CC2DFF008845F3 /* AirportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B98012520CC2DFF008845F3 /* AirportModel.swift */; };
+		5BA6D7AC20D2459D002B7568 /* FoldTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BA6D7AB20D2459D002B7568 /* FoldTableView.storyboard */; };
+		5BA6D7AE20D2461B002B7568 /* FlightSearchFoldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6D7AD20D2461B002B7568 /* FlightSearchFoldViewController.swift */; };
+		5BA6D7B020D24653002B7568 /* FlightSearchFoldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6D7AF20D24653002B7568 /* FlightSearchFoldTableViewCell.swift */; };
+		5BA6D7B220D25A20002B7568 /* TimeMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6D7B120D25A20002B7568 /* TimeMode.swift */; };
 		5BD4F7F720CECFC000F3A7AC /* FlightSearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4F7F620CECFC000F3A7AC /* FlightSearchResultViewController.swift */; };
 		5BD4F7F920CED0CB00F3A7AC /* FlightSearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4F7F820CED0CB00F3A7AC /* FlightSearchResultTableViewCell.swift */; };
 		5BD4F7FD20CF203500F3A7AC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4F7FC20CF203500F3A7AC /* BaseViewController.swift */; };
@@ -38,6 +42,7 @@
 		5BD4F80120CF458900F3A7AC /* FlightStatsAPIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4F80020CF458900F3A7AC /* FlightStatsAPIHandler.swift */; };
 		5BD4F80320CF48C800F3A7AC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4F80220CF48C800F3A7AC /* Constants.swift */; };
 		A266FA7520D059F9006FF138 /* MyBookingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A266FA7420D059F9006FF138 /* MyBookingTableViewCell.swift */; };
+		A266FA7720D3647E006FF138 /* MyBookingFlightDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A266FA7620D3647E006FF138 /* MyBookingFlightDetailViewController.swift */; };
 		A27B462520CA27E6001132E3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27B462420CA27E6001132E3 /* SignUpViewController.swift */; };
 		A27B462720CA2C53001132E3 /* FirebaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27B462620CA2C53001132E3 /* FirebaseHandler.swift */; };
 		A27B462920CA2D60001132E3 /* UploadPhotoIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27B462820CA2D60001132E3 /* UploadPhotoIDViewController.swift */; };
@@ -86,6 +91,10 @@
 		5B98012120CB0F40008845F3 /* AirportSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportSearchViewController.swift; sourceTree = "<group>"; };
 		5B98012320CB118E008845F3 /* CitySearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchTableViewCell.swift; sourceTree = "<group>"; };
 		5B98012520CC2DFF008845F3 /* AirportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportModel.swift; sourceTree = "<group>"; };
+		5BA6D7AB20D2459D002B7568 /* FoldTableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FoldTableView.storyboard; sourceTree = "<group>"; };
+		5BA6D7AD20D2461B002B7568 /* FlightSearchFoldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSearchFoldViewController.swift; sourceTree = "<group>"; };
+		5BA6D7AF20D24653002B7568 /* FlightSearchFoldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSearchFoldTableViewCell.swift; sourceTree = "<group>"; };
+		5BA6D7B120D25A20002B7568 /* TimeMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeMode.swift; sourceTree = "<group>"; };
 		5BD4F7F620CECFC000F3A7AC /* FlightSearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSearchResultViewController.swift; sourceTree = "<group>"; };
 		5BD4F7F820CED0CB00F3A7AC /* FlightSearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSearchResultTableViewCell.swift; sourceTree = "<group>"; };
 		5BD4F7FC20CF203500F3A7AC /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +103,7 @@
 		5BD4F80220CF48C800F3A7AC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		80F61C3F87551F07EAF36BD1 /* Pods-TuniuAirlineProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuniuAirlineProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuniuAirlineProject/Pods-TuniuAirlineProject.release.xcconfig"; sourceTree = "<group>"; };
 		A266FA7420D059F9006FF138 /* MyBookingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingTableViewCell.swift; sourceTree = "<group>"; };
+		A266FA7620D3647E006FF138 /* MyBookingFlightDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingFlightDetailViewController.swift; sourceTree = "<group>"; };
 		A27B462420CA27E6001132E3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A27B462620CA2C53001132E3 /* FirebaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirebaseHandler.swift; path = Model/FirebaseHandler.swift; sourceTree = SOURCE_ROOT; };
 		A27B462820CA2D60001132E3 /* UploadPhotoIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPhotoIDViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +194,7 @@
 				5B98010520C9CB55008845F3 /* Login.storyboard */,
 				5B9800AE20C9902B008845F3 /* Main.storyboard */,
 				5B98011B20CAC276008845F3 /* Calendar.storyboard */,
+				5BA6D7AB20D2459D002B7568 /* FoldTableView.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -197,6 +208,7 @@
 				5BD4F7F820CED0CB00F3A7AC /* FlightSearchResultTableViewCell.swift */,
 				A266FA7420D059F9006FF138 /* MyBookingTableViewCell.swift */,
 				5B80E63120D0CF390061CB8C /* FlightDetialTableViewCell.swift */,
+				5BA6D7AF20D24653002B7568 /* FlightSearchFoldTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -210,6 +222,7 @@
 				A2B00D9620CE1A5F0082B21C /* CouponModel.swift */,
 				5BD4F7FE20CF34E500F3A7AC /* FlightModel.swift */,
 				5BD4F80220CF48C800F3A7AC /* Constants.swift */,
+				5BA6D7B120D25A20002B7568 /* TimeMode.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -231,7 +244,9 @@
 				A2B00D9820CE25930082B21C /* CouponViewController.swift */,
 				5BD4F7FC20CF203500F3A7AC /* BaseViewController.swift */,
 				5BD4F7F620CECFC000F3A7AC /* FlightSearchResultViewController.swift */,
+				5BA6D7AD20D2461B002B7568 /* FlightSearchFoldViewController.swift */,
 				5B80E62F20D0B9AB0061CB8C /* FlightDetailViewController.swift */,
+				A266FA7620D3647E006FF138 /* MyBookingFlightDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -334,6 +349,7 @@
 			files = (
 				5B98011C20CAC276008845F3 /* Calendar.storyboard in Resources */,
 				5B9800B520C9902D008845F3 /* LaunchScreen.storyboard in Resources */,
+				5BA6D7AC20D2459D002B7568 /* FoldTableView.storyboard in Resources */,
 				5B9800CB20C99053008845F3 /* GoogleService-Info.plist in Resources */,
 				5B9800B220C9902D008845F3 /* Assets.xcassets in Resources */,
 				5B98010620C9CB55008845F3 /* Login.storyboard in Resources */,
@@ -416,6 +432,7 @@
 				"${BUILT_PRODUCTS_DIR}/ECSlidingViewController/ECSlidingViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FoldingCell/FoldingCell.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
@@ -432,6 +449,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ECSlidingViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FoldingCell.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
@@ -457,6 +475,7 @@
 				5BD4F80320CF48C800F3A7AC /* Constants.swift in Sources */,
 				A27B462720CA2C53001132E3 /* FirebaseHandler.swift in Sources */,
 				5B98011220CA09A9008845F3 /* MyBookingViewController.swift in Sources */,
+				A266FA7720D3647E006FF138 /* MyBookingFlightDetailViewController.swift in Sources */,
 				5BD4F7FF20CF34E500F3A7AC /* FlightModel.swift in Sources */,
 				5B96864A20CE2DDD00909163 /* HomeViewController.swift in Sources */,
 				5B98010E20C9E4B6008845F3 /* FTNavigationController.swift in Sources */,
@@ -466,18 +485,21 @@
 				A266FA7520D059F9006FF138 /* MyBookingTableViewCell.swift in Sources */,
 				5B98011420CA09B6008845F3 /* ProfileViewController.swift in Sources */,
 				5BD4F7F720CECFC000F3A7AC /* FlightSearchResultViewController.swift in Sources */,
+				5BA6D7B020D24653002B7568 /* FlightSearchFoldTableViewCell.swift in Sources */,
 				5B98011020CA040E008845F3 /* BookingViewController.swift in Sources */,
 				5BD4F80120CF458900F3A7AC /* FlightStatsAPIHandler.swift in Sources */,
 				5B98012220CB0F40008845F3 /* AirportSearchViewController.swift in Sources */,
 				5B80E63020D0B9AB0061CB8C /* FlightDetailViewController.swift in Sources */,
 				5B98011820CA4C43008845F3 /* CalenderViewController.swift in Sources */,
 				5B98011A20CA4E25008845F3 /* CalenderCell.swift in Sources */,
+				5BA6D7AE20D2461B002B7568 /* FlightSearchFoldViewController.swift in Sources */,
 				5BD4F7FD20CF203500F3A7AC /* BaseViewController.swift in Sources */,
 				A2B00D9720CE1A5F0082B21C /* CouponModel.swift in Sources */,
 				5B98012420CB118E008845F3 /* CitySearchTableViewCell.swift in Sources */,
 				5B80E63220D0CF390061CB8C /* FlightDetialTableViewCell.swift in Sources */,
 				5B98011620CA09C2008845F3 /* LogoutViewController.swift in Sources */,
 				A2B00D9920CE25930082B21C /* CouponViewController.swift in Sources */,
+				5BA6D7B220D25A20002B7568 /* TimeMode.swift in Sources */,
 				5B9800AB20C9902B008845F3 /* AppDelegate.swift in Sources */,
 				A27B462920CA2D60001132E3 /* UploadPhotoIDViewController.swift in Sources */,
 				A27B462520CA27E6001132E3 /* SignUpViewController.swift in Sources */,

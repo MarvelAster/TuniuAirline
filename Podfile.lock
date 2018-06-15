@@ -50,6 +50,7 @@ PODS:
   - FirebaseStorage (3.0.0):
     - FirebaseCore (~> 5.0)
     - GTMSessionFetcher/Core (~> 1.1)
+  - FoldingCell (3.1.1)
   - GoogleSignIn (4.1.2):
     - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
     - "GoogleToolboxForMac/NSString+URLArguments (~> 2.1)"
@@ -93,6 +94,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Messaging
   - Firebase/Storage
+  - FoldingCell
   - GoogleSignIn
   - JTAppleCalendar
   - SVProgressHUD
@@ -112,6 +114,7 @@ SPEC REPOS:
     - FirebaseInstanceID
     - FirebaseMessaging
     - FirebaseStorage
+    - FoldingCell
     - GoogleSignIn
     - GoogleToolboxForMac
     - GTMOAuth2
@@ -136,6 +139,7 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: 83e0040351565df711a5db3d8ebe5ea21aca998a
   FirebaseMessaging: f2360a966ecfb0d14facf0fbdf306efc2df0ddbe
   FirebaseStorage: 7ca4bb7b58a25fa647b04f524033fc7cb7eb272b
+  FoldingCell: 238c33ae8d9cd655090c9c4c5ff32596cfd18c6e
   GoogleSignIn: d9ef55b10f0aa401a5de2747f59b725e4b9732ac
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
@@ -147,6 +151,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   TWMessageBarManager: fd84e7948ba7968a2b5d9454859135761214ec56
 
-PODFILE CHECKSUM: 0a9cc053c8b3279043b3417d745483b1af820d13
+PODFILE CHECKSUM: 5e6b4a229a53c78effb9f4d93b9a9d7b0691fee4
 
 COCOAPODS: 1.5.2

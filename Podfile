@@ -17,7 +17,7 @@ target 'TuniuAirlineProject' do
   pod 'Firebase/Messaging'
   pod 'ECSlidingViewController', '~> 2.0.3'
   pod 'JTAppleCalendar'
-  
+  pod 'FoldingCell'
   target 'TuniuAirlineProjectTests' do
     inherit! :search_paths
     # Pods for testing

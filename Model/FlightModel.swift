@@ -24,3 +24,23 @@ struct ScheduledFlights : Codable {
     var departureTime : String
     var arrivalTime : String
 }
+
+struct BookedFlightsInfo{
+    var carrierFsCode : String
+    var flightNumber : String
+    var departureAirportFsCode : String
+    var arrivalAirportFsCode : String
+    var stops : Int
+    var departureTerminal : String
+    var arrivalTerminal : String
+    var departureTime : String
+    var arrivalTime : String
+    var departureCity: String
+    var arriveCity: String
+    var departureDate: String
+    var flightKey: String
+    var departureAirportName: String
+    var arriveAirportName: String
+    var durationTime: String
+}
+
