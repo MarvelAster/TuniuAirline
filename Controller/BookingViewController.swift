@@ -9,7 +9,8 @@
 import UIKit
 import ECSlidingViewController
 import SVProgressHUD
-class BookingViewController: UIViewController,UITextFieldDelegate, AirportSearchDelegate, CalendarDelegate {
+import ARSPopover
+class BookingViewController: UIViewController,UITextFieldDelegate, AirportSearchDelegate, CalendarDelegate, UIPopoverPresentationControllerDelegate {
     
     @IBOutlet weak var sourceTextfield: UITextField!
     
@@ -46,7 +47,6 @@ class BookingViewController: UIViewController,UITextFieldDelegate, AirportSearch
         
         let storyboard = UIStoryboard(name: "FoldTableView", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "FlightSearchFoldViewController") as! FlightSearchFoldViewController
-        
         controller.segmentTag = self.segmentTag
         controller.sourceAirport = self.sourceAirport!
         controller.destinationAirport = self.destinationAirport!
@@ -81,7 +81,25 @@ class BookingViewController: UIViewController,UITextFieldDelegate, AirportSearch
         let controller = storyboard.instantiateViewController(withIdentifier: "CalenderViewController") as! CalenderViewController
         controller.tag = sender.tag
         controller.delegate = self
-        present(controller, animated: true, completion: nil)
+//        present(controller, animated: true, completion: nil)
+        
+        controller.modalPresentationStyle = UIModalPresentationStyle.popover
+        
+        // set up the popover presentation controller
+        controller.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.any
+        controller.popoverPresentationController?.delegate = self
+        controller.popoverPresentationController?.sourceView = sender as! UIView // button
+        controller.popoverPresentationController?.sourceRect = sender.bounds
+        
+        // present the popover
+        self.present(controller, animated: true, completion: nil)
+        
+
+    }
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+        // return UIModalPresentationStyle.FullScreen
+        return UIModalPresentationStyle.none
     }
     
     @IBAction func segment(_ sender: UISegmentedControl) {

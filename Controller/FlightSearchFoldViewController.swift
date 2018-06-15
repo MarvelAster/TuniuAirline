@@ -105,6 +105,43 @@ extension FlightSearchFoldViewController : FoldCellDelegate {
         guard let indexPath = tblView.indexPath(for: cell) else {
             return
         }
+        if self.segmentTag == 0 {
+            //round trip choosed
+            let storyboard = UIStoryboard(name: "FoldTableView", bundle: nil)
+            flag = true
+            let controller = storyboard.instantiateViewController(withIdentifier: "FlightSearchFoldViewController") as! FlightSearchFoldViewController
+            controller.segmentTag = 1
+            controller.sourceAirport = self.sourceAirport!
+            controller.destinationAirport = self.destinationAirport!
+            controller.departureTrip = self.returnTrip
+            controller.flag = flag
+            if choosedFlights.count > 0 {
+                choosedFlights.popLast()
+            }
+            self.choosedFlights.append(self.allFlights![indexPath.row])
+            controller.choosedFlights = self.choosedFlights
+            self.navigationController?.pushViewController(controller, animated: true)
+        } else {
+            //one-way trip choosed
+            let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
+            let controller1 = storyboard.instantiateViewController(withIdentifier: "FlightDetailViewController") as! FlightDetailViewController
+            if flag == false {
+                if choosedFlights.count > 0 {
+                    choosedFlights.popLast()
+                }
+            } else {
+                if choosedFlights.count > 1 {
+                    choosedFlights.popLast()
+                }
+            }
+            self.choosedFlights.append(self.allFlights![indexPath.row])
+            controller1.flights = self.choosedFlights
+            controller1.departureTrip = self.departureTrip
+            controller1.returnTrip = self.returnTrip
+            controller1.sourceAirport = self.sourceAirport
+            controller1.destAirport = self.destinationAirport
+            navigationController?.pushViewController(controller1, animated: true)
+        }
     }
     
     
@@ -122,7 +159,7 @@ extension FlightSearchFoldViewController : FoldCellDelegate {
         cell.durationsForExpandedState = durations
         cell.durationsForCollapsedState = durations
         cell.backgroundColor = UIColor(white: 1, alpha: 0.2)
-        
+        cell.delegate = self
         cell.flightNumber.text = "NO.\(String(allFlights[indexPath.row].flightNumber))"
         cell.dateLabel.text = Time.shareTimeInstance.toDate(time: allFlights[indexPath.row].departureTime)
         cell.durationTimeLabel.text = "\(Time.shareTimeInstance.getTimeInterval(startTime: allFlights[indexPath.row].departureTime, endTime: allFlights[indexPath.row].arrivalTime))(\(allFlights[indexPath.row].stops)stops)"

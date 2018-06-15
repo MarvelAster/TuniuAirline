@@ -18,6 +18,7 @@ target 'TuniuAirlineProject' do
   pod 'ECSlidingViewController', '~> 2.0.3'
   pod 'JTAppleCalendar'
   pod 'FoldingCell'
+  pod 'ARSPopover'
   target 'TuniuAirlineProjectTests' do
     inherit! :search_paths
     # Pods for testing
