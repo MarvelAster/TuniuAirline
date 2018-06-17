@@ -35,6 +35,7 @@
 		5BA6D7AE20D2461B002B7568 /* FlightSearchFoldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6D7AD20D2461B002B7568 /* FlightSearchFoldViewController.swift */; };
 		5BA6D7B020D24653002B7568 /* FlightSearchFoldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6D7AF20D24653002B7568 /* FlightSearchFoldTableViewCell.swift */; };
 		5BA6D7B220D25A20002B7568 /* TimeMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6D7B120D25A20002B7568 /* TimeMode.swift */; };
+		5BCCC1BE20D5DF3200645C27 /* PaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCCC1BD20D5DF3200645C27 /* PaymentModel.swift */; };
 		5BD4F7F720CECFC000F3A7AC /* FlightSearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4F7F620CECFC000F3A7AC /* FlightSearchResultViewController.swift */; };
 		5BD4F7F920CED0CB00F3A7AC /* FlightSearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4F7F820CED0CB00F3A7AC /* FlightSearchResultTableViewCell.swift */; };
 		5BD4F7FD20CF203500F3A7AC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4F7FC20CF203500F3A7AC /* BaseViewController.swift */; };
@@ -95,6 +96,7 @@
 		5BA6D7AD20D2461B002B7568 /* FlightSearchFoldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSearchFoldViewController.swift; sourceTree = "<group>"; };
 		5BA6D7AF20D24653002B7568 /* FlightSearchFoldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSearchFoldTableViewCell.swift; sourceTree = "<group>"; };
 		5BA6D7B120D25A20002B7568 /* TimeMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeMode.swift; sourceTree = "<group>"; };
+		5BCCC1BD20D5DF3200645C27 /* PaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModel.swift; sourceTree = "<group>"; };
 		5BD4F7F620CECFC000F3A7AC /* FlightSearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSearchResultViewController.swift; sourceTree = "<group>"; };
 		5BD4F7F820CED0CB00F3A7AC /* FlightSearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSearchResultTableViewCell.swift; sourceTree = "<group>"; };
 		5BD4F7FC20CF203500F3A7AC /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				5BD4F7FE20CF34E500F3A7AC /* FlightModel.swift */,
 				5BD4F80220CF48C800F3A7AC /* Constants.swift */,
 				5BA6D7B120D25A20002B7568 /* TimeMode.swift */,
+				5BCCC1BD20D5DF3200645C27 /* PaymentModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -430,6 +433,8 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-TuniuAirlineProject/Pods-TuniuAirlineProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ARSPopover/ARSPopover.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Braintree/Braintree.framework",
+				"${BUILT_PRODUCTS_DIR}/BraintreeDropIn/BraintreeDropIn.framework",
 				"${BUILT_PRODUCTS_DIR}/ECSlidingViewController/ECSlidingViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
@@ -448,6 +453,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ARSPopover.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Braintree.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BraintreeDropIn.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ECSlidingViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
@@ -488,6 +495,7 @@
 				5B98011420CA09B6008845F3 /* ProfileViewController.swift in Sources */,
 				5BD4F7F720CECFC000F3A7AC /* FlightSearchResultViewController.swift in Sources */,
 				5BA6D7B020D24653002B7568 /* FlightSearchFoldTableViewCell.swift in Sources */,
+				5BCCC1BE20D5DF3200645C27 /* PaymentModel.swift in Sources */,
 				5B98011020CA040E008845F3 /* BookingViewController.swift in Sources */,
 				5BD4F80120CF458900F3A7AC /* FlightStatsAPIHandler.swift in Sources */,
 				5B98012220CB0F40008845F3 /* AirportSearchViewController.swift in Sources */,

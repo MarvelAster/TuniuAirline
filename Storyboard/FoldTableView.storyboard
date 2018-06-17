@@ -681,6 +681,7 @@
                                     <outlet property="flightNumber" destination="ROw-CH-1zB" id="pK8-tJ-6JK"/>
                                     <outlet property="foregroundView" destination="SQn-iu-ibt" id="5kb-s5-peG"/>
                                     <outlet property="foregroundViewTop" destination="IUl-qA-a4J" id="DyW-gX-fD4"/>
+                                    <outlet property="price" destination="MG8-aq-5Y1" id="h8S-zw-Jrd"/>
                                     <outlet property="timeFromTo" destination="a3n-ZR-Ang" id="RVa-OC-0CP"/>
                                     <outlet property="userImg" destination="Hqe-vM-y3i" id="xrH-fM-Zdq"/>
                                     <outlet property="userName" destination="CJn-Xg-uE1" id="oGn-hm-hfT"/>

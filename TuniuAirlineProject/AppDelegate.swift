@@ -10,7 +10,8 @@ import UIKit
 import Firebase
 import GoogleSignIn
 import UserNotifications
-
+import BraintreeDropIn
+import Braintree
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -19,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        //set payment
+        BTAppSwitch.setReturnURLScheme("com.Chuanqi.MyInstagramProjectWithFirebase.payments")
+        //
         FirebaseApp.configure()
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         if Auth.auth().currentUser == nil{
@@ -27,7 +31,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController = rootController
         }
         setupNotification()
-
+        
+        //test only
+//        let storyboard = UIStoryboard(name: "Payment", bundle: nil)
+//        let controller = storyboard.instantiateViewController(withIdentifier: "PaymentViewController")
+//        self.window?.rootViewController = controller
+        
+        
         return true
     }
 
@@ -57,9 +67,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any])
         -> Bool {
+            if url.scheme?.localizedCaseInsensitiveCompare("com.Chuanqi.MyInstagramProjectWithFirebase.payments") == .orderedSame {
+                return BTAppSwitch.handleOpen(url, options: options)
+            } else {
             let googlehandler =
                 GIDSignIn.sharedInstance().handle(url, sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String, annotation: [:])
             return googlehandler
+            }
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {

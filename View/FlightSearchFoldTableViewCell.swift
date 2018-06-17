@@ -13,6 +13,7 @@ protocol FoldCellDelegate {
 }
 class FlightSearchFoldTableViewCell: FoldingCell {
     
+    @IBOutlet weak var price: UILabel!
     @IBOutlet weak var closeNumberLabel : UILabel!
     @IBOutlet weak var flightNumber : UILabel!
     @IBOutlet weak var dateLabel: UILabel!
