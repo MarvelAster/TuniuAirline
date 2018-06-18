@@ -19,6 +19,11 @@ target 'TuniuAirlineProject' do
   pod 'JTAppleCalendar'
   pod 'FoldingCell'
   pod 'ARSPopover'
+  pod 'Braintree'
+  pod 'BraintreeDropIn'
+  pod 'Braintree/PayPal'
+  pod 'Braintree/Venmo'
+  pod 'Braintree/Apple-Pay'
   target 'TuniuAirlineProjectTests' do
     inherit! :search_paths
     # Pods for testing

@@ -10,9 +10,8 @@ import UIKit
 import FoldingCell
 class FlightSearchFoldViewController: UITableViewController {
     
+    var price : Double = 0.0
     @IBOutlet weak var tblView: UITableView!
-    
-    
     var sourceAirport : Airport?
     var destinationAirport : Airport?
     

@@ -6,6 +6,43 @@ PODS:
   - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
+  - Braintree (4.15.0):
+    - Braintree/Card (= 4.15.0)
+    - Braintree/Core (= 4.15.0)
+    - Braintree/PayPal (= 4.15.0)
+    - Braintree/UI (= 4.15.0)
+  - Braintree/Card (4.15.0):
+    - Braintree/Core
+  - Braintree/Core (4.15.0)
+  - Braintree/PaymentFlow (4.15.0):
+    - Braintree/Card
+    - Braintree/Core
+  - Braintree/PayPal (4.15.0):
+    - Braintree/Core
+    - Braintree/PayPalOneTouch
+  - Braintree/PayPalDataCollector (4.15.0):
+    - Braintree/Core
+    - Braintree/PayPalUtils
+  - Braintree/PayPalOneTouch (4.15.0):
+    - Braintree/Core
+    - Braintree/PayPalDataCollector
+    - Braintree/PayPalUtils
+  - Braintree/PayPalUtils (4.15.0)
+  - Braintree/UI (4.15.0):
+    - Braintree/Card
+    - Braintree/Core
+  - Braintree/UnionPay (4.15.0):
+    - Braintree/Card
+    - Braintree/Core
+  - BraintreeDropIn (6.2.0):
+    - BraintreeDropIn/DropIn (= 6.2.0)
+  - BraintreeDropIn/DropIn (6.2.0):
+    - Braintree/Card (~> 4.11)
+    - Braintree/Core (~> 4.11)
+    - Braintree/PaymentFlow (~> 4.11)
+    - Braintree/UnionPay (~> 4.11)
+    - BraintreeDropIn/UIKit
+  - BraintreeDropIn/UIKit (6.2.0)
   - ECSlidingViewController (2.0.3)
   - FBSDKCoreKit (4.33.0):
     - Bolts (~> 1.7)
@@ -89,6 +126,8 @@ PODS:
 
 DEPENDENCIES:
   - ARSPopover
+  - Braintree
+  - BraintreeDropIn
   - ECSlidingViewController (~> 2.0.3)
   - FBSDKLoginKit
   - Firebase/Auth
@@ -106,6 +145,8 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - ARSPopover
     - Bolts
+    - Braintree
+    - BraintreeDropIn
     - ECSlidingViewController
     - FBSDKCoreKit
     - FBSDKLoginKit
@@ -132,6 +173,8 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   ARSPopover: ec2531fe8f498da1181e00f9ffeaa586a3d16d82
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  Braintree: 5f10816f455ffd79c411e6d22a177846971f3677
+  BraintreeDropIn: 4e80bce4bc2b430f2fb1af0cd13ff3223d2758d3
   ECSlidingViewController: 6485c14f23b4487e9946535421ca8f111f86cc53
   FBSDKCoreKit: 572b047a7e029bc44542bcf8a59414e7ff2b543e
   FBSDKLoginKit: 88cb456349cfb3b554427ce4f8b43729d85dfb40
@@ -155,6 +198,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   TWMessageBarManager: fd84e7948ba7968a2b5d9454859135761214ec56
 
-PODFILE CHECKSUM: 113464b999390ef64d2cc25246f4cc59864c91d1
+PODFILE CHECKSUM: 554bb60e9d03e7ab58c998ac86e33a0ddbc1e23d
 
 COCOAPODS: 1.5.2

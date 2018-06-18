@@ -7,9 +7,11 @@
 //
 
 import UIKit
-
+import BraintreeDropIn
+import Braintree
 class FlightDetailViewController: UIViewController, UITableViewDataSource {
     
+    @IBOutlet weak var price: UILabel!
     
     @IBOutlet weak var tblView: UITableView!
     
@@ -39,6 +41,40 @@ class FlightDetailViewController: UIViewController, UITableViewDataSource {
         DestAirportName = destAirport?.name
         backSourceAirportName = DestAirportName
         backDestAirportName = SourceAirportName
+    }
+    
+    @IBAction func purchaseClick(_ sender: Any) {
+        var str = self.price.text
+        str?.removeFirst()
+        print(str)
+        let request =  BTDropInRequest()
+        let dropIn = BTDropInController(authorization: BraintreePayment.toKinizationKey, request: request)
+        { [unowned self] (controller, result, error) in
+            
+            if let error = error {
+                print(error.localizedDescription)
+                
+            } else if (result?.isCancelled == true) {
+                print("Transaction Cancelled")
+                
+            } else if let nonce = result?.paymentMethod?.nonce, let amount = str {
+                self.sendRequestPaymentToServer(nonce: nonce, amount: amount)
+            }
+            controller.dismiss(animated: true, completion: nil)
+        }
+        self.present(dropIn!, animated: true, completion: nil)
+    }
+    
+    func purchaseSuccess() {
+        if flights?.count == 1{
+            FirebaseHandler.sharedInstance.uploadBookedFlightDetail(flights: flights![0], departureTrip: toDate(time: flights![0].departureTime), departureCity: sourceAirport!.city!, arriveCity: destAirport!.city!, departureAirportName: SourceAirportName!, arriveAirportName: DestAirportName!, durationTime: departureDurationTime!, completion: {()in
+            })
+        }else{
+            FirebaseHandler.sharedInstance.uploadBookedFlightDetail(flights: flights![0], departureTrip: toDate(time: flights![0].departureTime), departureCity: sourceAirport!.city!, arriveCity: destAirport!.city!, departureAirportName: SourceAirportName!, arriveAirportName: DestAirportName!, durationTime: departureDurationTime!, completion: {()in
+            })
+            FirebaseHandler.sharedInstance.uploadBookedFlightDetail(flights: flights![1], departureTrip: toDate(time: flights![1].departureTime), departureCity: backSourceAirport!, arriveCity: backDestAirport!, departureAirportName: backSourceAirportName!, arriveAirportName: backDestAirportName!, durationTime: returnDurationTime!, completion: {()in
+            })
+        }
     }
     
     @objc func doneBtnAction() {
@@ -91,6 +127,29 @@ class FlightDetailViewController: UIViewController, UITableViewDataSource {
             cell.stopsLabel.text = "\(flights![indexPath.row].stops)"
         }
         return cell
+    }
+    
+    
+    func sendRequestPaymentToServer(nonce: String, amount: String) {
+        let paymentURL = URL(string: "http://localhost:8000/checkout")!
+        var request = URLRequest(url: paymentURL)
+        request.httpBody = "payment_method_nonce=\(nonce)&amount=\(amount)".data(using: String.Encoding.utf8)
+        request.httpMethod = "POST"
+        
+        URLSession.shared.dataTask(with: request) { [weak self] (data, response, error) -> Void in
+            guard let data = data else {
+                print(error!.localizedDescription)
+                return
+            }
+            
+            guard let result = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any], let success = result?["success"] as? Bool, success == true else {
+                print("Transaction failed. Please try again.")
+                return
+            }
+            
+            print("Successfully charged. Thanks So Much :)")
+            self?.purchaseSuccess()
+            }.resume()
     }
     
     func getTimeInterval(indexPath : IndexPath) -> String {

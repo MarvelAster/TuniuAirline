@@ -468,7 +468,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H5G-1b-4Qe">
-                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                                <rect key="frame" x="0.0" y="60" width="375" height="567"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FlightDetialTableViewCell" rowHeight="254" id="EtL-bt-mxO" customClass="FlightDetialTableViewCell" customModule="TuniuAirlineProject" customModuleProvider="target">
@@ -667,26 +667,54 @@
                                     <outlet property="delegate" destination="y94-B5-QJE" id="Ejl-J3-hYO"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2H-DP-jXv">
+                                <rect key="frame" x="250" y="627" width="125" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Get Tickets Now">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="purchaseClick:" destination="y94-B5-QJE" eventType="touchUpInside" id="8f4-WM-ius"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$236.68" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcc-GP-euT">
+                                <rect key="frame" x="0.0" y="627" width="250" height="40"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="XXR-pv-hIx"/>
+                                    <constraint firstAttribute="height" constant="40" id="yA0-T5-cue"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="L7v-dP-pXF" firstAttribute="trailing" secondItem="k2H-DP-jXv" secondAttribute="trailing" id="7NO-Bk-pAX"/>
                             <constraint firstItem="L7v-dP-pXF" firstAttribute="trailing" secondItem="H5G-1b-4Qe" secondAttribute="trailing" id="83X-MH-tLg"/>
+                            <constraint firstItem="k2H-DP-jXv" firstAttribute="top" secondItem="H5G-1b-4Qe" secondAttribute="bottom" id="9nV-op-apX"/>
+                            <constraint firstItem="k2H-DP-jXv" firstAttribute="leading" secondItem="hcc-GP-euT" secondAttribute="trailing" id="JTN-Rx-NjP"/>
                             <constraint firstItem="KJX-hn-cxo" firstAttribute="top" secondItem="L7v-dP-pXF" secondAttribute="top" id="UuG-Sf-uDD"/>
-                            <constraint firstItem="L7v-dP-pXF" firstAttribute="bottom" secondItem="H5G-1b-4Qe" secondAttribute="bottom" id="dVF-jK-lbz"/>
+                            <constraint firstItem="L7v-dP-pXF" firstAttribute="bottom" secondItem="hcc-GP-euT" secondAttribute="bottom" id="bwh-Gu-a0m"/>
+                            <constraint firstItem="k2H-DP-jXv" firstAttribute="centerY" secondItem="hcc-GP-euT" secondAttribute="centerY" id="dxc-12-SUP"/>
                             <constraint firstItem="L7v-dP-pXF" firstAttribute="trailing" secondItem="KJX-hn-cxo" secondAttribute="trailing" id="eRu-MQ-x8E"/>
+                            <constraint firstItem="k2H-DP-jXv" firstAttribute="height" secondItem="hcc-GP-euT" secondAttribute="height" id="gEw-cw-Trr"/>
                             <constraint firstItem="H5G-1b-4Qe" firstAttribute="top" secondItem="KJX-hn-cxo" secondAttribute="bottom" id="mPA-bV-o2U"/>
                             <constraint firstItem="KJX-hn-cxo" firstAttribute="leading" secondItem="L7v-dP-pXF" secondAttribute="leading" id="p87-rK-MAx"/>
+                            <constraint firstItem="hcc-GP-euT" firstAttribute="leading" secondItem="L7v-dP-pXF" secondAttribute="leading" id="q6l-d1-oHy"/>
                             <constraint firstItem="H5G-1b-4Qe" firstAttribute="leading" secondItem="L7v-dP-pXF" secondAttribute="leading" id="qRQ-w6-Nr3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="L7v-dP-pXF"/>
                     </view>
                     <connections>
+                        <outlet property="price" destination="hcc-GP-euT" id="47J-V9-TSg"/>
                         <outlet property="tblView" destination="H5G-1b-4Qe" id="zjX-pD-ynj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tty-gy-VEv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4172" y="740"/>
+            <point key="canvasLocation" x="4172" y="739.88005997001505"/>
         </scene>
     </scenes>
 </document>
