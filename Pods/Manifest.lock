@@ -11,6 +11,8 @@ PODS:
     - Braintree/Core (= 4.15.0)
     - Braintree/PayPal (= 4.15.0)
     - Braintree/UI (= 4.15.0)
+  - Braintree/Apple-Pay (4.15.0):
+    - Braintree/Core
   - Braintree/Card (4.15.0):
     - Braintree/Core
   - Braintree/Core (4.15.0)
@@ -34,6 +36,9 @@ PODS:
   - Braintree/UnionPay (4.15.0):
     - Braintree/Card
     - Braintree/Core
+  - Braintree/Venmo (4.15.0):
+    - Braintree/Core
+    - Braintree/PayPalDataCollector
   - BraintreeDropIn (6.2.0):
     - BraintreeDropIn/DropIn (= 6.2.0)
   - BraintreeDropIn/DropIn (6.2.0):
@@ -89,6 +94,7 @@ PODS:
     - FirebaseCore (~> 5.0)
     - GTMSessionFetcher/Core (~> 1.1)
   - FoldingCell (3.1.1)
+  - FVSeatsPicker (0.9.0)
   - GoogleSignIn (4.1.2):
     - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
     - "GoogleToolboxForMac/NSString+URLArguments (~> 2.1)"
@@ -127,6 +133,9 @@ PODS:
 DEPENDENCIES:
   - ARSPopover
   - Braintree
+  - Braintree/Apple-Pay
+  - Braintree/PayPal
+  - Braintree/Venmo
   - BraintreeDropIn
   - ECSlidingViewController (~> 2.0.3)
   - FBSDKLoginKit
@@ -136,6 +145,7 @@ DEPENDENCIES:
   - Firebase/Messaging
   - Firebase/Storage
   - FoldingCell
+  - FVSeatsPicker
   - GoogleSignIn
   - JTAppleCalendar
   - SVProgressHUD
@@ -159,6 +169,7 @@ SPEC REPOS:
     - FirebaseMessaging
     - FirebaseStorage
     - FoldingCell
+    - FVSeatsPicker
     - GoogleSignIn
     - GoogleToolboxForMac
     - GTMOAuth2
@@ -187,6 +198,7 @@ SPEC CHECKSUMS:
   FirebaseMessaging: f2360a966ecfb0d14facf0fbdf306efc2df0ddbe
   FirebaseStorage: 7ca4bb7b58a25fa647b04f524033fc7cb7eb272b
   FoldingCell: 238c33ae8d9cd655090c9c4c5ff32596cfd18c6e
+  FVSeatsPicker: 4a20b3af164584f62579e39bfc4704d8297b2276
   GoogleSignIn: d9ef55b10f0aa401a5de2747f59b725e4b9732ac
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
@@ -198,6 +210,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   TWMessageBarManager: fd84e7948ba7968a2b5d9454859135761214ec56
 
-PODFILE CHECKSUM: 554bb60e9d03e7ab58c998ac86e33a0ddbc1e23d
+PODFILE CHECKSUM: f65707e8e36ca6356cf9c28d00c920eccdd5d14b
 
 COCOAPODS: 1.5.2

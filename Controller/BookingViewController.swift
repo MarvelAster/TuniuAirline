@@ -30,29 +30,30 @@ class BookingViewController: UIViewController,UITextFieldDelegate, AirportSearch
     var segmentTag = 0
     
     @IBAction func findFlightsClick(_ sender: Any) {
-        if segmentTag == 0 {
-            if dateTextfield1.text == "" || dateTextfield2.text == "" {
-                alter1()
-                return
-            }
-        }
-        if segmentTag == 1 {
-            if dateTextfield1.text == "" {
-                alter1()
-                return
-            }
-        }
-//        let storyboard = UIStoryboard(name: "Calendar", bundle: nil )
-//        let controller = storyboard.instantiateViewController(withIdentifier: "FlightSearchResultViewController") as! FlightSearchResultViewController
+//        if segmentTag == 0 {
+//            if dateTextfield1.text == "" || dateTextfield2.text == "" {
+//                alter1()
+//                return
+//            }
+//        }
+//        if segmentTag == 1 {
+//            if dateTextfield1.text == "" {
+//                alter1()
+//                return
+//            }
+//        }
+        let storyboard = UIStoryboard(name: "Seat", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "SeatPickerViewController")
+        present(controller, animated: true, completion: nil)
         
-        let storyboard = UIStoryboard(name: "FoldTableView", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "FlightSearchFoldViewController") as! FlightSearchFoldViewController
-        controller.segmentTag = self.segmentTag
-        controller.sourceAirport = self.sourceAirport!
-        controller.destinationAirport = self.destinationAirport!
-        controller.departureTrip = dateTextfield1.text
-        controller.returnTrip = dateTextfield2.text
-        self.navigationController?.pushViewController(controller, animated: true)
+//        let storyboard = UIStoryboard(name: "FoldTableView", bundle: nil)
+//        let controller = storyboard.instantiateViewController(withIdentifier: "FlightSearchFoldViewController") as! FlightSearchFoldViewController
+//        controller.segmentTag = self.segmentTag
+//        controller.sourceAirport = self.sourceAirport!
+//        controller.destinationAirport = self.destinationAirport!
+//        controller.departureTrip = dateTextfield1.text
+//        controller.returnTrip = dateTextfield2.text
+//        self.navigationController?.pushViewController(controller, animated: true)
         
         
     }

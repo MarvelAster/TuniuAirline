@@ -20,7 +20,7 @@ final class FirebaseHandler{
     var userStorage: StorageReference!
     var couponRef: DatabaseReference!
     var airplaneRef: DatabaseReference!
-    
+    var seatRef : DatabaseReference!
     static let sharedInstance = FirebaseHandler()
     
     private init(){
@@ -32,7 +32,54 @@ final class FirebaseHandler{
         airportRef = Database.database().reference().child("Airport")
         couponRef = Database.database().reference().child("CouponInfo")
         airplaneRef = Database.database().reference().child("AirplaneInfo")
+        seatRef = Database.database().reference().child("Seat")
         userStorage = Storage.storage().reference()
+    }
+    
+    func seatInitialize() {
+        databaseInit()
+        let totalSeatNum = 100;
+        for i in 0..<totalSeatNum {
+            let autoKey = seatRef.childByAutoId().key
+            let dict = ["seatNumber" : i, "seatStatus" : 0, "seatPrice" : 20]
+            seatRef.child(autoKey).updateChildValues(dict)
+        }
+    }
+    
+    func getAllSeatInfomation(completion : @escaping ([Seat]) -> Void) {
+        databaseInit()
+        var seats : [Seat] = []
+        seatRef.observeSingleEvent(of: .value, with: {
+            (snapshot) in
+            guard let value = snapshot.value as? Dictionary<String, Any> else{
+                return
+            }
+            let dispachgroup = DispatchGroup()
+            for (key, value1) in value {
+                dispachgroup.enter()
+                guard let tmp = value1 as? Dictionary<String, Int> else {
+                    return
+                }
+                var curSeat = Seat(seatNumber: tmp["seatNumber"]!, seatStatus: tmp["seatStatus"]!, seatPrice: tmp["seatPrice"]!, seatId: key)
+                seats.append(curSeat)
+                dispachgroup.leave()
+            }
+            dispachgroup.notify(queue: DispatchQueue.main, execute: {
+                completion(seats)
+            })
+        })
+    }
+    func seatChoosed(seatId : String, completion:@escaping (Error?) -> Void) {
+        databaseInit()
+        seatRef.child(seatId).updateChildValues(["seatStatus": 1], withCompletionBlock: {
+            (error, ref) in
+            if error != nil {
+                completion(error)
+            } else {
+                completion(nil)
+            }
+            
+        })
     }
     func databaseQueryByCityName(city : String , completion:@escaping ([Airport]) -> Void) {
         databaseInit()

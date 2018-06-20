@@ -18,7 +18,7 @@ class FlightDetailViewController: UIViewController, UITableViewDataSource {
     var sourceAirport: Airport?
     var destAirport: Airport?
     var flights: [ScheduledFlights]?
-    var departureTrip : String?
+    var departureTrip : String? 
     var returnTrip : String?
     var backSourceAirport: String?
     var backDestAirport: String?
@@ -42,12 +42,28 @@ class FlightDetailViewController: UIViewController, UITableViewDataSource {
         backSourceAirportName = DestAirportName
         backDestAirportName = SourceAirportName
     }
+    func fetchClientToken() {
+        // TODO: Switch this URL to your own authenticated API
+        let clientTokenURL = NSURL(string: "https://braintree-sample-merchant.herokuapp.com/client_token")!
+        let clientTokenRequest = NSMutableURLRequest(url: clientTokenURL as URL)
+        clientTokenRequest.setValue("text/plain", forHTTPHeaderField: "Accept")
+        
+        URLSession.shared.dataTask(with: clientTokenRequest as URLRequest) { (data, response, error) -> Void in
+            // TODO: Handle errors
+            let clientToken = String(data: data!, encoding: String.Encoding.utf8)
+            print(clientToken)
+            // As an example, you may wish to present Drop-in at this point.
+            // Continue to the next section to learn more...
+            }.resume()
+    }
     
     @IBAction func purchaseClick(_ sender: Any) {
         var str = self.price.text
         str?.removeFirst()
         print(str)
         let request =  BTDropInRequest()
+        request.venmoDisabled = false
+        request.applePayDisabled = false
         let dropIn = BTDropInController(authorization: BraintreePayment.toKinizationKey, request: request)
         { [unowned self] (controller, result, error) in
             
@@ -58,6 +74,9 @@ class FlightDetailViewController: UIViewController, UITableViewDataSource {
                 print("Transaction Cancelled")
                 
             } else if let nonce = result?.paymentMethod?.nonce, let amount = str {
+                
+                
+                
                 self.sendRequestPaymentToServer(nonce: nonce, amount: amount)
             }
             controller.dismiss(animated: true, completion: nil)

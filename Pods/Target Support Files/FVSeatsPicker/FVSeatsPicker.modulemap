@@ -1,0 +1,6 @@
+framework module FVSeatsPicker {
+  umbrella header "FVSeatsPicker-umbrella.h"
+
+  export *
+  module * { export * }
+}
