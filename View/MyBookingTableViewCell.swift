@@ -10,6 +10,7 @@ import UIKit
 
 class MyBookingTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var uiView: UIView!
     @IBOutlet weak var flightNumberLabel: UILabel!
     @IBOutlet weak var tripLabel: UILabel!
     @IBOutlet weak var dataLabel: UILabel!

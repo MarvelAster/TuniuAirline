@@ -144,8 +144,9 @@ class BookingViewController: UIViewController,UITextFieldDelegate, AirportSearch
     func initialze() {
         passengerLbl.layer.borderWidth = 0.5
         passengerLbl.text = "1"
-        view.backgroundColor = UIColor(patternImage: UIImage(named: "generalbackground")!)
-    }
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "background-1")!)
+        
+        }
     func alter() {
         let alter = UIAlertController(title: "Warning", message: "return date must be later than your depature date", preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: {

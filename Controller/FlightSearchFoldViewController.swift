@@ -110,8 +110,8 @@ extension FlightSearchFoldViewController : FoldCellDelegate {
             flag = true
             let controller = storyboard.instantiateViewController(withIdentifier: "FlightSearchFoldViewController") as! FlightSearchFoldViewController
             controller.segmentTag = 1
-            controller.sourceAirport = self.sourceAirport!
-            controller.destinationAirport = self.destinationAirport!
+            controller.sourceAirport = self.destinationAirport!
+            controller.destinationAirport = self.sourceAirport!
             controller.departureTrip = self.returnTrip
             controller.flag = flag
             if choosedFlights.count > 0 {
@@ -123,7 +123,7 @@ extension FlightSearchFoldViewController : FoldCellDelegate {
         } else {
             //one-way trip choosed
             let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
-            let controller1 = storyboard.instantiateViewController(withIdentifier: "FlightDetailViewController") as! FlightDetailViewController
+            let controller1 = storyboard.instantiateViewController(withIdentifier: "BookingConfirmViewController") as! BookingConfirmViewController
             if flag == false {
                 if choosedFlights.count > 0 {
                     choosedFlights.popLast()

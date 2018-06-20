@@ -19,7 +19,7 @@ class CouponViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(couponInfo)
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "background-1")!)
         couponImage.image = couponInfo?.image
         descriptionLabel.text = couponInfo?.discount
         couponCodeLabel.text = couponInfo?.couponCode

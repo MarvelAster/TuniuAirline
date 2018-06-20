@@ -71,7 +71,7 @@ class CalenderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCalendarView()
-        view.backgroundColor = UIColor(patternImage: UIImage(named: "generalbackground")!)
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "background-1")!)
         collectionView.backgroundColor = UIColor(white: 1, alpha: 0)
         // Do any additional setup after loading the view.
     }
