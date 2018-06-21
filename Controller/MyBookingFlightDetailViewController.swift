@@ -11,6 +11,7 @@ import UserNotifications
 
 class MyBookingFlightDetailViewController: UIViewController {
 
+    @IBOutlet weak var seat: UILabel!
     @IBOutlet weak var confirmationNumberLabel: UILabel!
     @IBOutlet weak var bookingStatusLabel: UILabel!
     @IBOutlet weak var airportFScode: UILabel!
@@ -72,6 +73,7 @@ class MyBookingFlightDetailViewController: UIViewController {
         tripLabel.text = "\(flights!.departureAirportName)-\(flights!.arriveAirportName)"
         personName.text = name
         email.text = emailInfo
+        seat.text = flights?.seat
     }
     
     func timeNotifications(date: DateComponents, completion: @escaping (Bool)->Void) {

@@ -10,6 +10,7 @@ import UIKit
 
 class BookingConfirmTableViewCell3: UITableViewCell {
 
+    @IBOutlet weak var price: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

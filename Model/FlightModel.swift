@@ -25,6 +25,11 @@ struct ScheduledFlights : Codable {
     var arrivalTime : String
 }
 
+struct ScheduledFlight{
+    var flight: ScheduledFlights
+    var seat: String
+}
+
 struct BookedFlightsInfo{
     var carrierFsCode : String
     var flightNumber : String
@@ -42,5 +47,6 @@ struct BookedFlightsInfo{
     var departureAirportName: String
     var arriveAirportName: String
     var durationTime: String
+    var seat: String
 }
 

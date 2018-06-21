@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5446E1950F4C17426F2992F8 /* Pods_TuniuAirlineProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC1708CDFBE00B4E3BECD1E /* Pods_TuniuAirlineProject.framework */; };
+		5B63B4A720D9E36D00C5D1FC /* Seat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B63B4A620D9E36D00C5D1FC /* Seat.storyboard */; };
+		5B63B4B420D9FCAD00C5D1FC /* SeatPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63B4B320D9FCAD00C5D1FC /* SeatPickerViewController.swift */; };
+		5B63B4B620D9FDF000C5D1FC /* SeatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63B4B520D9FDF000C5D1FC /* SeatCollectionViewCell.swift */; };
+		5B63B4B820DA05A200C5D1FC /* SeatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63B4B720DA05A200C5D1FC /* SeatModel.swift */; };
 		5B660EFDDF3467D2ED702C9E /* Pods_TuniuAirlineProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D09BC57BFB05A865C03D0F2 /* Pods_TuniuAirlineProjectTests.framework */; };
 		5B80E63020D0B9AB0061CB8C /* FlightDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B80E62F20D0B9AB0061CB8C /* FlightDetailViewController.swift */; };
 		5B80E63220D0CF390061CB8C /* FlightDetialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B80E63120D0CF390061CB8C /* FlightDetialTableViewCell.swift */; };
@@ -71,6 +75,10 @@
 		227DD92D7279E99C7CAED100 /* Pods-TuniuAirlineProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuniuAirlineProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuniuAirlineProject/Pods-TuniuAirlineProject.debug.xcconfig"; sourceTree = "<group>"; };
 		3D09BC57BFB05A865C03D0F2 /* Pods_TuniuAirlineProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuniuAirlineProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC1708CDFBE00B4E3BECD1E /* Pods_TuniuAirlineProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuniuAirlineProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B63B4A620D9E36D00C5D1FC /* Seat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Seat.storyboard; sourceTree = "<group>"; };
+		5B63B4B320D9FCAD00C5D1FC /* SeatPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatPickerViewController.swift; sourceTree = "<group>"; };
+		5B63B4B520D9FDF000C5D1FC /* SeatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatCollectionViewCell.swift; sourceTree = "<group>"; };
+		5B63B4B720DA05A200C5D1FC /* SeatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatModel.swift; sourceTree = "<group>"; };
 		5B80E62F20D0B9AB0061CB8C /* FlightDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailViewController.swift; sourceTree = "<group>"; };
 		5B80E63120D0CF390061CB8C /* FlightDetialTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetialTableViewCell.swift; sourceTree = "<group>"; };
 		5B96864920CE2DDD00909163 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +215,7 @@
 				5B9800AE20C9902B008845F3 /* Main.storyboard */,
 				A27CFAB120DAF7C000AB1349 /* Calendar.storyboard */,
 				5BA6D7AB20D2459D002B7568 /* FoldTableView.storyboard */,
+				5B63B4A620D9E36D00C5D1FC /* Seat.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -221,10 +230,14 @@
 				A266FA7420D059F9006FF138 /* MyBookingTableViewCell.swift */,
 				5B80E63120D0CF390061CB8C /* FlightDetialTableViewCell.swift */,
 				5BA6D7AF20D24653002B7568 /* FlightSearchFoldTableViewCell.swift */,
+
 				A27CFAA320D8A7F200AB1349 /* BookingConfirmTableViewCell1.swift */,
 				A27CFAA520D8A80300AB1349 /* BookingConfirmTableViewCell2.swift */,
 				A27CFAA720D8A81800AB1349 /* BookingConfirmTableViewCell3.swift */,
 				A27CFAA920D8BDB500AB1349 /* BookingConfirmTableViewCell4.swift */,
+
+				5B63B4B520D9FDF000C5D1FC /* SeatCollectionViewCell.swift */,
+
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -240,6 +253,7 @@
 				5BD4F80220CF48C800F3A7AC /* Constants.swift */,
 				5BA6D7B120D25A20002B7568 /* TimeMode.swift */,
 				5BCCC1BD20D5DF3200645C27 /* PaymentModel.swift */,
+				5B63B4B720DA05A200C5D1FC /* SeatModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -264,7 +278,11 @@
 				5BA6D7AD20D2461B002B7568 /* FlightSearchFoldViewController.swift */,
 				5B80E62F20D0B9AB0061CB8C /* FlightDetailViewController.swift */,
 				A266FA7620D3647E006FF138 /* MyBookingFlightDetailViewController.swift */,
+
 				A27CFAA120D8A78C00AB1349 /* BookingConfirmViewController.swift */,
+
+				5B63B4B320D9FCAD00C5D1FC /* SeatPickerViewController.swift */,
+
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -334,6 +352,7 @@
 				TargetAttributes = {
 					5B9800A620C9902B008845F3 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
 					};
 					5B9800BA20C9902D008845F3 = {
 						CreatedOnToolsVersion = 9.4;
@@ -367,6 +386,7 @@
 			files = (
 				5B9800B520C9902D008845F3 /* LaunchScreen.storyboard in Resources */,
 				5BA6D7AC20D2459D002B7568 /* FoldTableView.storyboard in Resources */,
+				5B63B4A720D9E36D00C5D1FC /* Seat.storyboard in Resources */,
 				5B9800CB20C99053008845F3 /* GoogleService-Info.plist in Resources */,
 				5B9800B220C9902D008845F3 /* Assets.xcassets in Resources */,
 				5B98010620C9CB55008845F3 /* Login.storyboard in Resources */,
@@ -453,6 +473,7 @@
 				"${BUILT_PRODUCTS_DIR}/ECSlidingViewController/ECSlidingViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FVSeatsPicker/FVSeatsPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/FoldingCell/FoldingCell.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
@@ -473,6 +494,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ECSlidingViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FVSeatsPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FoldingCell.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
@@ -513,6 +535,8 @@
 				5BD4F7F720CECFC000F3A7AC /* FlightSearchResultViewController.swift in Sources */,
 				5BA6D7B020D24653002B7568 /* FlightSearchFoldTableViewCell.swift in Sources */,
 				5BCCC1BE20D5DF3200645C27 /* PaymentModel.swift in Sources */,
+				5B63B4B620D9FDF000C5D1FC /* SeatCollectionViewCell.swift in Sources */,
+				5B63B4B420D9FCAD00C5D1FC /* SeatPickerViewController.swift in Sources */,
 				5B98011020CA040E008845F3 /* BookingViewController.swift in Sources */,
 				5BD4F80120CF458900F3A7AC /* FlightStatsAPIHandler.swift in Sources */,
 				A27CFAAA20D8BDB500AB1349 /* BookingConfirmTableViewCell4.swift in Sources */,
@@ -522,7 +546,11 @@
 				5B98011A20CA4E25008845F3 /* CalenderCell.swift in Sources */,
 				A27CFAA220D8A78C00AB1349 /* BookingConfirmViewController.swift in Sources */,
 				5BA6D7AE20D2461B002B7568 /* FlightSearchFoldViewController.swift in Sources */,
+
 				A27CFAA420D8A7F200AB1349 /* BookingConfirmTableViewCell1.swift in Sources */,
+
+				5B63B4B820DA05A200C5D1FC /* SeatModel.swift in Sources */,
+
 				5BD4F7FD20CF203500F3A7AC /* BaseViewController.swift in Sources */,
 				A2B00D9720CE1A5F0082B21C /* CouponModel.swift in Sources */,
 				5B98012420CB118E008845F3 /* CitySearchTableViewCell.swift in Sources */,
@@ -694,6 +722,7 @@
 			baseConfigurationReference = 227DD92D7279E99C7CAED100 /* Pods-TuniuAirlineProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RQAE768Z9N;
 				INFOPLIST_FILE = TuniuAirlineProject/Info.plist;
@@ -704,6 +733,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Chuanqi.MyInstagramProjectWithFirebase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -714,6 +745,7 @@
 			baseConfigurationReference = 80F61C3F87551F07EAF36BD1 /* Pods-TuniuAirlineProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RQAE768Z9N;
 				INFOPLIST_FILE = TuniuAirlineProject/Info.plist;
@@ -724,6 +756,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Chuanqi.MyInstagramProjectWithFirebase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

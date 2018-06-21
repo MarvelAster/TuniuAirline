@@ -42,8 +42,9 @@ class BookingViewController: UIViewController,UITextFieldDelegate, AirportSearch
                 return
             }
         }
-//        let storyboard = UIStoryboard(name: "Calendar", bundle: nil )
-//        let controller = storyboard.instantiateViewController(withIdentifier: "FlightSearchResultViewController") as! FlightSearchResultViewController
+//        let storyboard = UIStoryboard(name: "Seat", bundle: nil)
+//        let controller = storyboard.instantiateViewController(withIdentifier: "SeatPickerViewController")
+//        present(controller, animated: true, completion: nil)
         
         let storyboard = UIStoryboard(name: "FoldTableView", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "FlightSearchFoldViewController") as! FlightSearchFoldViewController

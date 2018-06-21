@@ -876,16 +876,40 @@
                                                             <color key="textColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUf-ZF-bwq">
+                                                            <rect key="frame" x="295" y="90" width="40" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="exK-bk-Uja"/>
+                                                                <constraint firstAttribute="width" constant="40" id="xia-yL-MIv"/>
+                                                            </constraints>
+                                                            <state key="normal" image="seat"/>
+                                                            <connections>
+                                                                <action selector="chooseSeatBtnAction:" destination="UnB-oN-D83" eventType="touchUpInside" id="gqP-RA-WOb"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="not chosen" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTJ-dY-BD4">
+                                                            <rect key="frame" x="255" y="135" width="80" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="HDz-18-urJ"/>
+                                                                <constraint firstAttribute="width" constant="80" id="x3p-tJ-4RC"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="ruA-Ta-oQn" firstAttribute="leading" secondItem="Njp-UX-7wa" secondAttribute="leading" constant="10" id="0OL-Zb-4K2"/>
                                                         <constraint firstItem="0ft-JY-dE9" firstAttribute="leading" secondItem="Njp-UX-7wa" secondAttribute="leading" constant="10" id="0dG-4J-daJ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ZUf-ZF-bwq" secondAttribute="trailing" constant="20" id="0oA-f7-oBz"/>
                                                         <constraint firstAttribute="height" constant="246" id="13N-4h-4Uh"/>
                                                         <constraint firstAttribute="trailing" secondItem="GiA-By-mQ6" secondAttribute="trailing" constant="10" id="2js-XJ-Y4K"/>
                                                         <constraint firstItem="gcd-5H-mIx" firstAttribute="leading" secondItem="Njp-UX-7wa" secondAttribute="leading" constant="10" id="3K2-gw-03T"/>
+                                                        <constraint firstItem="ZUf-ZF-bwq" firstAttribute="top" secondItem="ZNI-d3-Cfh" secondAttribute="bottom" constant="40" id="4w9-55-3ka"/>
                                                         <constraint firstItem="GiA-By-mQ6" firstAttribute="leading" secondItem="Njp-UX-7wa" secondAttribute="leading" constant="10" id="6xY-p2-Yac"/>
                                                         <constraint firstItem="a1X-2x-yCr" firstAttribute="top" secondItem="Jpz-jZ-ocf" secondAttribute="bottom" id="I4o-jr-8ZJ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="bTJ-dY-BD4" secondAttribute="trailing" constant="20" id="IRO-zl-6sH"/>
                                                         <constraint firstAttribute="trailing" secondItem="ZNI-d3-Cfh" secondAttribute="trailing" id="O9z-4d-fn8"/>
                                                         <constraint firstItem="ZNI-d3-Cfh" firstAttribute="top" secondItem="Njp-UX-7wa" secondAttribute="top" id="RIz-pF-jSR"/>
                                                         <constraint firstItem="Jpz-jZ-ocf" firstAttribute="top" secondItem="gcd-5H-mIx" secondAttribute="bottom" id="YQQ-Cu-SBL"/>
@@ -901,6 +925,7 @@
                                                         <constraint firstItem="6D9-qO-GoO" firstAttribute="leading" secondItem="Jpz-jZ-ocf" secondAttribute="trailing" constant="20" id="uvW-me-pIs"/>
                                                         <constraint firstAttribute="bottom" secondItem="0ft-JY-dE9" secondAttribute="bottom" constant="9.5" id="wMQ-lr-lfG"/>
                                                         <constraint firstItem="6D9-qO-GoO" firstAttribute="top" secondItem="gcd-5H-mIx" secondAttribute="bottom" id="xtg-wD-wHS"/>
+                                                        <constraint firstItem="bTJ-dY-BD4" firstAttribute="top" secondItem="ZUf-ZF-bwq" secondAttribute="bottom" constant="5" id="zGZ-AZ-Fup"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -918,6 +943,7 @@
                                             <outlet property="departureAirportFSCode" destination="Jpz-jZ-ocf" id="krR-zJ-HBK"/>
                                             <outlet property="departureTime" destination="a1X-2x-yCr" id="aXS-au-dve"/>
                                             <outlet property="flightNumberLabel" destination="gcd-5H-mIx" id="hux-70-dxf"/>
+                                            <outlet property="seat" destination="bTJ-dY-BD4" id="3zR-3R-mHH"/>
                                             <outlet property="stopsLabel" destination="ruA-Ta-oQn" id="pNP-II-CLK"/>
                                         </connections>
                                     </tableViewCell>
@@ -1099,6 +1125,9 @@
                                                 <constraint firstItem="HcA-nz-g3B" firstAttribute="top" secondItem="Q55-qS-C0n" secondAttribute="top" constant="10" id="u12-D0-JXg"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="price" destination="rc6-Ay-e5l" id="DzU-jP-ZGk"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookingConfirmTableViewCell4" rowHeight="50" id="Yhj-WT-juB" customClass="BookingConfirmTableViewCell4" customModule="TuniuAirlineProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="826" width="375" height="50"/>
@@ -1158,12 +1187,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k6D-I6-LC7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4895.1999999999998" y="753.37331334332839"/>
+            <point key="canvasLocation" x="4954" y="740"/>
         </scene>
     </scenes>
     <resources>
         <image name="background-1" width="414" height="736"/>
         <image name="ckeck" width="32" height="32"/>
         <image name="cross" width="32" height="32"/>
+        <image name="seat" width="40" height="40"/>
     </resources>
 </document>

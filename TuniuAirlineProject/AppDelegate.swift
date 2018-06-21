@@ -33,8 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupNotification()
         
         //test only
-//        let storyboard = UIStoryboard(name: "Payment", bundle: nil)
-//        let controller = storyboard.instantiateViewController(withIdentifier: "PaymentViewController")
+//        let storyboard = UIStoryboard(name: "Seat", bundle: nil)
+//        let controller = storyboard.instantiateViewController(withIdentifier: "SeatPickerViewController")
 //        self.window?.rootViewController = controller
         
         
