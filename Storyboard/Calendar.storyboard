@@ -877,7 +877,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUf-ZF-bwq">
-                                                            <rect key="frame" x="295" y="90" width="40" height="40"/>
+                                                            <rect key="frame" x="275" y="90" width="40" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="exK-bk-Uja"/>
                                                                 <constraint firstAttribute="width" constant="40" id="xia-yL-MIv"/>
@@ -888,10 +888,10 @@
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="not chosen" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTJ-dY-BD4">
-                                                            <rect key="frame" x="255" y="135" width="80" height="20"/>
+                                                            <rect key="frame" x="195" y="135" width="140" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20" id="HDz-18-urJ"/>
-                                                                <constraint firstAttribute="width" constant="80" id="x3p-tJ-4RC"/>
+                                                                <constraint firstAttribute="width" constant="140" id="x3p-tJ-4RC"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <nil key="textColor"/>
@@ -902,7 +902,7 @@
                                                     <constraints>
                                                         <constraint firstItem="ruA-Ta-oQn" firstAttribute="leading" secondItem="Njp-UX-7wa" secondAttribute="leading" constant="10" id="0OL-Zb-4K2"/>
                                                         <constraint firstItem="0ft-JY-dE9" firstAttribute="leading" secondItem="Njp-UX-7wa" secondAttribute="leading" constant="10" id="0dG-4J-daJ"/>
-                                                        <constraint firstAttribute="trailing" secondItem="ZUf-ZF-bwq" secondAttribute="trailing" constant="20" id="0oA-f7-oBz"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ZUf-ZF-bwq" secondAttribute="trailing" constant="40" id="0oA-f7-oBz"/>
                                                         <constraint firstAttribute="height" constant="246" id="13N-4h-4Uh"/>
                                                         <constraint firstAttribute="trailing" secondItem="GiA-By-mQ6" secondAttribute="trailing" constant="10" id="2js-XJ-Y4K"/>
                                                         <constraint firstItem="gcd-5H-mIx" firstAttribute="leading" secondItem="Njp-UX-7wa" secondAttribute="leading" constant="10" id="3K2-gw-03T"/>

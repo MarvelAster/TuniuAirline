@@ -162,7 +162,7 @@ final class FirebaseHandler{
         userRef?.child(userId).observeSingleEvent(of: .value, with: {
             (snapshot) in
             var result = false
-            if (snapshot.value as? Dictionary<String, Any>) != nil {
+            if snapshot.value != nil {
                 result = true
             }
             completion(result)
