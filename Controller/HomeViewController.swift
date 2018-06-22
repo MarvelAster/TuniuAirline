@@ -28,6 +28,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         let singleTap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "background-1")!)
         singleTap.cancelsTouchesInView = false
         singleTap.numberOfTapsRequired = 1
         scrollView.addGestureRecognizer(singleTap)

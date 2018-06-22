@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Controller/FlightDetailViewController.swift"
-            timestampString = "551245638.6580499"
+            filePath = "Controller/BookingConfirmViewController.swift"
+            timestampString = "551310275.107679"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "fetchClientToken()"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "paymentAuthorizationViewController(_:didAuthorizePayment:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,29 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Controller/SeatPickerViewController.m"
-            timestampString = "551156539.109277"
+            filePath = "Controller/BookingConfirmViewController.swift"
+            timestampString = "551310275.108236"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Model/FirebaseHandler.swift"
-            timestampString = "551172452.252623"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "getAllSeatInfomation(completion:)"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "paymentAuthorizationViewController(_:didAuthorizePayment:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,13 +41,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Controller/SeatPickerViewController.swift"
-            timestampString = "551245638.658201"
+            filePath = "Controller/BookingConfirmViewController.swift"
+            timestampString = "551310275.108664"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "seatChoosed(cell:)"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "paymentAuthorizationViewController(_:didAuthorizePayment:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Controller/BookingConfirmViewController.swift"
+            timestampString = "551310275.109043"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "paymentAuthorizationViewController(_:didAuthorizePayment:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -31,7 +31,6 @@
 		5B98011620CA09C2008845F3 /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B98011520CA09C2008845F3 /* LogoutViewController.swift */; };
 		5B98011820CA4C43008845F3 /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B98011720CA4C43008845F3 /* CalenderViewController.swift */; };
 		5B98011A20CA4E25008845F3 /* CalenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B98011920CA4E25008845F3 /* CalenderCell.swift */; };
-		5B98011C20CAC276008845F3 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B98011B20CAC276008845F3 /* Calendar.storyboard */; };
 		5B98012220CB0F40008845F3 /* AirportSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B98012120CB0F40008845F3 /* AirportSearchViewController.swift */; };
 		5B98012420CB118E008845F3 /* CitySearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B98012320CB118E008845F3 /* CitySearchTableViewCell.swift */; };
 		5B98012620CC2DFF008845F3 /* AirportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B98012520CC2DFF008845F3 /* AirportModel.swift */; };
@@ -51,6 +50,12 @@
 		A27B462520CA27E6001132E3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27B462420CA27E6001132E3 /* SignUpViewController.swift */; };
 		A27B462720CA2C53001132E3 /* FirebaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27B462620CA2C53001132E3 /* FirebaseHandler.swift */; };
 		A27B462920CA2D60001132E3 /* UploadPhotoIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27B462820CA2D60001132E3 /* UploadPhotoIDViewController.swift */; };
+		A27CFAA220D8A78C00AB1349 /* BookingConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CFAA120D8A78C00AB1349 /* BookingConfirmViewController.swift */; };
+		A27CFAA420D8A7F200AB1349 /* BookingConfirmTableViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CFAA320D8A7F200AB1349 /* BookingConfirmTableViewCell1.swift */; };
+		A27CFAA620D8A80300AB1349 /* BookingConfirmTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CFAA520D8A80300AB1349 /* BookingConfirmTableViewCell2.swift */; };
+		A27CFAA820D8A81800AB1349 /* BookingConfirmTableViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CFAA720D8A81800AB1349 /* BookingConfirmTableViewCell3.swift */; };
+		A27CFAAA20D8BDB500AB1349 /* BookingConfirmTableViewCell4.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CFAA920D8BDB500AB1349 /* BookingConfirmTableViewCell4.swift */; };
+		A27CFAB220DAF7C000AB1349 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A27CFAB120DAF7C000AB1349 /* Calendar.storyboard */; };
 		A2B00D9720CE1A5F0082B21C /* CouponModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B00D9620CE1A5F0082B21C /* CouponModel.swift */; };
 		A2B00D9920CE25930082B21C /* CouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B00D9820CE25930082B21C /* CouponViewController.swift */; };
 		A2FDAB8720C9DDE1009D2D5E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FDAB8620C9DDE1009D2D5E /* SignInViewController.swift */; };
@@ -97,7 +102,6 @@
 		5B98011520CA09C2008845F3 /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
 		5B98011720CA4C43008845F3 /* CalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
 		5B98011920CA4E25008845F3 /* CalenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderCell.swift; sourceTree = "<group>"; };
-		5B98011B20CAC276008845F3 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		5B98012120CB0F40008845F3 /* AirportSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportSearchViewController.swift; sourceTree = "<group>"; };
 		5B98012320CB118E008845F3 /* CitySearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchTableViewCell.swift; sourceTree = "<group>"; };
 		5B98012520CC2DFF008845F3 /* AirportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportModel.swift; sourceTree = "<group>"; };
@@ -118,6 +122,12 @@
 		A27B462420CA27E6001132E3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A27B462620CA2C53001132E3 /* FirebaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirebaseHandler.swift; path = Model/FirebaseHandler.swift; sourceTree = SOURCE_ROOT; };
 		A27B462820CA2D60001132E3 /* UploadPhotoIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPhotoIDViewController.swift; sourceTree = "<group>"; };
+		A27CFAA120D8A78C00AB1349 /* BookingConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingConfirmViewController.swift; sourceTree = "<group>"; };
+		A27CFAA320D8A7F200AB1349 /* BookingConfirmTableViewCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingConfirmTableViewCell1.swift; sourceTree = "<group>"; };
+		A27CFAA520D8A80300AB1349 /* BookingConfirmTableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingConfirmTableViewCell2.swift; sourceTree = "<group>"; };
+		A27CFAA720D8A81800AB1349 /* BookingConfirmTableViewCell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingConfirmTableViewCell3.swift; sourceTree = "<group>"; };
+		A27CFAA920D8BDB500AB1349 /* BookingConfirmTableViewCell4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingConfirmTableViewCell4.swift; sourceTree = "<group>"; };
+		A27CFAB120DAF7C000AB1349 /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		A2B00D9620CE1A5F0082B21C /* CouponModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponModel.swift; sourceTree = "<group>"; };
 		A2B00D9820CE25930082B21C /* CouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponViewController.swift; sourceTree = "<group>"; };
 		A2FDAB8620C9DDE1009D2D5E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -205,7 +215,7 @@
 			children = (
 				5B98010520C9CB55008845F3 /* Login.storyboard */,
 				5B9800AE20C9902B008845F3 /* Main.storyboard */,
-				5B98011B20CAC276008845F3 /* Calendar.storyboard */,
+				A27CFAB120DAF7C000AB1349 /* Calendar.storyboard */,
 				5BA6D7AB20D2459D002B7568 /* FoldTableView.storyboard */,
 				5B63B4A620D9E36D00C5D1FC /* Seat.storyboard */,
 			);
@@ -222,7 +232,14 @@
 				A266FA7420D059F9006FF138 /* MyBookingTableViewCell.swift */,
 				5B80E63120D0CF390061CB8C /* FlightDetialTableViewCell.swift */,
 				5BA6D7AF20D24653002B7568 /* FlightSearchFoldTableViewCell.swift */,
+
+				A27CFAA320D8A7F200AB1349 /* BookingConfirmTableViewCell1.swift */,
+				A27CFAA520D8A80300AB1349 /* BookingConfirmTableViewCell2.swift */,
+				A27CFAA720D8A81800AB1349 /* BookingConfirmTableViewCell3.swift */,
+				A27CFAA920D8BDB500AB1349 /* BookingConfirmTableViewCell4.swift */,
+
 				5B63B4B520D9FDF000C5D1FC /* SeatCollectionViewCell.swift */,
+
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -263,7 +280,11 @@
 				5BA6D7AD20D2461B002B7568 /* FlightSearchFoldViewController.swift */,
 				5B80E62F20D0B9AB0061CB8C /* FlightDetailViewController.swift */,
 				A266FA7620D3647E006FF138 /* MyBookingFlightDetailViewController.swift */,
+
+				A27CFAA120D8A78C00AB1349 /* BookingConfirmViewController.swift */,
+
 				5B63B4B320D9FCAD00C5D1FC /* SeatPickerViewController.swift */,
+
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -370,7 +391,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B98011C20CAC276008845F3 /* Calendar.storyboard in Resources */,
 				5B9800B520C9902D008845F3 /* LaunchScreen.storyboard in Resources */,
 				5BA6D7AC20D2459D002B7568 /* FoldTableView.storyboard in Resources */,
 				5B63B4A720D9E36D00C5D1FC /* Seat.storyboard in Resources */,
@@ -378,6 +398,7 @@
 				5B9800B220C9902D008845F3 /* Assets.xcassets in Resources */,
 				5B98010620C9CB55008845F3 /* Login.storyboard in Resources */,
 				5B9800B020C9902B008845F3 /* Main.storyboard in Resources */,
+				A27CFAB220DAF7C000AB1349 /* Calendar.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +526,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BD4F80320CF48C800F3A7AC /* Constants.swift in Sources */,
+				A27CFAA620D8A80300AB1349 /* BookingConfirmTableViewCell2.swift in Sources */,
 				A27B462720CA2C53001132E3 /* FirebaseHandler.swift in Sources */,
 				5B98011220CA09A9008845F3 /* MyBookingViewController.swift in Sources */,
 				A266FA7720D3647E006FF138 /* MyBookingFlightDetailViewController.swift in Sources */,
@@ -512,6 +534,7 @@
 				5B96864A20CE2DDD00909163 /* HomeViewController.swift in Sources */,
 				5B98010E20C9E4B6008845F3 /* FTNavigationController.swift in Sources */,
 				5BD4F7F920CED0CB00F3A7AC /* FlightSearchResultTableViewCell.swift in Sources */,
+				A27CFAA820D8A81800AB1349 /* BookingConfirmTableViewCell3.swift in Sources */,
 				5B98010C20C9DD53008845F3 /* SideMenuViewController.swift in Sources */,
 				5B98012620CC2DFF008845F3 /* AirportModel.swift in Sources */,
 				A266FA7520D059F9006FF138 /* MyBookingTableViewCell.swift in Sources */,
@@ -523,12 +546,18 @@
 				5B63B4B420D9FCAD00C5D1FC /* SeatPickerViewController.swift in Sources */,
 				5B98011020CA040E008845F3 /* BookingViewController.swift in Sources */,
 				5BD4F80120CF458900F3A7AC /* FlightStatsAPIHandler.swift in Sources */,
+				A27CFAAA20D8BDB500AB1349 /* BookingConfirmTableViewCell4.swift in Sources */,
 				5B98012220CB0F40008845F3 /* AirportSearchViewController.swift in Sources */,
 				5B80E63020D0B9AB0061CB8C /* FlightDetailViewController.swift in Sources */,
 				5B98011820CA4C43008845F3 /* CalenderViewController.swift in Sources */,
 				5B98011A20CA4E25008845F3 /* CalenderCell.swift in Sources */,
+				A27CFAA220D8A78C00AB1349 /* BookingConfirmViewController.swift in Sources */,
 				5BA6D7AE20D2461B002B7568 /* FlightSearchFoldViewController.swift in Sources */,
+
+				A27CFAA420D8A7F200AB1349 /* BookingConfirmTableViewCell1.swift in Sources */,
+
 				5B63B4B820DA05A200C5D1FC /* SeatModel.swift in Sources */,
+
 				5BD4F7FD20CF203500F3A7AC /* BaseViewController.swift in Sources */,
 				A2B00D9720CE1A5F0082B21C /* CouponModel.swift in Sources */,
 				5B98012420CB118E008845F3 /* CitySearchTableViewCell.swift in Sources */,

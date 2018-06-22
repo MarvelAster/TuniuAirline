@@ -256,10 +256,10 @@ final class FirebaseHandler{
         return date1
     }
     
-    func uploadBookedFlightDetail(flights: ScheduledFlights, departureTrip: String, departureCity: String, arriveCity: String, departureAirportName: String, arriveAirportName: String, durationTime: String, completion:@escaping ()->Void) {
+    func uploadBookedFlightDetail(flights: ScheduledFlights, departureTrip: String, departureCity: String, arriveCity: String, departureAirportName: String, arriveAirportName: String, durationTime: String, seat:String, completion:@escaping ()->Void) {
         databaseInit()
         let flightKey = userRef.childByAutoId().key
-        let flightDetail = ["carrierFsCode": flights.carrierFsCode, "flightNumber": flights.flightNumber, "departureAirportFsCode": flights.departureAirportFsCode, "arrivalAirportFsCode": flights.arrivalAirportFsCode, "stops": "\(flights.stops)", "departureTerminal": flights.departureTerminal, "arrivalTerminal": flights.arrivalTerminal, "departureTime": toTime(time: flights.departureTime), "arrivalTime": toTime(time: flights.arrivalTime), "departureDate": departureTrip, "departureCity": departureCity, "arriveCity": arriveCity, "departureAirportName": departureAirportName, "arriveAirportName": arriveAirportName, "durationTime": durationTime]
+        let flightDetail = ["carrierFsCode": flights.carrierFsCode, "flightNumber": flights.flightNumber, "departureAirportFsCode": flights.departureAirportFsCode, "arrivalAirportFsCode": flights.arrivalAirportFsCode, "stops": "\(flights.stops)", "departureTerminal": flights.departureTerminal, "arrivalTerminal": flights.arrivalTerminal, "departureTime": toTime(time: flights.departureTime), "arrivalTime": toTime(time: flights.arrivalTime), "departureDate": departureTrip, "departureCity": departureCity, "arriveCity": arriveCity, "departureAirportName": departureAirportName, "arriveAirportName": arriveAirportName, "durationTime": durationTime, "seat": seat]
         let flightdict = [flightKey: "FlightInfoKey"]
         userRef.child((Auth.auth().currentUser?.uid)!).child("Flights").updateChildValues(flightdict)
         airplaneRef.child(flightKey).updateChildValues(flightDetail) { (error, ref) in
@@ -303,7 +303,8 @@ final class FirebaseHandler{
                     let departureAirportName = value1["departureAirportName"]
                     let arriveAirportName = value1["arriveAirportName"]
                     let durationTime = value1["durationTime"]
-                    let singleFilght = BookedFlightsInfo(carrierFsCode: carrierFsCode!, flightNumber: flightNumber!, departureAirportFsCode: departureAirportFsCode!, arrivalAirportFsCode: arrivalAirportFsCode!, stops: Int(stops!)!, departureTerminal: departureTerminal!, arrivalTerminal: arrivalTerminal!, departureTime: departureTime!, arrivalTime: arrivalTime!, departureCity: departureCity!, arriveCity: arriveCity!, departureDate: departureDate!, flightKey: flightKey, departureAirportName: departureAirportName!, arriveAirportName: arriveAirportName!, durationTime: durationTime!)
+                    let seat = value1["seat"]
+                    let singleFilght = BookedFlightsInfo(carrierFsCode: carrierFsCode!, flightNumber: flightNumber!, departureAirportFsCode: departureAirportFsCode!, arrivalAirportFsCode: arrivalAirportFsCode!, stops: Int(stops!)!, departureTerminal: departureTerminal!, arrivalTerminal: arrivalTerminal!, departureTime: departureTime!, arrivalTime: arrivalTime!, departureCity: departureCity!, arriveCity: arriveCity!, departureDate: departureDate!, flightKey: flightKey, departureAirportName: departureAirportName!, arriveAirportName: arriveAirportName!, durationTime: durationTime!, seat: seat!)
                     flights.append(singleFilght)
                     dispatchGroup.leave()
                 })
@@ -312,6 +313,11 @@ final class FirebaseHandler{
                 completion(flights)
             })
         }
+    }
+    //MARK: -UploadSeatInfoToDatabase
+    func uploadSeatInfo(seat: String, completion:@escaping ()->Void){
+        databaseInit()
+        
     }
     
 }

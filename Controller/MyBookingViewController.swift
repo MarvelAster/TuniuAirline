@@ -19,6 +19,7 @@ class MyBookingViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tblView.backgroundColor = UIColor(white: 1, alpha: 0)
         date.weekday = 3
         date.hour = 14
         date.minute = 34
@@ -39,6 +40,10 @@ class MyBookingViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tblView.dequeueReusableCell(withIdentifier: "MyBookingTableViewCell") as! MyBookingTableViewCell
+        cell.backgroundColor = UIColor(red: 2, green: 2, blue: 2, alpha: 0)
+        cell.uiView.layer.borderWidth = 0.5
+        cell.uiView.layer.borderColor = UIColor.purple.cgColor
+        cell.uiView.layer.cornerRadius = 5
         cell.arriveCityFSCode.text = flights[indexPath.row].arrivalAirportFsCode
         cell.arriveTimeLabel.text = flights[indexPath.row].arrivalTime
         cell.dataLabel.text = flights[indexPath.row].departureDate

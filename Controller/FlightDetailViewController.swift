@@ -33,7 +33,7 @@ class FlightDetailViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Confirm Purchase", style:  .plain, target: self, action: #selector(doneBtnAction))
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Confirm Purchase", style:  .plain, target: self, action: #selector(doneBtnAction))
         backSourceAirport = destAirport?.city
         backDestAirport = sourceAirport?.city
         
@@ -84,29 +84,29 @@ class FlightDetailViewController: UIViewController, UITableViewDataSource {
         self.present(dropIn!, animated: true, completion: nil)
     }
     
-    func purchaseSuccess() {
-        if flights?.count == 1{
-            FirebaseHandler.sharedInstance.uploadBookedFlightDetail(flights: flights![0], departureTrip: toDate(time: flights![0].departureTime), departureCity: sourceAirport!.city!, arriveCity: destAirport!.city!, departureAirportName: SourceAirportName!, arriveAirportName: DestAirportName!, durationTime: departureDurationTime!, completion: {()in
-            })
-        }else{
-            FirebaseHandler.sharedInstance.uploadBookedFlightDetail(flights: flights![0], departureTrip: toDate(time: flights![0].departureTime), departureCity: sourceAirport!.city!, arriveCity: destAirport!.city!, departureAirportName: SourceAirportName!, arriveAirportName: DestAirportName!, durationTime: departureDurationTime!, completion: {()in
-            })
-            FirebaseHandler.sharedInstance.uploadBookedFlightDetail(flights: flights![1], departureTrip: toDate(time: flights![1].departureTime), departureCity: backSourceAirport!, arriveCity: backDestAirport!, departureAirportName: backSourceAirportName!, arriveAirportName: backDestAirportName!, durationTime: returnDurationTime!, completion: {()in
-            })
-        }
-    }
+//    func purchaseSuccess() {
+//        if flights?.count == 1{
+//            FirebaseHandler.sharedInstance.uploadBookedFlightDetail(flights: flights![0], departureTrip: toDate(time: flights![0].departureTime), departureCity: sourceAirport!.city!, arriveCity: destAirport!.city!, departureAirportName: SourceAirportName!, arriveAirportName: DestAirportName!, durationTime: departureDurationTime!, seat: <#String#>, completion: {()in
+//            })
+//        }else{
+//            FirebaseHandler.sharedInstance.uploadBookedFlightDetail(flights: flights![0], departureTrip: toDate(time: flights![0].departureTime), departureCity: sourceAirport!.city!, arriveCity: destAirport!.city!, departureAirportName: SourceAirportName!, arriveAirportName: DestAirportName!, durationTime: departureDurationTime!, seat: <#String#>, completion: {()in
+//            })
+//            FirebaseHandler.sharedInstance.uploadBookedFlightDetail(flights: flights![1], departureTrip: toDate(time: flights![1].departureTime), departureCity: backSourceAirport!, arriveCity: backDestAirport!, departureAirportName: backSourceAirportName!, arriveAirportName: backDestAirportName!, durationTime: returnDurationTime!, seat: <#String#>, completion: {()in
+//            })
+//        }
+//    }
     
-    @objc func doneBtnAction() {
-        if flights?.count == 1{
-            FirebaseHandler.sharedInstance.uploadBookedFlightDetail(flights: flights![0], departureTrip: toDate(time: flights![0].departureTime), departureCity: sourceAirport!.city!, arriveCity: destAirport!.city!, departureAirportName: SourceAirportName!, arriveAirportName: DestAirportName!, durationTime: departureDurationTime!, completion: {()in
-            })
-        }else{
-            FirebaseHandler.sharedInstance.uploadBookedFlightDetail(flights: flights![0], departureTrip: toDate(time: flights![0].departureTime), departureCity: sourceAirport!.city!, arriveCity: destAirport!.city!, departureAirportName: SourceAirportName!, arriveAirportName: DestAirportName!, durationTime: departureDurationTime!, completion: {()in
-            })
-            FirebaseHandler.sharedInstance.uploadBookedFlightDetail(flights: flights![1], departureTrip: toDate(time: flights![1].departureTime), departureCity: backSourceAirport!, arriveCity: backDestAirport!, departureAirportName: backSourceAirportName!, arriveAirportName: backDestAirportName!, durationTime: returnDurationTime!, completion: {()in
-            })
-        }
-    }
+//    @objc func doneBtnAction() {
+//        if flights?.count == 1{
+//            FirebaseHandler.sharedInstance.uploadBookedFlightDetail(flights: flights![0], departureTrip: toDate(time: flights![0].departureTime), departureCity: sourceAirport!.city!, arriveCity: destAirport!.city!, departureAirportName: SourceAirportName!, arriveAirportName: DestAirportName!, durationTime: departureDurationTime!, seat: <#String#>, completion: {()in
+//            })
+//        }else{
+//            FirebaseHandler.sharedInstance.uploadBookedFlightDetail(flights: flights![0], departureTrip: toDate(time: flights![0].departureTime), departureCity: sourceAirport!.city!, arriveCity: destAirport!.city!, departureAirportName: SourceAirportName!, arriveAirportName: DestAirportName!, durationTime: departureDurationTime!, seat: <#String#>, completion: {()in
+//            })
+//            FirebaseHandler.sharedInstance.uploadBookedFlightDetail(flights: flights![1], departureTrip: toDate(time: flights![1].departureTime), departureCity: backSourceAirport!, arriveCity: backDestAirport!, departureAirportName: backSourceAirportName!, arriveAirportName: backDestAirportName!, durationTime: returnDurationTime!, seat: <#String#>, completion: {()in
+//            })
+//        }
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if flights == nil {
@@ -167,7 +167,7 @@ class FlightDetailViewController: UIViewController, UITableViewDataSource {
             }
             
             print("Successfully charged. Thanks So Much :)")
-            self?.purchaseSuccess()
+//            self?.purchaseSuccess()
             }.resume()
     }
     
