@@ -232,14 +232,11 @@
 				A266FA7420D059F9006FF138 /* MyBookingTableViewCell.swift */,
 				5B80E63120D0CF390061CB8C /* FlightDetialTableViewCell.swift */,
 				5BA6D7AF20D24653002B7568 /* FlightSearchFoldTableViewCell.swift */,
-
 				A27CFAA320D8A7F200AB1349 /* BookingConfirmTableViewCell1.swift */,
 				A27CFAA520D8A80300AB1349 /* BookingConfirmTableViewCell2.swift */,
 				A27CFAA720D8A81800AB1349 /* BookingConfirmTableViewCell3.swift */,
 				A27CFAA920D8BDB500AB1349 /* BookingConfirmTableViewCell4.swift */,
-
 				5B63B4B520D9FDF000C5D1FC /* SeatCollectionViewCell.swift */,
-
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -280,11 +277,8 @@
 				5BA6D7AD20D2461B002B7568 /* FlightSearchFoldViewController.swift */,
 				5B80E62F20D0B9AB0061CB8C /* FlightDetailViewController.swift */,
 				A266FA7620D3647E006FF138 /* MyBookingFlightDetailViewController.swift */,
-
 				A27CFAA120D8A78C00AB1349 /* BookingConfirmViewController.swift */,
-
 				5B63B4B320D9FCAD00C5D1FC /* SeatPickerViewController.swift */,
-
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -553,11 +547,8 @@
 				5B98011A20CA4E25008845F3 /* CalenderCell.swift in Sources */,
 				A27CFAA220D8A78C00AB1349 /* BookingConfirmViewController.swift in Sources */,
 				5BA6D7AE20D2461B002B7568 /* FlightSearchFoldViewController.swift in Sources */,
-
 				A27CFAA420D8A7F200AB1349 /* BookingConfirmTableViewCell1.swift in Sources */,
-
 				5B63B4B820DA05A200C5D1FC /* SeatModel.swift in Sources */,
-
 				5BD4F7FD20CF203500F3A7AC /* BaseViewController.swift in Sources */,
 				A2B00D9720CE1A5F0082B21C /* CouponModel.swift in Sources */,
 				5B98012420CB118E008845F3 /* CitySearchTableViewCell.swift in Sources */,
@@ -739,7 +730,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Chuanqi.MyInstagramProjectWithFirebase;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Chuanqi.MyInstagramProjectWithFirebas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -763,7 +754,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Chuanqi.MyInstagramProjectWithFirebase;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Chuanqi.MyInstagramProjectWithFirebas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;

@@ -1119,7 +1119,17 @@
                     <view key="view" contentMode="scaleToFill" id="db7-14-lys">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-1" translatesAutoresizingMaskIntoConstraints="NO" id="r9x-S8-AGB">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="r9x-S8-AGB" firstAttribute="leading" secondItem="sTU-v1-sXM" secondAttribute="leading" id="1xC-zg-lnu"/>
+                            <constraint firstItem="sTU-v1-sXM" firstAttribute="trailing" secondItem="r9x-S8-AGB" secondAttribute="trailing" id="FQk-jc-pJT"/>
+                            <constraint firstItem="r9x-S8-AGB" firstAttribute="top" secondItem="sTU-v1-sXM" secondAttribute="top" id="dYT-Ty-7o0"/>
+                            <constraint firstItem="sTU-v1-sXM" firstAttribute="bottom" secondItem="r9x-S8-AGB" secondAttribute="bottom" id="oTQ-I7-QO3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="sTU-v1-sXM"/>
                     </view>
                     <navigationItem key="navigationItem" id="9Mc-Dd-psh">
